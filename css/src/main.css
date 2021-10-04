@@ -9,28 +9,28 @@ h2 {
   width: 1252px; height: 156px;
   margin: 0 auto; margin-top: 106px;
   font-size: 40px; font-weight: 700; line-height: 52px; 
-  text-align: center; text-transform: capitalize;
+  text-align: center; text-transform: uppercase;
 }
 .btn_small {
   display: block;
   width: 140px; height: 48px;
   box-sizing: border-box; padding: 15px 18px;
-  color:#1c1c1c; text-align: center; text-transform: capitalize;
+  color:#1c1c1c; text-align: center; text-transform: uppercase;
   cursor: pointer;
 }
 .btn_large {
   display: block;
   width: 260px; height: 56px;
   box-sizing: border-box; padding: 19px 18px;
-  text-align: center;
+  text-align: center; text-transform: uppercase;
   cursor: pointer;
 }
 .btn_round {
   display: block;
   width: 140px; height: 44px;
   box-sizing: border-box; border-radius: 20px; border: 1px solid #1c1c1c;
-  padding: 13px 18px;
-  color:#1c1c1c; text-align: center; text-transform: capitalize;
+  padding: 12px 18px;
+  color:#1c1c1c; text-align: center; text-transform: uppercase;
   cursor: pointer;
 }
 .blind_wrap a {
@@ -62,13 +62,13 @@ h2 {
 #gnb {
   float: left;
   width: auto; height: 34px;
-  margin: 20px auto; margin-left: 143px;
+  margin: 24px auto; margin-left: 143px;
 }
   #gnb li {
     float: left;
     margin-left: 60px;
     color: #1c1c1c;
-    font-size: 22px; font-weight: 700; line-height: 34px;
+    font-size: 22px; font-weight: 700; line-height: 32px;
   }
   #gnb li:first-of-type {
     margin-left: 0;
@@ -78,7 +78,7 @@ h2 {
   #unb {
     float: right;
     width: 124px; height: auto;
-    margin: 25px 0;
+    margin: 20px 0;
   }
   #unb li {
     float: left;
@@ -101,9 +101,10 @@ h2 {
     position: absolute; top: 164px; right: 185px; z-index: 100;
     float: right;
     width: 445px; height: 344px;
+    font-size: 18px; line-height: 1.4;
   }
   .view_text h3 {
-    font-size: 44px; font-weight: 400;
+    font-size: 44px; font-weight: 400; line-height: 1.2;
   }
   .view_text p {
     margin-top: 40px;
@@ -162,20 +163,24 @@ h2 {
   .slide_nav_area {
     width: 3000px; height: 320px;
     margin-top: 68px;
-    background-color: #444;
   }
   .slide_nav_area > li {
     float: left;
-    width: 260px; height: 260px;
+    width: 260px; height: auto;
     margin-left: 30px;
-    background-color: turquoise;
   }
   .slide_nav_area li:first-of-type {
     margin-left: 0;
   }
+  .slide_nav_area > li > div {
+    width: 260px; height: 260px;
+    margin-bottom: 32px;
+    background-color: #3aa;
+  }
   .slide_nav_area > li > p {
+    display: block;
     color: #1c1c1c;
-    font-size: 28px; font-weight: 700;
+    font-size: 28px; font-weight: 700; text-align: center;
   }
 
 /* orderBox */
@@ -240,7 +245,6 @@ h2 {
   padding-top: 88px; padding-left: 89px;
   background-color: #fff;
 }
-  #recipeBox h2 {}
   #recipeBox ul {
     width: 2000px; height: auto;
     margin-top: 38px;
@@ -248,13 +252,22 @@ h2 {
   #recipeBox > ul > li {
     float: left;
     width: 366px; height: 550px;
-    margin-right: 26px; border-radius: 20px;
+    margin-right: 26px; border-radius: 20px; padding:300px 30px 0 40px;
     background-color: #ccc;
   }
   #recipeBox > ul > li:last-of-type {
     margin-right: 0;
   }
+  .recipe_title {
+    font-size: 28px; font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .recipe_title + p {
+    font-size: 18px; line-height: 1.2;
+    margin-bottom: 16px;
+  }
 
+  
 /* franchise */
 #franchise {
   width: 100%; height: 472px;
