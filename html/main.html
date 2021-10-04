@@ -19,21 +19,32 @@
 <body>
   <!-- layout -->
   <div id="wrap">
-    <header id="headBox" class="clearfix">
-      <h1><a href="#">Gongcha</a></h1>
+    <header id="headBox" class="clearfix blind_wrap">
+      <h1><a href="#"><span>Gongcha</span></a></h1>
       <nav id="gnb">
-        <h2 class="blind">gnb</h2>
+        <h2 class="blind">navigation</h2>
+        <ul>
+          <li>메뉴소개</li>
+          <li>이용방법</li>
+          <li>이벤트&뉴스</li>
+          <li>브랜드소개</li>
+          <li>프랜차이즈</li>
+        </ul>
       </nav>
       <nav id="unb">
         <h2 class="blind">unb</h2>
+        <ul class="blind_wrap">
+          <li><a href="#"><span>search</span></a></li>
+          <li><a href="#"><span>user</span></a></li>
+        </ul>
       </nav>
     </header><!-- //#headBox -->
 
     <section id="viewBox">
       <h2 class="blind">viewBox</h2>
       <div class="view_btn">
-        <button type="button" class="prev"><span>prev</span></button>
-        <button type="button" class="next"><span>next</span></button>
+        <a href="#" class="prev"><img src="../img/btn_prev.png" alt="prev"></a>
+        <a href="#" class="next"><img src="../img/btn_next.png" alt="next"></a>
       </div><!-- //.view_btn -->
       <ul class="indicator blind_wrap">
         <li><a href="#"><span>01</span></a></li>
@@ -50,14 +61,14 @@
     <section id="slideBox">
       <h2>Gongcha Menu</h2>
       <ul class="slide_nav_area">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li><div class="menu_img"></div><p>Lorem ipsum</li>p></li>
+        <li><div class="menu_img"></div><p>Lorem ipsum</p></li>
+        <li><div class="menu_img"></div><p>Lorem ipsum</p></li>
+        <li><div class="menu_img"></div><p>Lorem ipsum</p></li>
+        <li><div class="menu_img"></div><p>Lorem ipsum</p></li>
+        <li><div class="menu_img"></div><p>Lorem ipsum</p></li>
+        <li><div class="menu_img"></div><p>Lorem ipsum</p></li>
+        <li><div class="menu_img"></div><p>Lorem ipsum</p></li>
       </ul>
     </section><!-- //#slideBox -->
 
@@ -130,7 +141,7 @@
 
     <section id="liveBox">
       <h2>Gongcha Live</h2>
-      <div class="shop_area">dd</div>
+      <div class="shop_area">lorem</div>
       <div class="social_area">
         <div class="live_btn">
           <button type="button" class="prev"><span>prev</span></button>
@@ -146,8 +157,28 @@
       <!-- <h2 class="blind">sideBox</h2>
     </aside>//#sideBox -->
     <footer id="footBox">
-      <h2 class="blind">site information</h2>
-      
+      <h2 class="blind"><a href="#"><span>site information</span></a></h2>
+      <div class="foot_info">
+        <h3>Lorem, ipsum.</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="foot_cs">
+        <h3>Lorem, ipsum.</h3>
+        <p><span class="phone_number">00-000-0000</span></p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="foot_family">
+        <ul class="clearfix">
+          <li><a href="#"><span>fb</span></a></li>
+          <li><a href="#"><span>insta</span></a></li>
+          <li><a href="#"><span>yt</span></a></li>
+        </ul>
+        <div class="foot_brand">brand sites</div>
+      </div>
     </footer><!-- //#footBox -->
   </div><!-- //#wrap -->
 
