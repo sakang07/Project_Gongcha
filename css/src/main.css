@@ -5,10 +5,40 @@
 h2 {
   font-size: 40px;
 }
+.title {
+  width: 1252px; height: 156px;
+  margin: 0 auto; margin-top: 106px;
+  font-size: 40px; font-weight: 700; line-height: 52px; 
+  text-align: center; text-transform: capitalize;
+}
 .btn_small {
+  display: block;
   width: 140px; height: 48px;
-  margin-top: 48px; padding: 15px 18px;
-  background-color: #fff;
+  box-sizing: border-box; padding: 15px 18px;
+  color:#1c1c1c; text-align: center; text-transform: capitalize;
+  cursor: pointer;
+}
+.btn_large {
+  display: block;
+  width: 260px; height: 56px;
+  box-sizing: border-box; padding: 19px 18px;
+  text-align: center;
+  cursor: pointer;
+}
+.btn_round {
+  display: block;
+  width: 140px; height: 44px;
+  box-sizing: border-box; border-radius: 20px; border: 1px solid #1c1c1c;
+  padding: 13px 18px;
+  color:#1c1c1c; text-align: center; text-transform: capitalize;
+  cursor: pointer;
+}
+.blind_wrap a {
+  display: block; width: 100%; height: 100%;
+}
+.blind_wrap a > span {
+  display: block;overflow: hidden;
+  width: 0; height: 0; 
 }
 
 /* design */
@@ -22,12 +52,11 @@ h2 {
   padding: 14px 94px;
   background-color: #fff;
 }
-
-h1 {
-  float: left;
-  width: 62px; height: 82px;
-  background-color: red;
-}
+  h1 {
+    float: left;
+    width: 62px; height: 82px;
+    background-color: red;
+  }
 
 /* gnb */
 #gnb {
@@ -49,7 +78,8 @@ h1 {
 #viewBox {
   position: relative;
   width: 100%; height: 672px;
-  background-color: #A907D2;
+  color: #fff;
+  background-color: rgba(0,0,0,0.6);
 }
   .view_text {
     position: absolute; top: 164px; right: 185px; z-index: 100;
@@ -63,11 +93,41 @@ h1 {
     margin-top: 40px;
     font-size: 18px;
   }
-  /* indicator */
+  .view_text .btn_small {
+    margin-top: 48px; 
+    background-color: #fff;
+  }
+
+  /* view_btn */
+  .view_btn {
+    position: absolute; top: 170px; left: 0; right: 0;
+    width: 1248px; height: 300px;
+    margin: 0 auto;
+  }
+    .prev {
+      float: left;
+      width: 100px; height: 100%;
+      background-color: #fff;
+    }
+    .next {
+      float: right;
+      width: 100px; height: 100%;
+      background-color: #fff;
+    }
   .indicator {
-    position: absolute; bottom: 44px; left: 0; right: 0; z-index: 2000;
-    width: 54px; height: 12px;
-    margin: auto;
+    display: block;
+    position: absolute; bottom: 44px; left: 0; right: 0;
+    width: 54px; height: auto;
+    margin: 0 auto;
+  }
+  .indicator li {
+    float: left;
+    width: 12px; height: 12px;
+    border-radius: 100%; margin-right: 9px;
+    background-color: #fff;
+  }
+  .indicator li:last-of-type {
+    margin-right: 0;
   }
 
 /* slideBox */
@@ -84,42 +144,152 @@ h1 {
 
 /* orderBox */
 #orderBox {
-  width: 100%; height: 100px;
-  background-color: #A95880;
+  width: 100%; height: 883px;
+  padding-top: 112px;
+  background-color: #f3ebe0;
 }
-
+  #orderBox > h2 {
+    width: auto; height: auto;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #orderBox > ul{
+    width: 990px; height: 382px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #orderBox > ul > li {
+    float: left;
+    width: 262px; height: auto;
+    margin-top: 75px; margin-right: 100px;
+  }
+  #orderBox > ul >li:last-of-type {
+    margin-right: 0;
+  }
+  #orderBox .order_img {
+    display: block;
+    width: 200px; height: 200px;
+    margin: 0 auto; border-radius: 100%;
+    background-color: #fff;
+  }
+  #orderBox .order_title {
+    width: 100%; height: auto;
+    margin: 0 auto; margin-top: 39px;
+    font-size: 28px; font-weight: 700;
+  }
+  #orderBox .order_text {
+    width: 100%; height: 92px;
+    margin-top: 9px;
+    font-size: 18px;
+  }
+  #orderBox .btn_large {
+    margin: 0 auto; margin-top: 136px;
+    background-color: #c30e2f
+  }
 /* messageBox */
 #messageBox {
-  width: 100%; height: 100px;
-  background-color: #56FAEB;
+  width: 100%; height: 472px;
+  color: #fff;
+  background-color: rgba(0,0,0,0.6);
 }
+  #messageBox .btn_large {
+    margin: 0 auto; margin-top: 30px; box-sizing: border-box; border: 1px solid #fff;
+    color: #fff; background-color: transparent;
+  }
 
 /* recipeBox */
 #recipeBox {
-  width: 100%; height: 100px;
-  background-color: #A284FB;
+  overflow: hidden;
+  width: 100%; height: 862px;
+  padding-top: 88px; padding-left: 89px;
+  background-color: #fff;
 }
+  #recipeBox h2 {}
+  #recipeBox ul {
+    width: 2000px; height: auto;
+    margin-top: 38px;
+  }
+  #recipeBox > ul > li {
+    float: left;
+    width: 366px; height: 550px;
+    margin-right: 26px; border-radius: 20px;
+    background-color: #ccc;
+  }
+  #recipeBox > ul > li:last-of-type {
+    margin-right: 0;
+  }
 
 /* franchise */
 #franchise {
-  width: 100%; height: 100px;
-  background-color: #9722F9;
+  width: 100%; height: 472px;
+  color: #fff;
+  background-color: rgba(0,0,0,0.6);
 }
+  #franchise .btn_large {
+    margin: 0 auto; margin-top: 30px; box-sizing: border-box; border: 1px solid #505050;
+    color: #505050; background-color: #fff;
+  }
 
 /* liveBox */
 #liveBox {
-  width: 100%; height: 100px;
-  background-color: #A02FDB;
+  width: 100%; height: 774px;
+  margin: 0 auto; padding: 92px;
+  background-color: #fff;
 }
+#liveBox h2 {
+  text-align: center;
+}
+  .shop_area {
+    float: left;
+    width: 380px; height: 420px;
+    margin-top: 90px;
+    background-color: #853811;
+  }
+  .social_area {
+    position: relative;
+    float: right;
+    width: auto; height: 420px;
+    margin-top: 90px;
+  }
+    .live_btn {
+      position: absolute; top: 180px; left: 0; right: 0; z-index: 500px;
+      width: auto; height: 60px;
+      margin: 0 auto;
+    }
+    .live_btn .prev {
+      float: left;
+      width: 60px; height: 60px;
+      box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+    .live_btn .next {
+      float: right;
+      width: 60px; height: 60px;
+      box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+    .social_area > ul {
+      margin: 0 30px;
+    }
+    .social_area li {
+      float: left;
+      width: 380px; height: 420px;
+      margin-right: 29px;
+      background-color: #eee;
+    }
+    .social_area li:last-of-type {
+      margin-right: 0;
+    }
 
 /* sideBox */
-#sideBox {
+/* #sideBox {
   width: 100%; height: 100px;
   background-color: #3E96B2;
-}
+} */
 
 /* footBox */
 #footBox {
-  width: 100%; height: 100px;
-  background-color: #99842D;
+  width: 100%; height: 268px;
+  padding-top: 49px 92px 68px;
+  background-color: #333;
 }
