@@ -13,7 +13,6 @@ h2 {
   text-align: center; text-transform: capitalize;
 }
 
-
 /* btn */
 .btn_small {
   display: block;
@@ -76,9 +75,10 @@ h2 {
 
 /* design */
 #wrap {
-  width: 1440px; height: auto;
+  width: 100%; height: auto; min-width: 1280px; 
   margin: 0 auto;
 }
+
 /* headBox */
 #headBox {
   width: 100%; height: 110px;
@@ -137,7 +137,7 @@ h2 {
     font-size: 18px; line-height: 1.4;
   }
   .view_text h3 {
-    font-size: 44px; font-weight: 400; line-height: 1.2;
+    font-size: 44px; font-weight: 700; line-height: 1.2;
   }
   .view_text p {
     margin-top: 40px;
@@ -281,8 +281,11 @@ h2 {
   padding-top: 88px;
   background-color: #fff;
 }
+  #recipeBox h2 {
+    margin-left: 88px;
+  }
   #recipeBox ul {
-    width: 2000px; height: auto;
+    width: 3000px; height: auto;
     margin-top: 38px; padding-left: 88px;
   }
   #recipeBox li {
@@ -326,7 +329,7 @@ h2 {
   .shop_area {
     position: relative;
     float: left;
-    width: 380px; height: 420px;
+    width: 30%; max-width: 380px; height: 420px;
     margin-top: 90px; padding: 56px 44px;
     background-color: #555;
   }
@@ -340,7 +343,7 @@ h2 {
   }
   .shop_area .shop_search {
     position: absolute; bottom: 56px; left: 44px;
-    width: 290px; height: 52px;
+    width: 76.3%; height: 52px;
     padding: 14px 0; padding-left: 18px; border: 3px solid #fff;
     background: rgba(255, 255, 255, 0.5); color: #505050;
   }
@@ -357,7 +360,7 @@ h2 {
   .social_area {
     position: relative;
     float: right;
-    width: auto; height: 420px;
+    width: 66%; max-width: 848px; height: 420px;
     margin-top: 90px;
   }
     .live_btn {
@@ -378,12 +381,13 @@ h2 {
       background-color: #fff;
     }
     .social_area > ul {
+      width: auto; height: auto;
       margin: 0 30px;
     }
     .social_area li {
       float: left;
-      width: 380px; height: 420px;
-      margin-right: 29px;
+      width: 48.5%; height: 420px;
+      margin-right: 3%;
       background-color: #eee;
     }
     .social_area li:last-of-type {
@@ -424,7 +428,7 @@ h2 {
   .foot_cs {
     float: left;
     width: auto; height: 140px;
-    margin-left: 305px;
+    margin-left: 21%;
   }
     .phone_number {
       width: auto; height: 48px;
