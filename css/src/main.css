@@ -364,7 +364,7 @@ h2 {
     margin-top: 90px;
   }
     .live_btn {
-      position: absolute; top: 180px; left: 0; right: 0; z-index: 500px;
+      position: absolute; top: 180px; left: 0; right: 0; z-index: 500;
       width: auto; height: 60px;
       margin: 0 auto;
     }
