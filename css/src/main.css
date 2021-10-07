@@ -2,6 +2,7 @@
 /* main.css */
 
 /* common */
+
 h2 {
   font-size: 40px;
 }
@@ -9,20 +10,23 @@ h2 {
   width: 1252px; height: 156px;
   margin: 0 auto; margin-top: 106px;
   font-size: 40px; font-weight: 700; line-height: 52px; 
-  text-align: center; text-transform: uppercase;
+  text-align: center; text-transform: capitalize;
 }
+
+
+/* btn */
 .btn_small {
   display: block;
   width: 140px; height: 48px;
   box-sizing: border-box; padding: 15px 18px;
-  color:#1c1c1c; text-align: center; text-transform: uppercase;
+  color:#1c1c1c; text-align: center; text-transform: uppercase; font-size: 14px;
   cursor: pointer;
 }
 .btn_large {
   display: block;
   width: 260px; height: 56px;
   box-sizing: border-box; padding: 19px 18px;
-  text-align: center; text-transform: uppercase;
+  text-align: center; text-transform: uppercase; font-size: 14px;
   cursor: pointer;
 }
 .btn_round {
@@ -30,15 +34,44 @@ h2 {
   width: 140px; height: 44px;
   box-sizing: border-box; border-radius: 20px; border: 1px solid #1c1c1c;
   padding: 12px 18px;
-  color:#1c1c1c; text-align: center; text-transform: uppercase;
+  color:#1c1c1c; text-align: center; text-transform: uppercase; font-size: 14px;
   cursor: pointer;
 }
+.btn_circle {
+  display: block;
+  width: 60px; height: 60px;
+  box-sizing: border-box; border-radius: 100%; border: 0;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  cursor: pointer;
+}
+
 .blind_wrap a {
   display: block; width: 100%; height: 100%;
 }
 .blind_wrap a > span {
   display: block;overflow: hidden;
   width: 0; height: 0; 
+}
+
+.gallery_wrap {
+  position: relative;
+  width: 100%; height: auto;
+}
+.gallery_wrap > button {
+  position: absolute; top: 0; bottom: 0; margin: auto;
+}
+.gallery_wrap > .prev {
+  left: 100px;
+}
+.gallery_wrap > .next {
+  right: 100px;
+}
+.gallery_wrap > .action {
+  display: none;
+}
+.prev > img, .next > img {
+  width: 16px; height: 27px;
 }
 
 /* design */
@@ -157,14 +190,17 @@ h2 {
 #slideBox {
   overflow: hidden;
   width: 100%; height: 680px;
-  padding: 110px 88px; padding-right: 0;
+  padding: 110px 0;
   background-color: #fff;
+}
+#slideBox h2 {
+  margin-left: 88px;
 }
   .slide_nav_area {
     width: 3000px; height: 320px;
-    margin-top: 68px;
+    padding-left: 88px; margin-top: 68px;
   }
-  .slide_nav_area > li {
+  .slide_nav_area li {
     float: left;
     width: 260px; height: auto;
     margin-left: 30px;
@@ -172,12 +208,12 @@ h2 {
   .slide_nav_area li:first-of-type {
     margin-left: 0;
   }
-  .slide_nav_area > li > div {
+  .slide_nav_area li div {
     width: 260px; height: 260px;
     margin-bottom: 32px;
     background-color: #3aa;
   }
-  .slide_nav_area > li > p {
+  .slide_nav_area li p {
     display: block;
     color: #1c1c1c;
     font-size: 28px; font-weight: 700; text-align: center;
@@ -242,31 +278,30 @@ h2 {
 #recipeBox {
   overflow: hidden;
   width: 100%; height: 862px;
-  padding-top: 88px; padding-left: 89px;
+  padding-top: 88px;
   background-color: #fff;
 }
   #recipeBox ul {
     width: 2000px; height: auto;
-    margin-top: 38px;
+    margin-top: 38px; padding-left: 88px;
   }
-  #recipeBox > ul > li {
+  #recipeBox li {
     float: left;
     width: 366px; height: 550px;
     margin-right: 26px; border-radius: 20px; padding:300px 30px 0 40px;
     background-color: #ccc;
   }
-  #recipeBox > ul > li:last-of-type {
+  #recipeBox ul > li:last-of-type {
     margin-right: 0;
   }
   .recipe_title {
     font-size: 28px; font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
   .recipe_title + p {
     font-size: 18px; line-height: 1.2;
     margin-bottom: 16px;
   }
-
   
 /* franchise */
 #franchise {
@@ -289,11 +324,36 @@ h2 {
   text-align: center;
 }
   .shop_area {
+    position: relative;
     float: left;
     width: 380px; height: 420px;
-    margin-top: 90px;
+    margin-top: 90px; padding: 56px 44px;
     background-color: #555;
   }
+  .shop_area h3 {
+    width: auto; height: auto;
+    margin-bottom: 20px;
+    font-size: 36px; color: #fff;
+  }
+  .shop_area > p {
+    font-size: 18px; color: #fff;
+  }
+  .shop_area .shop_search {
+    position: absolute; bottom: 56px; left: 44px;
+    width: 290px; height: 52px;
+    padding: 14px 0; padding-left: 18px; border: 3px solid #fff;
+    background: rgba(255, 255, 255, 0.5); color: #505050;
+  }
+  .shop_search > div {
+    position: absolute; right: 0; top: 0;
+    width: 46px; height: 46px;
+    padding: 10px;
+    background-color: #c30e2f;
+  }
+  .shop_search > div img {
+    width: 28px; height: 28px;
+  }
+
   .social_area {
     position: relative;
     float: right;
@@ -346,7 +406,7 @@ h2 {
   #footBox > h2 {
     float: left;
     width: 49px; height: 94px;
-    background-color: #fff;
+    background-color: #ccc;
   }
   #footBox h3 {
     font-size: 22px; font-weight: 700;
@@ -382,7 +442,7 @@ h2 {
       float: left;
       width: 30px; height: 30px;
       margin-left: 22px;
-      background-color: #fff;
+      background-color: #ccc;
     }
     .foot_family li:first-of-type {
       margin-left: 0;

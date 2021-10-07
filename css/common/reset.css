@@ -1,20 +1,22 @@
 @charset "UTF-8";
 /* reset.css */
+
 html, body {
   margin: 0; padding: 0; border: 0;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Mulish', 'KoPubDotumMedium', sans-serif;
+  font-style: normal;
   box-sizing: border-box;
 }
 h1, h2, h3, h4, h5, h6, p, pre, address, ul, li, ol, dl, dt, dd, hr, img, div {
   margin: 0; padding: 0; border: 0;
-  font-family: sans-serif; font-size: 100%;
+  font-family: 'Mulish', 'KoPubDotumMedium', sans-serif; font-size: 100%;
   box-sizing: border-box;
 }
 a {
   text-decoration: none; color: inherit;
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 ul, ol {
   list-style: none; 

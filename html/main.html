@@ -7,8 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>main</title>
 
+  <!-- js -->
   <script src="../js/base/modernizr-custom.js"></script>
 
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../fonts/KoPubDotumMedium.css">
+
+  <!-- css -->
   <link rel="stylesheet" href="../css/common/reset.css">
   <link rel="stylesheet" href="../css/common/common.css">
   <link rel="stylesheet" href="../css/src/main.css">
@@ -24,11 +32,11 @@
       <nav id="gnb">
         <h2 class="blind">navigation</h2>
         <ul>
-          <li>메뉴소개</li>
-          <li>이용방법</li>
-          <li>이벤트&뉴스</li>
-          <li>브랜드소개</li>
-          <li>프랜차이즈</li>
+          <li><a href="#">메뉴소개</a></li>
+          <li><a href="#">이용방법</a></li>
+          <li><a href="#">이벤트&뉴스</a></li>
+          <li><a href="#">브랜드소개</a></li>
+          <li><a href="#">프랜차이즈</a></li>
         </ul>
       </nav>
       <nav id="unb">
@@ -60,16 +68,20 @@
 
     <section id="slideBox">
       <h2>Gongcha Menu</h2>
-      <ul class="slide_nav_area">
-        <li><div class="menu_img"></div><p>Lorem ipsum</p></li>
-        <li><div class="menu_img"></div><p>Lorem ipsum</p></li>
-        <li><div class="menu_img"></div><p>Lorem ipsum</p></li>
-        <li><div class="menu_img"></div><p>Lorem ipsum</p></li>
-        <li><div class="menu_img"></div><p>Lorem ipsum</p></li>
-        <li><div class="menu_img"></div><p>Lorem ipsum</p></li>
-        <li><div class="menu_img"></div><p>Lorem ipsum</p></li>
-        <li><div class="menu_img"></div><p>Lorem ipsum</p></li>
-      </ul>
+      <div class="gallery_wrap">
+        <ul class="slide_nav_area">
+          <li><a href="#"><div class="menu_img"></div><p>Lorem ipsum</p></a></li>
+          <li><a href="#"><div class="menu_img"></div><p>Lorem ipsum</p></a></li>
+          <li><a href="#"><div class="menu_img"></div><p>Lorem ipsum</p></a></li>
+          <li><a href="#"><div class="menu_img"></div><p>Lorem ipsum</p></a></li>
+          <li><a href="#"><div class="menu_img"></div><p>Lorem ipsum</p></a></li>
+          <li><a href="#"><div class="menu_img"></div><p>Lorem ipsum</p></a></li>
+          <li><a href="#"><div class="menu_img"></div><p>Lorem ipsum</p></a></li>
+          <li><a href="#"><div class="menu_img"></div><p>Lorem ipsum</p></a></li>
+        </ul>
+        <button type="button" class="btn_circle prev action"><img src="../img/btn_prev2.png" alt="prev"></button>
+        <button type="button" class="btn_circle next"><img src="../img/btn_next2.png" alt="next"></button>
+      </div>
     </section><!-- //#slideBox -->
 
     <article id="orderBox">
@@ -104,32 +116,35 @@
 
     <article id="recipeBox">
       <h2>Tea Recipe</h2>
-      <ul>
-        <li>
-          <h3 class="recipe_title">Lorem, ipsum.</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi doloremque quaerat at, totam deserunt beatae.</p>
-          <a href="#" class="btn_round">view more</a>
-          <span class="img"></span>
-        </li>
-        <li>
-          <h3 class="recipe_title">Lorem, ipsum.</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi doloremque quaerat at, totam deserunt beatae.</p>
-          <a href="#" class="btn_round">view more</a>
-          <span class="img"></span>
-        </li>
-        <li>
-          <h3 class="recipe_title">Lorem, ipsum.</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi doloremque quaerat at, totam deserunt beatae.</p>
-          <a href="#" class="btn_round">view more</a>
-          <span class="img"></span>
-        </li>
-        <li>
-          <h3 class="recipe_title">Lorem, ipsum.</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi doloremque quaerat at, totam deserunt beatae.</p>
-          <a href="#" class="btn_round">view more</a>
-          <span class="img"></span>
-        </li>
-      </ul>
+      <div class="gallery_wrap clearfix">
+        <ul>
+          <li>
+            <h3 class="recipe_title">Lorem, ipsum.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi doloremque quaerat at, totam deserunt beatae.</p>
+            <a href="#" class="btn_round">view more</a>
+            <span class="img"></span>
+          </li>
+          <li>
+            <h3 class="recipe_title">Lorem, ipsum.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi doloremque quaerat at, totam deserunt beatae.</p>
+            <a href="#" class="btn_round">view more</a>
+            <span class="img"></span>
+          </li>
+          <li>
+            <h3 class="recipe_title">Lorem, ipsum.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi doloremque quaerat at, totam deserunt beatae.</p>
+            <a href="#" class="btn_round">view more</a>
+            <span class="img"></span>
+          </li>
+          <li>
+            <h3 class="recipe_title">Lorem, ipsum.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi doloremque quaerat at, totam deserunt beatae.</p>
+            <a href="#" class="btn_round">view more</a>
+            <span class="img"></span>
+          </li>
+        </ul>
+        <button type="button" class="btn_circle prev action"><img src="../img/btn_prev2.png" alt="prev"></button>
+        <button type="button" class="btn_circle next"><img src="../img/btn_next2.png" alt="next"></button>
     </article><!-- //#recipeBox -->
     <section id="franchise">
       <h2 class="blind">franchise</h2>
@@ -141,11 +156,18 @@
 
     <section id="liveBox">
       <h2>Gongcha Live</h2>
-      <div class="shop_area"></div>
+      <div class="shop_area">
+        <h3>Lorem, ipsum.</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <div class="shop_search">
+          <p>Lorem, ipsum dolor.</p>
+          <div><a href="#"><img src="../img/search.png" alt="search_button"></a></div>
+        </div>
+      </div>
       <div class="social_area">
         <div class="live_btn">
-          <button type="button" class="prev"><span>prev</span></button>
-          <button type="button" class="next"><span>next</span></button>
+          <button type="button" class="prev"><img src="../img/btn_prev2.png" alt="prev"></button>
+          <button type="button" class="next"><img src="../img/btn_next2.png" alt="next"></button>
       </div>
         <ul>
           <li></li>
@@ -157,7 +179,7 @@
       <!-- <h2 class="blind">sideBox</h2>
     </aside>//#sideBox -->
     <footer id="footBox">
-      <h2 class="blind"><a href="#"><span>site information</span></a></h2>
+      <h2 class="blind blind_wrap"><a href="#"><span>site information</span></a></h2>
       <div class="foot_info">
         <h3>Lorem, ipsum.</h3>
         <p>Lorem ipsum dolor sit amet.</p>
@@ -172,7 +194,7 @@
         <p>Lorem ipsum dolor sit amet.</p>
       </div>
       <div class="foot_family">
-        <ul class="clearfix">
+        <ul class="clearfix blind_wrap">
           <li><a href="#"><span>fb</span></a></li>
           <li><a href="#"><span>insta</span></a></li>
           <li><a href="#"><span>yt</span></a></li>
