@@ -2,7 +2,6 @@
 /* main.css */
 
 /* common */
-
 h2 {
   font-size: 40px;
 }
@@ -12,8 +11,15 @@ h2 {
   font-size: 40px; font-weight: 700; line-height: 52px; 
   text-align: center; text-transform: capitalize;
 }
+.blind_wrap a {
+  display: block; width: 100%; height: 100%;
+}
+.blind_wrap a > span {
+  display: block;overflow: hidden;
+  width: 0; height: 0; 
+}
 
-/* btn */
+/* common_btn */
 .btn_small {
   display: block;
   width: 140px; height: 48px;
@@ -45,14 +51,6 @@ h2 {
   cursor: pointer;
 }
 
-.blind_wrap a {
-  display: block; width: 100%; height: 100%;
-}
-.blind_wrap a > span {
-  display: block;overflow: hidden;
-  width: 0; height: 0; 
-}
-
 .gallery_wrap {
   position: relative;
   width: 100%; height: auto;
@@ -73,6 +71,7 @@ h2 {
   width: 16px; height: 27px;
 }
 
+
 /* design */
 #wrap {
   width: 100%; height: auto; min-width: 1280px; 
@@ -90,38 +89,36 @@ h2 {
     width: 62px; height: 82px;
     background-color: #c30e2f;
   }
-
-/* gnb */
-#gnb {
-  float: left;
-  width: auto; height: 34px;
-  margin: 24px auto; margin-left: 143px;
-}
-  #gnb li {
+  /* gnb */
+  #gnb {
     float: left;
-    margin-left: 60px;
-    color: #1c1c1c;
-    font-size: 22px; font-weight: 700; line-height: 32px;
+    width: auto; height: 34px;
+    margin: 24px auto; margin-left: 143px;
   }
-  #gnb li:first-of-type {
-    margin-left: 0;
-  }
-
+    #gnb li {
+      float: left;
+      margin-left: 60px;
+      color: #1c1c1c;
+      font-size: 22px; font-weight: 700; line-height: 32px;
+    }
+    #gnb li:first-of-type {
+      margin-left: 0;
+    }
   /* unb */
   #unb {
     float: right;
     width: 124px; height: auto;
     margin: 20px 0;
   }
-  #unb li {
-    float: left;
-    width: 32px; height: 32px;
-    margin-left: 56px;
-    background-color: #eee;
-  }
-  #unb li:first-of-type {
-    margin-left: 0;
-  }
+    #unb li {
+      float: left;
+      width: 32px; height: 32px;
+      margin-left: 56px;
+      background-color: #eee;
+    }
+    #unb li:first-of-type {
+      margin-left: 0;
+    }
   
 /* viewBox */
 #viewBox {
@@ -147,44 +144,43 @@ h2 {
     margin-top: 48px; 
     background-color: #fff;
   }
-
   /* view_btn */
   .view_btn {
     position: absolute; top: 170px; left: 0; right: 0;
     width: 100%; height: 300px;
     margin: 0 auto;
   }
-  .view_btn a {
-    display: block;
-    width: 200px; height: 300px;
-    text-align: center;
-    background-color: transparent;
-  }
-  .view_btn img {
-    width: 18px; height: 42px;
-    margin: 130px auto;
-  }
-  .view_btn .prev {
-    float: left;
-  }
-  .view_btn .next {
-    float: right;
-  }
+    .view_btn a {
+      display: block;
+      width: 200px; height: 300px;
+      text-align: center;
+      background-color: transparent;
+    }
+    .view_btn img {
+      width: 18px; height: 42px;
+      margin: 130px auto;
+    }
+    .view_btn .prev {
+      float: left;
+    }
+    .view_btn .next {
+      float: right;
+    }
   .indicator {
     display: block;
     position: absolute; bottom: 44px; left: 0; right: 0;
     width: 54px; height: auto;
     margin: 0 auto;
   }
-  .indicator li {
-    float: left;
-    width: 12px; height: 12px;
-    border-radius: 100%; margin-right: 9px;
-    background-color: #fff;
-  }
-  .indicator li:last-of-type {
-    margin-right: 0;
-  }
+    .indicator li {
+      float: left;
+      width: 12px; height: 12px;
+      border-radius: 100%; margin-right: 9px;
+      background-color: #fff;
+    }
+    .indicator li:last-of-type {
+      margin-right: 0;
+    }
 
 /* slideBox */
 #slideBox {
@@ -193,31 +189,31 @@ h2 {
   padding: 110px 0;
   background-color: #fff;
 }
-#slideBox h2 {
-  margin-left: 88px;
-}
+  #slideBox h2 {
+    margin-left: 88px;
+  }
   .slide_nav_area {
     width: 3000px; height: 320px;
     padding-left: 88px; margin-top: 68px;
   }
-  .slide_nav_area li {
-    float: left;
-    width: 260px; height: auto;
-    margin-left: 30px;
-  }
-  .slide_nav_area li:first-of-type {
-    margin-left: 0;
-  }
-  .slide_nav_area li div {
-    width: 260px; height: 260px;
-    margin-bottom: 32px;
-    background-color: #3aa;
-  }
-  .slide_nav_area li p {
-    display: block;
-    color: #1c1c1c;
-    font-size: 28px; font-weight: 700; text-align: center;
-  }
+    .slide_nav_area li {
+      float: left;
+      width: 260px; height: auto;
+      margin-left: 30px;
+    }
+    .slide_nav_area li:first-of-type {
+      margin-left: 0;
+    }
+    .slide_nav_area li div {
+      width: 260px; height: 260px;
+      margin-bottom: 32px;
+      background-color: #3aa;
+    }
+    .slide_nav_area li p {
+      display: block;
+      color: #1c1c1c;
+      font-size: 28px; font-weight: 700; text-align: center;
+    }
 
 /* orderBox */
 #orderBox {
@@ -230,39 +226,40 @@ h2 {
     margin: 0 auto;
     text-align: center;
   }
-  #orderBox > ul{
+  #orderBox > ul {
     width: 990px; height: 382px;
     margin: 0 auto;
     text-align: center;
   }
-  #orderBox > ul > li {
-    float: left;
-    width: 262px; height: auto;
-    margin-top: 75px; margin-right: 100px;
-  }
-  #orderBox > ul >li:last-of-type {
-    margin-right: 0;
-  }
-  #orderBox .order_img {
-    display: block;
-    width: 200px; height: 200px;
-    margin: 0 auto; border-radius: 100%;
-    background-color: #fff;
-  }
-  #orderBox .order_title {
-    width: 100%; height: auto;
-    margin: 0 auto; margin-top: 39px;
-    font-size: 28px; font-weight: 700;
-  }
-  #orderBox .order_text {
-    width: 100%; height: 92px;
-    margin-top: 9px;
-    font-size: 18px;
-  }
-  #orderBox .btn_large {
-    margin: 0 auto; margin-top: 136px;
-    background-color: #c30e2f
-  }
+    #orderBox > ul > li {
+      float: left;
+      width: 262px; height: auto;
+      margin-top: 75px; margin-right: 100px;
+    }
+    #orderBox > ul > li:last-of-type {
+      margin-right: 0;
+    }
+      #orderBox .order_img {
+        display: block;
+        width: 200px; height: 200px;
+        margin: 0 auto; border-radius: 100%;
+        background-color: #fff;
+      }
+      #orderBox .order_title {
+        width: 100%; height: auto;
+        margin: 0 auto; margin-top: 39px;
+        font-size: 28px; font-weight: 700;
+      }
+      #orderBox .order_text {
+        width: 100%; height: 92px;
+        margin-top: 9px;
+        font-size: 18px;
+      }
+      #orderBox .btn_large {
+        margin: 0 auto; margin-top: 136px;
+        background-color: #c30e2f
+      }
+
 /* messageBox */
 #messageBox {
   width: 100%; height: 472px;
@@ -288,23 +285,23 @@ h2 {
     width: 3000px; height: auto;
     margin-top: 38px; padding-left: 88px;
   }
-  #recipeBox li {
-    float: left;
-    width: 366px; height: 550px;
-    margin-right: 26px; border-radius: 20px; padding:300px 30px 0 40px;
-    background-color: #ccc;
-  }
-  #recipeBox ul > li:last-of-type {
-    margin-right: 0;
-  }
-  .recipe_title {
-    font-size: 28px; font-weight: 700;
-    margin-bottom: 10px;
-  }
-  .recipe_title + p {
-    font-size: 18px; line-height: 1.2;
-    margin-bottom: 16px;
-  }
+    #recipeBox li {
+      float: left;
+      width: 366px; height: 550px;
+      margin-right: 26px; border-radius: 20px; padding:300px 30px 0 40px;
+      background-color: #ccc;
+    }
+    #recipeBox ul > li:last-of-type {
+      margin-right: 0;
+    }
+      .recipe_title {
+        font-size: 28px; font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .recipe_title + p {
+        font-size: 18px; line-height: 1.2;
+        margin-bottom: 16px;
+      }
   
 /* franchise */
 #franchise {
@@ -323,9 +320,9 @@ h2 {
   margin: 0 auto; padding: 92px;
   background-color: #fff;
 }
-#liveBox h2 {
-  text-align: center;
-}
+  #liveBox h2 {
+    text-align: center;
+  }
   .shop_area {
     position: relative;
     float: left;
@@ -333,30 +330,29 @@ h2 {
     margin-top: 90px; padding: 56px 44px;
     background-color: #555;
   }
-  .shop_area h3 {
-    width: auto; height: auto;
-    margin-bottom: 20px;
-    font-size: 36px; color: #fff;
-  }
-  .shop_area > p {
-    font-size: 18px; color: #fff;
-  }
-  .shop_area .shop_search {
-    position: absolute; bottom: 56px; left: 44px;
-    width: 76.3%; height: 52px;
-    padding: 14px 0; padding-left: 18px; border: 3px solid #fff;
-    background: rgba(255, 255, 255, 0.5); color: #505050;
-  }
-  .shop_search > div {
-    position: absolute; right: 0; top: 0;
-    width: 46px; height: 46px;
-    padding: 10px;
-    background-color: #c30e2f;
-  }
-  .shop_search > div img {
-    width: 28px; height: 28px;
-  }
-
+    .shop_area h3 {
+      width: auto; height: auto;
+      margin-bottom: 20px;
+      font-size: 36px; color: #fff;
+    }
+    .shop_area > p {
+      font-size: 18px; color: #fff;
+    }
+    .shop_area .shop_search {
+      position: absolute; bottom: 56px; left: 44px;
+      width: 76.3%; height: 52px;
+      padding: 14px 0; padding-left: 18px; border: 3px solid #fff;
+      background: rgba(255, 255, 255, 0.5); color: #505050;
+    }
+    .shop_search > div {
+      position: absolute; right: 0; top: 0;
+      width: 46px; height: 46px;
+      padding: 10px;
+      background-color: #c30e2f;
+    }
+      .shop_search > div img {
+        width: 28px; height: 28px;
+      }
   .social_area {
     position: relative;
     float: right;
@@ -384,15 +380,15 @@ h2 {
       width: auto; height: auto;
       margin: 0 30px;
     }
-    .social_area li {
-      float: left;
-      width: 48.5%; height: 420px;
-      margin-right: 3%;
-      background-color: #eee;
-    }
-    .social_area li:last-of-type {
-      margin-right: 0;
-    }
+      .social_area li {
+        float: left;
+        width: 48.5%; height: 420px;
+        margin-right: 3%;
+        background-color: #eee;
+      }
+      .social_area li:last-of-type {
+        margin-right: 0;
+      }
 
 /* sideBox */
 /* #sideBox {
@@ -419,7 +415,6 @@ h2 {
   #footBox p {
     font-size: 16px; line-height: 1.5rem;
   }
-  
   .foot_info {
     float: left;
     width: 258px; height: 150px;
@@ -439,18 +434,18 @@ h2 {
     float: right;
     width: 182px; height: 90px;
   }
-    .foot_brand ul {
+    .foot_family ul {
       width: auto; height: auto;
     }
-    .foot_family li {
-      float: left;
-      width: 30px; height: 30px;
-      margin-left: 22px;
-      background-color: #ccc;
-    }
-    .foot_family li:first-of-type {
-      margin-left: 0;
-    }
+      .foot_family li {
+        float: left;
+        width: 30px; height: 30px;
+        margin-left: 22px;
+        background-color: #ccc;
+      }
+      .foot_family li:first-of-type {
+        margin-left: 0;
+      }
     .foot_brand {
       width: 182px; height: 40px;
       margin-top: 20px; padding-left: 14px; 
