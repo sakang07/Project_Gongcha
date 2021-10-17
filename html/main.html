@@ -8,7 +8,7 @@
   <title>공차</title>
 
   <!-- js -->
-  <script src="../js/base/modernizr-custom.js"></script>
+  <!-- <script src="../js/base/modernizr-custom.js"></script> -->
 
   <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,44 +27,49 @@
 <body>
   <!-- layout -->
   <div id="wrap">
-    <header id="headBox" class="clearfix blind_wrap">
-      <h1><a href="#"><span>Gongcha</span></a></h1>
-      <nav id="gnb">
-        <h2 class="blind">navigation</h2>
-        <ul>
-          <li><a href="#">메뉴소개</a></li>
-          <li><a href="#">이용방법</a></li>
-          <li><a href="#">이벤트&뉴스</a></li>
-          <li><a href="#">브랜드소개</a></li>
-          <li><a href="#">프랜차이즈</a></li>
-        </ul>
-      </nav>
-      <nav id="unb">
-        <h2 class="blind">unb</h2>
-        <ul class="blind_wrap">
-          <li><a href="#"><span>search</span></a></li>
-          <li><a href="#"><span>user</span></a></li>
-        </ul>
-      </nav>
-      
+    <header id="headBox">
+      <div class="container clearfix blind_wrap">
+        <h1><a href="#"><span>Gongcha</span></a></h1>
+        <nav id="gnb">
+          <h2 class="blind">navigation</h2>
+          <ul>
+            <li><a href="#">메뉴소개</a></li>
+            <li><a href="#">이용방법</a></li>
+            <li><a href="#">이벤트&뉴스</a></li>
+            <li><a href="#">브랜드소개</a></li>
+            <li><a href="#">프랜차이즈</a></li>
+          </ul>
+        </nav>
+        <nav id="unb">
+          <h2 class="blind">unb</h2>
+          <ul class="blind_wrap">
+            <li><a href="#"><span>search</span></a></li>
+            <li><a href="#"><span>user</span></a></li>
+          </ul>
+        </nav>
+      </div>
     </header><!-- //#headBox -->
 
     <section id="viewBox">
-      <h2 class="blind">viewBox</h2>
-      <div class="view_btn">
-        <a href="#" class="prev"><img src="../img/btn_prev.png" alt="prev"></a>
-        <a href="#" class="next"><img src="../img/btn_next.png" alt="next"></a>
-      </div><!-- //.view_btn -->
-      <ul class="indicator blind_wrap">
-        <li><a href="#"><span>01</span></a></li>
-        <li><a href="#"><span>02</span></a></li>
-        <li><a href="#"><span>03</span></a></li>
-      </ul>
-      <div class="view_text">
-        <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nobis doloribus sequi possimus tempore cupiditate voluptate dicta animi eum voluptatem?</p>
-        <a href="#" class="btn_small">view more</a>
-      </div><!-- //.view_text -->
+      <div class="container">
+        <div class="view_inner">
+          <h2 class="blind">viewBox</h2>
+          <div class="view_btn">
+            <a href="#" class="prev"><img src="../img/btn_prev.png" alt="prev"></a>
+            <a href="#" class="next"><img src="../img/btn_next.png" alt="next"></a>
+          </div><!-- //.view_btn -->
+          <ul class="indicator blind_wrap">
+            <li><a href="#"><span>01</span></a></li>
+            <li><a href="#"><span>02</span></a></li>
+            <li><a href="#"><span>03</span></a></li>
+          </ul>
+          <div class="view_text">
+            <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nobis doloribus sequi possimus tempore cupiditate voluptate dicta animi eum voluptatem?</p>
+            <a href="#" class="btn_small">view more</a>
+          </div><!-- //.view_text -->
+        </div>
+      </div>
     </section><!-- //#viewBox -->
 
     <section id="slideBox">
@@ -86,25 +91,27 @@
     </section><!-- //#slideBox -->
 
     <article id="orderBox">
-      <h2>How to Order</h2>
-      <ul>
-        <li>
-          <span class="order_img"></span>
-          <h3 class="order_title">Lorem, ipsum.</h3>
-          <p class="order_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, soluta?</p>
-        </li>
-        <li>
-          <span class="order_img"></span>
-          <h3 class="order_title">Lorem, ipsum.</h3>
-          <p class="order_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, soluta?</p>
-        </li>
-        <li>
-          <span class="order_img"></span>
-          <h3 class="order_title">Lorem, ipsum.</h3>
-          <p class="order_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, soluta?</p>
-        </li>
-      </ul>
-      <a href="#" class="btn_large">view more</a>
+      <div class="container">
+        <h2>How to Order</h2>
+        <ul>
+          <li>
+            <span class="order_img"></span>
+            <h3 class="order_title">Lorem, ipsum.</h3>
+            <p class="order_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, soluta?</p>
+          </li>
+          <li>
+            <span class="order_img"></span>
+            <h3 class="order_title">Lorem, ipsum.</h3>
+            <p class="order_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, soluta?</p>
+          </li>
+          <li>
+            <span class="order_img"></span>
+            <h3 class="order_title">Lorem, ipsum.</h3>
+            <p class="order_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, soluta?</p>
+          </li>
+        </ul>
+        <a href="#" class="btn_large">view more</a>
+      </div>
     </article><!-- //#orderBox -->
 
     <section id="messageBox">
@@ -166,6 +173,7 @@
         <button type="button" class="btn_circle next"><img src="../img/btn_next2.png" alt="next"></button>
       </div>
     </article><!-- //#recipeBox -->
+
     <section id="franchise">
       <h2 class="blind">franchise</h2>
       <p class="title">Lorem, ipsum dolor <br />
@@ -175,53 +183,56 @@
     </section><!-- //#franchise -->
 
     <section id="liveBox">
-      <h2>Gongcha Live</h2>
-      <div class="shop_area">
-        <h3>Lorem, ipsum.</h3>
-        <p>Lorem ipsum dolor sit amet.</p>
-        <div class="shop_search">
-          <p>Lorem, ipsum dolor.</p>
-          <div><a href="#"><img src="../img/search.png" alt="search_button"></a></div>
+      <div class="container">
+        <h2>Gongcha Live</h2>
+        <div class="shop_area">
+          <h3>Lorem, ipsum.</h3>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <div class="shop_search">
+            <p>Lorem, ipsum dolor.</p>
+            <div><a href="#"><img src="../img/search.png" alt="search_button"></a></div>
+          </div>
+        </div>
+        <div class="social_area">
+          <div class="live_btn">
+            <button type="button" class="prev"><img src="../img/btn_prev2.png" alt="prev"></button>
+            <button type="button" class="next"><img src="../img/btn_next2.png" alt="next"></button>
+        </div>
+          <ul>
+            <li></li>
+            <li></li>
+          </ul>
         </div>
       </div>
-      <div class="social_area">
-        <div class="live_btn">
-          <button type="button" class="prev"><img src="../img/btn_prev2.png" alt="prev"></button>
-          <button type="button" class="next"><img src="../img/btn_next2.png" alt="next"></button>
-      </div>
-        <ul>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
     </section><!-- //#liveBox -->
-
     <!-- <aside id="sideBox">
       <h2 class="blind">sideBox</h2>
     </aside>//#sideBox -->
 
     <footer id="footBox">
-      <h2 class="blind blind_wrap"><a href="#"><span>site information</span></a></h2>
-      <div class="foot_info">
-        <h3>Lorem, ipsum.</h3>
-        <p>Lorem ipsum dolor sit amet.</p>
-        <p>Lorem ipsum dolor sit amet.</p>
-        <p>Lorem ipsum dolor sit amet.</p>
-        <p>Lorem ipsum dolor sit amet.</p>
-      </div>
-      <div class="foot_cs">
-        <h3>Lorem, ipsum.</h3>
-        <p><span class="phone_number">00-000-0000</span></p>
-        <p>Lorem ipsum dolor sit amet.</p>
-        <p>Lorem ipsum dolor sit amet.</p>
-      </div>
-      <div class="foot_family">
-        <ul class="clearfix blind_wrap">
-          <li><a href="#"><span>fb</span></a></li>
-          <li><a href="#"><span>insta</span></a></li>
-          <li><a href="#"><span>yt</span></a></li>
-        </ul>
-        <div class="foot_brand">brand sites</div>
+      <div class="container">
+        <h2 class="blind blind_wrap"><a href="#"><span>site information</span></a></h2>
+        <div class="foot_info">
+          <h3>Lorem, ipsum.</h3>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="foot_cs">
+          <h3>Lorem, ipsum.</h3>
+          <p><span class="phone_number">00-000-0000</span></p>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="foot_family">
+          <ul class="clearfix blind_wrap">
+            <li><a href="#"><span>fb</span></a></li>
+            <li><a href="#"><span>insta</span></a></li>
+            <li><a href="#"><span>yt</span></a></li>
+          </ul>
+          <div class="foot_brand">brand sites</div>
+        </div>
       </div>
     </footer><!-- //#footBox -->
   </div><!-- //#wrap -->
