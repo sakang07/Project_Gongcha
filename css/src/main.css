@@ -30,22 +30,35 @@ h2 {
   width: 140px; height: 48px;
   box-sizing: border-box; padding: 15px 18px;
   color:#1c1c1c; text-align: center; text-transform: uppercase; font-size: 14px;
-  cursor: pointer;
 }
+.btn_small:hover {
+  transform: scale(1.1);
+  transition: all 300ms linear;
+}
+.btn_small:focus {
+  border: 2px solid #171717;  
+}
+
 .btn_large {
   display: block;
   width: 260px; height: 56px;
   box-sizing: border-box; padding: 19px 18px;
   text-align: center; text-transform: uppercase; font-size: 14px;
-  cursor: pointer;
 }
+.btn_large:hover {
+  transform: scale(1.1);
+  transition: all 300ms linear;
+}
+.btn_large:focus {
+  border: 2px solid #171717;  
+}
+
 .btn_round {
   display: block;
   width: 140px; height: 44px;
   box-sizing: border-box; border-radius: 20px; border: 1px solid #1c1c1c;
   padding: 12px 18px;
   color:#1c1c1c; text-align: center; text-transform: uppercase; font-size: 14px;
-  cursor: pointer;
 }
 .btn_circle {
   display: block;
@@ -53,7 +66,13 @@ h2 {
   box-sizing: border-box; border-radius: 100%; border: 0;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
   background-color: #fff;
-  cursor: pointer;
+}
+.btn_circle:hover {
+  transform: scale(1.2);
+  transition: all 300ms linear;
+}
+.btn_circle:focus {
+  border: 2px solid #171717;
 }
 
 .gallery_wrap {
@@ -61,7 +80,7 @@ h2 {
   width: 100%; height: auto;
 }
 .gallery_wrap > button {
-  position: absolute; top: 0; bottom: 0; margin: auto;
+  position: absolute; top: 0; bottom: 0; margin: auto; z-index: 500;
 }
 .gallery_wrap > .prev {
   left: 100px;
@@ -153,42 +172,69 @@ h2 {
       margin-top: 48px; 
       background-color: #fff;
     }
+
     /* view_btn */
     .view_btn {
-      position: absolute; top: 170px; left: 0; right: 0;
-      width: 100%; height: 300px;
-      margin: 0 auto;
+      width: 100%; height: 100%;
     }
-      .view_btn a {
-        display: block;
-        width: 200px; height: 300px;
-        text-align: center;
-        background-color: transparent;
-      }
-      .view_btn img {
-        width: 18px; height: 42px;
-        margin: 130px auto;
-      }
-      .view_btn .prev {
-        float: left;
-      }
-      .view_btn .next {
-        float: right;
-      }
+    .view_btn li {
+      width: 80px; height: 300px;
+      background-position: 50%;
+      background-size: 18px, 42px;
+      background-repeat: no-repeat;
+    }
+    .view_btn .prev {
+      position: absolute; top: 50%; left: 0;
+      transform: translateY(-50%);
+      background-image: url(../../img/btn_prev.png);
+    }
+    .view_btn .next {
+      position: absolute; top: 50%; right: 0;
+      transform: translateY(-50%);
+      background-image: url(../../img/btn_next.png);
+    }
+    .view_btn a {
+      display: block;
+      width: 100%; height: 100%;
+    }
+    .view_btn li:hover {
+      background-color: rgba(255,255,255,0.3);
+    }
+
+    /* indicator */
     .indicator {
       display: block;
-      position: absolute; bottom: 44px; left: 0; right: 0;
-      width: 54px; height: auto;
-      margin: 0 auto;
+      position: absolute; bottom: 44px; left: 50%;
+      transform: translate(50%);
+      width: auto; height: auto;
     }
       .indicator li {
         float: left;
-        width: 12px; height: 12px;
-        border-radius: 100%; margin-right: 9px;
-        background-color: #fff;
+        width: 20px; height: 20px;
+        margin-right: 9px;
       }
       .indicator li:last-of-type {
         margin-right: 0;
+      }
+      .indicator a {
+        display: block;
+        width: 100%; height: 100%;
+        background-color: #fff;
+        border-radius: 100%; 
+      }
+      .indicator li.action {
+        width: 50px; 
+      }
+      .indicator li.action a {
+        border-radius: 10px;
+        background-color: #888;
+      }
+      .indicator li:hover {
+        transform: scale(1.2);
+        transition: all 300ms linear;
+      }
+      .indicator a:focus {
+        border: 2px solid #171717;
       }
 
 /* slideBox */
@@ -222,6 +268,10 @@ h2 {
       display: block;
       color: #1c1c1c;
       font-size: 28px; font-weight: 700; text-align: center;
+    }
+    .slide_nav_area li:hover {
+      transform: scale(1.1);
+      transition: all 300ms linear;
     }
 
 /* orderBox */
@@ -290,16 +340,18 @@ h2 {
   #recipeBox h2 {
     margin-left: 88px;
   }
+/* hover하면 이미지가 선명해지고 살짝 돌게, focus하면 빙 돌게 */
+
   #recipeBox ul {
     width: 3000px; height: auto;
     margin-top: 38px; padding-left: 88px;
   }
-    #recipeBox li {
+    #recipeBox .card {
       position: relative; z-index: 10;
       float: left;
       width: 366px; height: 550px;
       margin-right: 26px; border-radius: 20px; padding:300px 30px 0 40px;
-      background-color: #ccc;
+      background-color: rgba(0, 0, 0, 0.2);
     }
     #recipeBox ul > li:last-of-type {
       margin-right: 0;
@@ -312,15 +364,23 @@ h2 {
         font-size: 18px; line-height: 1.2;
         margin-bottom: 16px;
       }
-    #recipeBox ul > li a:focus + .img,
-    #recipeBox ul > li:hover .img {
-      background-color: rgba(255, 255, 255, 0.7);
+
+    /* hover시 이미지가 선명해지며 살짝 돌기 */
+    #recipeBox li:hover {
+      transform: rotateY(45deg);
+      background-color: transparent;
+      box-shadow: 10px 10px 20px #eee;
+    }
+    /* focus시 빙 돌기*/
+    #recipeBox .btn_round:focus {
+      transform: rotateY(360deg);
+      transition: all 300ms linear;
     }
     #recipeBox ul .img {
       display: block;
       position: absolute; top: 0; left: 0; z-index: -1;
       width: 100%; height: 100%;
-      transition: all 300ms ease;
+      transition: all 300ms linear;
       border-radius: 20px;
       background-color: rgba(0, 255, 0, 0);
     }
@@ -398,6 +458,14 @@ h2 {
       box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.1);
       background-color: #fff;
     }
+    .live_btn:hover > button {
+      transform: scale(1.2);
+      transition: all 300ms linear;
+    }
+    .live_btn button:focus {
+      border: 2px solid #171717;
+    }
+
     .social_area > ul {
       width: auto; height: auto;
       margin: 0 30px;
@@ -410,6 +478,10 @@ h2 {
       }
       .social_area li:last-of-type {
         margin-right: 0;
+      }
+      .social_area li:hover {
+        transform: scale(1.05);
+        transition: all 300ms linear;
       }
 
 /* sideBox */
