@@ -96,7 +96,7 @@ h2 {
 }
 
 
-/* design */
+/* design ---------------------------------*/
 #wrap {
   width: 100%; height: auto; min-width: 1280px; 
   margin: 0 auto;
@@ -111,7 +111,9 @@ h2 {
   h1 {
     float: left;
     width: 62px; height: 82px;
-    background-color: #c30e2f;
+    background-image: url(../../img/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
   }
   
   /* gnb */
@@ -120,7 +122,7 @@ h2 {
     width: auto; height: 34px;
     margin: 24px auto; margin-left: 143px;
   }
-    #gnb li {
+    /* #gnb {
       float: left;
       margin-left: 60px;
       color: #1c1c1c;
@@ -128,7 +130,60 @@ h2 {
     }
     #gnb li:first-of-type {
       margin-left: 0;
+    } */
+
+    #gnb > ul {
+      position: relative;
     }
+    #gnb > ul > li {
+      float: left;
+      margin: 0 30px;
+      color: #1c1c1c;
+      font-size: 22px; font-weight: 700; line-height: 32px;
+    }
+    #gnb a {
+      display: block;
+      width: 100%; height: 30px;
+    }
+    #gnb > ul {
+      width: 100%; height: auto;
+      background-color: #fff;
+    }
+    #gnb > ul > li {
+      float: left;
+      height: auto;
+      padding: 0 5px;
+    }
+    .nav_title {
+      width: 100%; height: 30px;
+      background-color: #fff;
+    }
+    .nav_title a {
+      display: block;
+      width: 100%; height: 100%;
+      text-align: center; line-height: 30px;
+    }
+
+    .nav_list {
+      display: none;
+      position: relative;
+      width: 100%; height: auto;
+      font-size: 18px;
+      background-color: #fff;
+    }
+    .nav_list li {
+      position: absolute; top: 34px; left: 0;
+      width: 100%; height: 40px;
+      margin-bottom: 10px;
+    }
+    .nav_list a {
+      display: block;
+      width: 100%; height: 100%;
+    }
+    #gnb:hover .nav_list {
+      display: block;
+    }
+
   /* unb */
   #unb {
     float: right;
