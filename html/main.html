@@ -9,13 +9,14 @@
 
   <!-- js -->
   <!-- <script src="../js/base/modernizr-custom.js"></script> -->
+  <script src="https://kit.fontawesome.com/b7d10af3f7.js" crossorigin="anonymous"></script>
 
   <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../fonts/KoPubDotumMedium.css">
-  <link rel="stylesheet" href="../fonts/fontAwesome/css/all.min.css">
+  <!-- <link rel="stylesheet" href="../fonts/fontAwesome/css/all.min.css"> -->
 
   <!-- css -->
   <link rel="stylesheet" href="../css/common/reset.css">
@@ -30,7 +31,7 @@
   <div id="wrap">
     <header id="headBox">
       <div class="container blind_wrap">
-        <h1><a href="#"><span>Gongcha</span></a></h1>
+        <h1><a href="../index.html"><span>Gongcha</span></a></h1>
         <nav id="gnb">
           <h2 class="blind">global navigation</h2>
           <ul>
@@ -226,8 +227,16 @@
           <h3>Lorem, ipsum.</h3>
           <p>Lorem ipsum dolor sit amet.</p>
           <div class="shop_search">
-            <p>Lorem, ipsum dolor.</p>
-            <div><a href="#"><img src="../img/search.png" alt="search_button"></a></div>
+            <form action="#" method="POST">
+              <fieldset>
+                <legend class="blind">매장 검색</legend>
+                <label for="storeSearch" class="blind">지점 입력</label>
+                <input type="search" id="storeSearch" name="store__search" value="" placeholder="지점을 입력해 주세요" />
+                <input type="submit" value="" />
+                  <!-- <div><a href="#"><img src="../img/search.png" alt="search_button"></a></div> -->
+                </input>
+              </fieldset>
+            </form>
           </div>
         </div>
         <div class="social_area">

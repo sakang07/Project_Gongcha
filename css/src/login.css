@@ -83,7 +83,7 @@
     #contBox {
       width: 100%; height: auto;
       padding-top: 152px; padding-bottom: 130px;
-      background-color: #ccc;
+      background-color: rgba(0,0,0,0.3);
     }
 
     .page_title {
