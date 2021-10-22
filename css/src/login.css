@@ -137,6 +137,7 @@
   /* line-height: 27px; */
 }
 .idcheck i {
+  float: left;
   margin-right: 8px;
   font-size: 24px;
   color: #ccc;

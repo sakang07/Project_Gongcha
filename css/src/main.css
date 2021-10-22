@@ -14,6 +14,7 @@
   background-color: #fff;
 }
   h1 {
+    position: relative; z-index: 1002;
     float: left;
     width: 62px; height: 82px;
     margin-right: 140px;
@@ -24,14 +25,24 @@
   
   /* gnb */
   #gnb {
+    position: relative; z-index: 1000;
     width: auto; height: auto;
     float: left;
     margin: 24px 0;
     text-align: center;
   }
+  #gnb::before,
+  #gnb:before {
+    content: "";
+    display: block;
+    position: absolute; left: 57%; /* 왜 57%임?? */ bottom: 0; z-index: -1;
+    width: 100vw; height: 100%;
+    margin-left: -50vw;
+    background-color: #fff;
+  }
     #gnb > ul > li {
       float: left;
-      width: 120px; height: 34px;
+      width: 120px; height: auto;
       margin-right: 40px;
       font-size: 22px; font-weight: 700; color: #1c1c1c;
     }
@@ -60,6 +71,7 @@
 
   /* unb */
   #unb {
+    position: relative; z-index: 1002;
     float: right;
     width: 124px; height: auto;
     margin: 20px 0;
