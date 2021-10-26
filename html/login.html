@@ -15,12 +15,13 @@
   <!-- css -->
   <link rel="stylesheet" href="../css/common/reset.css">
   <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/common/variable.css">
   <link rel="stylesheet" href="../css/src/login.css">
   <!-- favicon -->
   <link rel="shortcut icon" href="../favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="../favicon.png">
   <!-- js -->
-  <script src="../js/base/modernizr-custom.js"></script>
+  <script src="../js/common/modernizr-custom.js"></script>
   <script src="https://kit.fontawesome.com/b7d10af3f7.js" crossorigin="anonymous"></script>
 </head>
 
@@ -28,11 +29,11 @@
   <!-- layout -->
   <div id="wrap">
     <header id="headBox">
-      <div class="container blind_wrap">
+      <div class="container blind_wrap clearfix">
         <h1><a href="../index.html"><span>Gongcha</span></a></h1>
         <nav id="gnb">
           <h2 class="blind">global navigation</h2>
-          <ul>
+          <ul class="clearfix">
             <li>
               <div class="nav_title"><a href="#">메뉴소개</a></div>
               <ul class="nav_list">
@@ -144,27 +145,46 @@
     
     <footer id="footBox">
       <div class="container">
-        <h2 class="blind blind_wrap"><a href="#"><span>site information</span></a></h2>
-        <div class="foot_info">
-          <h3>Lorem, ipsum.</h3>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div class="foot_cs">
-          <h3>Lorem, ipsum.</h3>
-          <p><span class="phone_number">00-000-0000</span></p>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div class="foot_family">
-          <ul class="clearfix blind_wrap">
-            <li><a href="#"><span>fb</span></a></li>
-            <li><a href="#"><span>insta</span></a></li>
-            <li><a href="#"><span>yt</span></a></li>
+        <h2><a href="#"><span class="blind">site information</span></a></h2>
+        <div class="foot_nav clearfix">
+          <ul>
+            <li>회사소개</li>
+            <li>제휴/제안</li>
+            <li>고객센터</li>
+            <li class="bold">개인정보처리방침</li>
+            <li>이메일무단수집거부</li>
+            <li>HOT-LINE</li>
+            <li>사이트맵</li>
           </ul>
-          <div class="foot_brand">brand sites</div>
+          <div class="family_site">
+            <p>family site</p>
+            <!-- <form action="#" method="POST"></form> -->
+          </div>
+        </div>
+        <div class="foot_wrap">
+          <div class="foot_info">
+            <h3>(주)공차코리아</h3>
+            <p>서울 종로구 종로 47(공평동, 7층)<br />
+              대표이사 김의열<br />
+              사업자등록번호 000-00-00000<br />
+              통신판매번호 0000-서울종로-0000Lorem ipsum dolor sit amet.</p>
+            <p>GONGCHA(C)GONGCHA KOREA CO.,LTD<br />
+              ALL RIGHTS RESERVED.</p>
+          </div>
+          <div class="foot_cs">
+            <h3>Lorem, ipsum.</h3>
+            <p><span class="phone_number">00-000-0000</span></p>
+            <p>평일 오전 9시~ 오후 6시<br />
+              주말 및 공휴일 휴무</p>
+          </div>
+          <div class="foot_sns">
+            <ul class="clearfix blind_wrap">
+              <li><a href="#"><span>fb</span></a></li>
+              <li><a href="#"><span>insta</span></a></li>
+              <li><a href="#"><span>yt</span></a></li>
+            </ul>
+            <!-- <div class="foot_brand">brand sites</div> -->
+          </div>
         </div>
       </div>
     </footer><!-- //#footBox -->

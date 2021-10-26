@@ -7,34 +7,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>공차</title>
 
-  <!-- js -->
-  <!-- <script src="../js/base/modernizr-custom.js"></script> -->
-  <script src="https://kit.fontawesome.com/b7d10af3f7.js" crossorigin="anonymous"></script>
-
   <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../fonts/KoPubDotumMedium.css">
-  <!-- <link rel="stylesheet" href="../fonts/fontAwesome/css/all.min.css"> -->
-
   <!-- css -->
   <link rel="stylesheet" href="../css/common/reset.css">
   <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/common/variable.css">
   <link rel="stylesheet" href="../css/src/main.css">
   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="../favicon.ico">
+  <!-- js -->
+  <script src="../js/common/modernizr-custom.js"></script>
+  <script src="https://kit.fontawesome.com/b7d10af3f7.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <!-- layout -->
   <div id="wrap">
     <header id="headBox">
-      <div class="container blind_wrap">
+      <div class="container blind_wrap clearfix">
         <h1><a href="../index.html"><span>Gongcha</span></a></h1>
         <nav id="gnb">
           <h2 class="blind">global navigation</h2>
-          <ul>
+          <ul class="clearfix">
             <li>
               <div class="nav_title"><a href="#">메뉴소개</a></div>
               <ul class="nav_list">
@@ -102,147 +100,213 @@
             <li><a href="#"><span>03</span></a></li>
           </ul>
           <div class="view_text">
-            <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nobis doloribus sequi possimus tempore cupiditate voluptate dicta animi eum voluptatem?</p>
-            <a href="#" class="btn_small">view more</a>
+            <h3>We serve you <br />
+              all about choco</h3>
+            <p>공차가 선물하는 달콤한 충전<br />
+              초코 신메뉴 마시면 공차 스탬프 3배 적립!</p>
+            <a href="#" class="btn_small">바로가기</a>
           </div><!-- //.view_text -->
         </div>
       </div>
     </section><!-- //#viewBox -->
 
-    <section id="slideBox">
-      <h2>Gongcha Menu</h2>
-      <div class="gallery_wrap">
-        <button type="button" class="btn_circle prev action"><img src="../img/btn_prev2.png" alt="prev"></button>
-        <button type="button" class="btn_circle next"><img src="../img/btn_next2.png" alt="next"></button>
-        <ul class="slide_nav_area">
-          <li><a href="#"><div class="menu_img"></div><p>Lorem ipsum</p></a></li>
-          <li><a href="#"><div class="menu_img"></div><p>Lorem ipsum</p></a></li>
-          <li><a href="#"><div class="menu_img"></div><p>Lorem ipsum</p></a></li>
-          <li><a href="#"><div class="menu_img"></div><p>Lorem ipsum</p></a></li>
-          <li><a href="#"><div class="menu_img"></div><p>Lorem ipsum</p></a></li>
-          <li><a href="#"><div class="menu_img"></div><p>Lorem ipsum</p></a></li>
-          <li><a href="#"><div class="menu_img"></div><p>Lorem ipsum</p></a></li>
-          <li><a href="#"><div class="menu_img"></div><p>Lorem ipsum</p></a></li>
+    <section id="menuBox">
+      <div class="title">
+        <h2>Gongcha Menu</h2>
+        <p>공차의 메뉴들을 만나보세요</p>
+      </div>
+      <div class="slide_wrap">
+        <button type="button" class="btn_circle prev action"><span class="blind">이전</span></button>
+        <button type="button" class="btn_circle next"><span class="blind">다음</span></button>
+        
+        <ul class="menu_area">
+          <li><a href="#"><div class="menu_img"></div><p>블랙 밀크티</p></a></li>
+          <li><a href="#"><div class="menu_img"></div><p>블랙 밀크티</p></a></li>
+          <li><a href="#"><div class="menu_img"></div><p>블랙 밀크티</p></a></li>
+          <li><a href="#"><div class="menu_img"></div><p>블랙 밀크티</p></a></li>
+          <li><a href="#"><div class="menu_img"></div><p>블랙 밀크티</p></a></li>
+          <li><a href="#"><div class="menu_img"></div><p>블랙 밀크티</p></a></li>
+          <li><a href="#"><div class="menu_img"></div><p>블랙 밀크티</p></a></li>
+          <li><a href="#"><div class="menu_img"></div><p>블랙 밀크티</p></a></li>
         </ul>
       </div>
-    </section><!-- //#slideBox -->
+    </section><!-- //#menuBox -->
 
     <article id="orderBox">
       <div class="container">
-        <h2>How to Order</h2>
-        <ul>
+        <div class="title">
+          <h2>How to Order</h2>
+          <p>취향에 맞는 맞춤주문</p>
+        </div>
+        <ul class="clearfix">
           <li>
-            <span class="order_img"></span>
-            <h3 class="order_title">Lorem, ipsum.</h3>
-            <p class="order_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, soluta?</p>
+            <span class="order_img img1"></span>
+            <h3 class="order_title">Tea menu</h3>
+            <p class="order_text">취향에 맞게 <br />
+              공차의 음료를 고르세요.</p>
           </li>
           <li>
-            <span class="order_img"></span>
-            <h3 class="order_title">Lorem, ipsum.</h3>
-            <p class="order_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, soluta?</p>
+            <span class="order_img img2"></span>
+            <h3 class="order_title">Toppings</h3>
+            <p class="order_text">6가지 토핑 중<br />
+              원하는 토핑을 선택하세요.<br />
+              (최대 3가지 선택 가능)</p>
           </li>
           <li>
-            <span class="order_img"></span>
-            <h3 class="order_title">Lorem, ipsum.</h3>
-            <p class="order_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, soluta?</p>
+            <span class="order_img img3"></span>
+            <h3 class="order_title">Sweet & Ice grade</h3>
+            <p class="order_text">당도와 얼음량을 <br />
+              원하시는 만큼 조절하세요.</p>
           </li>
         </ul>
-        <a href="#" class="btn_large">view more</a>
+        <a href="#" class="btn_large">이용방법 알아보기</a>
       </div>
     </article><!-- //#orderBox -->
 
-    <section id="messageBox">
-      <h2 class="blind">messageBox</h2>
-      <p class="title">Lorem, ipsum dolor <br />
-        sit amet consectetur adipisicing elit. Alias, <br />
-        architecto.</p>
-      <a href="#" class="btn_large">view more</a>
-    </section><!-- //#messageBox -->
+    <section id="brandBox">
+      <h2 class="blind">브랜드소개</h2>
+      <p class="title">공들여 맛있는 차(茶),<br />
+        중국 황실에서만 맛 볼 수 있던 프리미엄 퀄리티의 공차를 소개합니다.</p>
+      <a href="#" class="btn_large">브랜드 소개 바로가기</a>
+    </section><!-- //#brandBox -->
 
     <article id="recipeBox">
-      <h2>Tea Recipe</h2>
-      <div class="gallery_wrap clearfix">
-        <button type="button" class="btn_circle prev action"><img src="../img/btn_prev2.png" alt="prev"></button>
-        <button type="button" class="btn_circle next"><img src="../img/btn_next2.png" alt="next"></button>
+      <div class="title">
+        <h2>Tea Recipe</h2>
+        <p>공차만의 프리미엄 티 레시피</p>
+      </div>
+      <div class="recipe_wrap clearfix">
+        <button type="button" class="btn_circle prev action"><span class="blind">이전</span></button>
+        <button type="button" class="btn_circle next"><span class="blind">다음</span></button>
         <ul>
-          <li class="card">
-            <h3 class="recipe_title">Lorem, ipsum.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi doloremque quaerat at, totam deserunt beatae.</p>
-            <a href="#" class="btn_round">view more</a>
-            <span class="img"></span>
+          <li>
+            <a href="#">
+              <div class="card card1">
+                <h3 class="recipe_title">오리지널 티 Original Tea</h3>
+                <p>
+                  티백이나 가루가 아닌 황실에 바치던 잎차만 골라 <br />
+                  1도 1초도 어기지 않고 차마다 다른 황금률로 우려<br /> 한 잔 한 잔 부드러움을 더해 만듭니다.
+                </p>
+                <p class="more clearfix"><span>더보기</span><i class="fas fa-chevron-right"></i></p>
+              </div>
+            </a>
           </li>
-          <li class="card">
-            <h3 class="recipe_title">Lorem, ipsum.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi doloremque quaerat at, totam deserunt beatae.</p>
-            <a href="#" class="btn_round">view more</a>
-            <span class="img"></span>
+          <li>
+            <a href="#">
+              <div class="card card2">
+                <h3 class="recipe_title">밀크티 Milk Tea</h3>
+                <p>
+                  최적의 자연이 키워낸 입차만 골라 각 차종에 맞는 <br />황금률로 우려 담백한 우유와<br />
+                  허니, 카라멜 등 새로운 맛을 더해 만듭니다.
+                </p>
+                <p class="more clearfix"><span>더보기</span><i class="fas fa-chevron-right"></i></p>
+              </div>
+            </a>
           </li>
-          <li class="card">
-            <h3 class="recipe_title">Lorem, ipsum.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi doloremque quaerat at, totam deserunt beatae.</p>
-            <a href="#" class="btn_round">view more</a>
-            <span class="img"></span>
+          <li>
+            <a href="#">
+              <div class="card card3">
+                <h3 class="recipe_title">밀크폼 Milk Foam</h3>
+                <p>
+                  프리미엄 잎차만 골라 차마다 다른 <br />
+                  황금률로 우려 달콤짭조름한 밀크폼 또는 치즈폼을<br /> 더해 만듭니다.
+                </p>
+                <p class="more clearfix"><span>더보기</span><i class="fas fa-chevron-right"></i></p>
+              </div>
+            </a>
           </li>
-          <li class="card">
-            <h3 class="recipe_title">Lorem, ipsum.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi doloremque quaerat at, totam deserunt beatae.</p>
-            <a href="#" class="btn_round">view more</a>
-            <span class="img"></span>
+          <li>
+            <a href="#">
+              <div class="card card4">
+                <h3 class="recipe_title">과일 그린티 Fruit Green Tea</h3>
+                <p>
+                  찻잎의 푸름을 간직한 녹차만 골라 <br />
+                  최적의 온도 89℃로 우려<br />
+                  달콤상큼한 과일을 더해 만듭니다.
+                </p>
+                <p class="more clearfix"><span>더보기</span><i class="fas fa-chevron-right"></i></p>
+              </div>
+            </a>
           </li>
-          <li class="card">
-            <h3 class="recipe_title">Lorem, ipsum.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi doloremque quaerat at, totam deserunt beatae.</p>
-            <a href="#" class="btn_round">view more</a>
-            <span class="img"></span>
+          <li>
+            <a href="#">
+              <div class="card card4">
+                <h3 class="recipe_title">과일 그린티 Fruit Green Tea</h3>
+                <p>
+                  찻잎의 푸름을 간직한 녹차만 골라 <br />
+                  최적의 온도 89℃로 우려<br />
+                  달콤상큼한 과일을 더해 만듭니다.
+                </p>
+                <p class="more clearfix"><span>더보기</span><i class="fas fa-chevron-right"></i></p>
+              </div>
+            </a>
           </li>
-          <li class="card">
-            <h3 class="recipe_title">Lorem, ipsum.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi doloremque quaerat at, totam deserunt beatae.</p>
-            <a href="#" class="btn_round">view more</a>
-            <span class="img"></span>
+          <li>
+            <a href="#">
+              <div class="card card4">
+                <h3 class="recipe_title">과일 그린티 Fruit Green Tea</h3>
+                <p>
+                  찻잎의 푸름을 간직한 녹차만 골라 <br />
+                  최적의 온도 89℃로 우려<br />
+                  달콤상큼한 과일을 더해 만듭니다.
+                </p>
+                <p class="more clearfix"><span>더보기</span><i class="fas fa-chevron-right"></i></p>
+              </div>
+            </a>
           </li>
-          <li class="card">
-            <h3 class="recipe_title">Lorem, ipsum.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi doloremque quaerat at, totam deserunt beatae.</p>
-            <a href="#" class="btn_round">view more</a>
-            <span class="img"></span>
+          <li>
+            <a href="#">
+              <div class="card card4">
+                <h3 class="recipe_title">과일 그린티 Fruit Green Tea</h3>
+                <p>
+                  찻잎의 푸름을 간직한 녹차만 골라 <br />
+                  최적의 온도 89℃로 우려<br />
+                  달콤상큼한 과일을 더해 만듭니다.
+                </p>
+                <p class="more clearfix"><span>더보기</span><i class="fas fa-chevron-right"></i></p>
+              </div>
+            </a>
           </li>
         </ul>
       </div>
     </article><!-- //#recipeBox -->
 
     <section id="franchise">
-      <h2 class="blind">franchise</h2>
-      <p class="title">Lorem, ipsum dolor <br />
-        sit amet consectetur adipisicing elit. Alias, <br />
-        architecto.</p>
-      <a href="#" class="btn_large">view more</a>
+      <h2 class="blind">프랜차이즈</h2>
+      <p class="title">공차만의 프랜차이즈 운영 노하우로 안정된 창업을 이루세요.<br />
+        가맹점과 본사가 상생하는 성공 창업!</p>
+      <a href="#" class="btn_large">프랜차이즈 바로가기</a>
     </section><!-- //#franchise -->
 
     <section id="liveBox">
-      <div class="container">
+      <div class="title">
         <h2>Gongcha Live</h2>
-        <div class="shop_area">
-          <h3>Lorem, ipsum.</h3>
-          <p>Lorem ipsum dolor sit amet.</p>
+        <p>공차와 함께 다채로운 매일</p>
+      </div>
+      <div class="container">
+
+        <div class="store_search_box">
+          <h3>매장 검색<i class="fas fa-map-marker-alt"></i></h3>
+          <p>공차의 매장을 <br />
+            쉽고 빠르게 찾아보세요.</p>
+
           <div class="shop_search">
             <form action="#" method="POST">
               <fieldset>
                 <legend class="blind">매장 검색</legend>
                 <label for="storeSearch" class="blind">지점 입력</label>
-                <input type="search" id="storeSearch" name="store__search" value="" placeholder="지점을 입력해 주세요" />
-                <input type="submit" value="" />
-                  <!-- <div><a href="#"><img src="../img/search.png" alt="search_button"></a></div> -->
+                <input type="search" id="storeSearch" name="store__search" value="" placeholder="지점을 입력해 주세요" maxlength="10"/>
+                <button type="button"><span class="blind">검색</span></button>
                 </input>
               </fieldset>
             </form>
           </div>
         </div>
+
         <div class="social_area">
           <div class="live_btn">
-            <button type="button" class="prev"><img src="../img/btn_prev2.png" alt="prev"></button>
-            <button type="button" class="next"><img src="../img/btn_next2.png" alt="next"></button>
+            <button type="button" class="prev btn"><span class="blind">이전</span></button>
+            <button type="button" class="next btn"><span class="blind">다음</span></button>
         </div>
           <ul>
             <li></li>
@@ -251,33 +315,57 @@
         </div>
       </div>
     </section><!-- //#liveBox -->
-    <!-- <aside id="sideBox">
-      <h2 class="blind">sideBox</h2>
-    </aside>//#sideBox -->
+    <aside id="sideBox">
+      <h2 class="blind">사이드바</h2>
+      <ul>
+        <li><span class="blind">가맹문의</span></li>
+        <li><span class="blind">맴버십 앱</span></li>
+        <li><span class="blind">카카오톡</span></li>
+      </ul>
+    </aside><!-- //#sideBox -->
 
     <footer id="footBox">
       <div class="container">
-        <h2 class="blind blind_wrap"><a href="#"><span>site information</span></a></h2>
-        <div class="foot_info">
-          <h3>Lorem, ipsum.</h3>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div class="foot_cs">
-          <h3>Lorem, ipsum.</h3>
-          <p><span class="phone_number">00-000-0000</span></p>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div class="foot_family">
-          <ul class="clearfix blind_wrap">
-            <li><a href="#"><span>fb</span></a></li>
-            <li><a href="#"><span>insta</span></a></li>
-            <li><a href="#"><span>yt</span></a></li>
+        <h2><a href="#"><span class="blind">site information</span></a></h2>
+        <div class="foot_nav clearfix">
+          <ul>
+            <li>회사소개</li>
+            <li>제휴/제안</li>
+            <li>고객센터</li>
+            <li class="bold">개인정보처리방침</li>
+            <li>이메일무단수집거부</li>
+            <li>HOT-LINE</li>
+            <li>사이트맵</li>
           </ul>
-          <div class="foot_brand">brand sites</div>
+          <div class="family_site">
+            <p>family site</p>
+            <!-- <form action="#" method="POST"></form> -->
+          </div>
+        </div>
+        <div class="foot_wrap">
+          <div class="foot_info">
+            <h3>(주)공차코리아</h3>
+            <p>서울 종로구 종로 47(공평동, 7층)<br />
+              대표이사 김의열<br />
+              사업자등록번호 000-00-00000<br />
+              통신판매번호 0000-서울종로-0000Lorem ipsum dolor sit amet.</p>
+            <p>GONGCHA(C)GONGCHA KOREA CO.,LTD<br />
+              ALL RIGHTS RESERVED.</p>
+          </div>
+          <div class="foot_cs">
+            <h3>Lorem, ipsum.</h3>
+            <p><span class="phone_number">00-000-0000</span></p>
+            <p>평일 오전 9시~ 오후 6시<br />
+              주말 및 공휴일 휴무</p>
+          </div>
+          <div class="foot_sns">
+            <ul class="clearfix blind_wrap">
+              <li><a href="#"><span>fb</span></a></li>
+              <li><a href="#"><span>insta</span></a></li>
+              <li><a href="#"><span>yt</span></a></li>
+            </ul>
+            <!-- <div class="foot_brand">brand sites</div> -->
+          </div>
         </div>
       </div>
     </footer><!-- //#footBox -->
