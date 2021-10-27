@@ -28,7 +28,7 @@
   content: "";
   display: block;
   position: absolute; left: 50%; bottom: 0; z-index: -1;
-  width: 100vw; height: 100%;
+  width: 100%; height: 100%;
   margin-left: -50vw; border-bottom: 1px solid var(--gray-02);
   background-color: var(--white);
 }
@@ -404,8 +404,6 @@
     font-size: 16px; color: var(--gray-03); font-weight: 700; text-align: left;
   }
 
-/* hover하면 이미지가 선명해지고 살짝 돌게, focus하면 빙 돌게 */
-
   /* recipeBox > btn_circle 메뉴 슬라이드 좌우 버튼 */
   .recipe_wrap {
     position: relative; width: 100%; height: auto;
@@ -450,6 +448,7 @@
       background-color: #F5EEE8; 
       background-repeat: no-repeat;
       background-size: 130%; background-position: 60% 20%;
+      transition: all 300ms ease;
     }
     #recipeBox .card a {
       display: block;
@@ -494,7 +493,7 @@
       }
 
     .recipe_wrap .card:hover { /* hover시 이미지가 선명해지며 살짝 돌기 */
-      transform: rotateY(30deg);
+      transform: rotateY(30deg) perspective(1000px); /* 퍼스펙티브왜안돼 */
       box-shadow: 10px 10px 20px var(--gray-01);
     }
     .recipe_wrap a:focus .card { /* focus시 빙 돌기*/
@@ -743,6 +742,10 @@
       }
       .foot_nav li.bold {
         font-weight: 700;
+      }
+      .foot_nav a {
+        display: block;
+        width: 100%; height: 100%;
       }
       /* footBox > family_site 패밀리 사이트 */
     .family_site {
