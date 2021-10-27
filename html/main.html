@@ -93,7 +93,7 @@
           <ul class="view_btn">
             <li class="prev"><a href="#"></a></li>
             <li class="next"><a href="#"></a></li>
-          </div><!-- //.view_btn -->
+          </ul><!-- //.view_btn -->
           <ul class="indicator blind_wrap">
             <li class="action"><a href="#"><span>01</span></a></li>
             <li><a href="#"><span>02</span></a></li>
@@ -297,7 +297,6 @@
                 <label for="storeSearch" class="blind">지점 입력</label>
                 <input type="search" id="storeSearch" name="store__search" value="" placeholder="지점을 입력해 주세요" maxlength="10"/>
                 <button type="button"><span class="blind">검색</span></button>
-                </input>
               </fieldset>
             </form>
           </div>
@@ -317,13 +316,13 @@
     </section><!-- //#liveBox -->
     <aside id="sideBox">
       <h2 class="blind">사이드바</h2>
-      <ul>
-        <li><span class="blind">가맹문의</span></li>
-        <li><span class="blind">맴버십 앱</span></li>
-        <li><span class="blind">카카오톡</span></li>
-      </ul>
+      <div>
+        <a class="app" href="#"><span class="blind">맴버십 앱</span></a>
+        <a class="kakao" href="#"><span class="blind">카카오톡</span></a>
+      </div>
     </aside><!-- //#sideBox -->
 
+    <!-- footBox -->
     <footer id="footBox">
       <div class="container">
         <h2><a href="#"><span class="blind">site information</span></a></h2>
@@ -338,8 +337,22 @@
             <li>사이트맵</li>
           </ul>
           <div class="family_site">
-            <p>family site</p>
-            <!-- <form action="#" method="POST"></form> -->
+            <form action="#" method="POST">
+              <fieldset>
+                <legend class="blind">family site</legend>
+                <input type="hidden" id="familySelect" name="family__Select" value="" />
+                <dl>
+                  <dt><span>family site</span><i class="fas fa-sort-up"></i></dt>
+                  <dd>
+                    <ul>
+                      <li data-select="site_01"><a href="#">site_01</a></li>
+                      <li data-select="site_02"><a href="#">site_02</a></li>
+                      <li data-select="site_03"><a href="#">site_03</a></li>
+                    </ul>
+                  </dd>
+                </dl>
+              </fieldset>
+            </form>
           </div>
         </div>
         <div class="foot_wrap">
@@ -348,12 +361,12 @@
             <p>서울 종로구 종로 47(공평동, 7층)<br />
               대표이사 김의열<br />
               사업자등록번호 000-00-00000<br />
-              통신판매번호 0000-서울종로-0000Lorem ipsum dolor sit amet.</p>
+              통신판매번호 0000-서울종로-0000</p>
             <p>GONGCHA(C)GONGCHA KOREA CO.,LTD<br />
               ALL RIGHTS RESERVED.</p>
           </div>
           <div class="foot_cs">
-            <h3>Lorem, ipsum.</h3>
+            <h3>고객센터</h3>
             <p><span class="phone_number">00-000-0000</span></p>
             <p>평일 오전 9시~ 오후 6시<br />
               주말 및 공휴일 휴무</p>
