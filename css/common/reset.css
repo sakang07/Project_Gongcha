@@ -3,7 +3,7 @@
 
 html, body {
   margin: 0; padding: 0; border: 0;
-  font-family: 'Mulish', 'KoPubDotumMedium', sans-serif;
+  font-family: 'Mulish', 'Pretendard', sans-serif;
   font-style: normal;
   box-sizing: border-box;
 }
@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6, p, pre, address,
 ul, li, ol, dl, dt, dd, hr, img, div, 
 form, fieldset, input, label {
   margin: 0; padding: 0; border: 0;
-  font-family: 'Mulish', 'KoPubDotumMedium', sans-serif; font-size: 100%;
+  font-family: 'Mulish', 'Pretendard', sans-serif; font-size: 100%;
   box-sizing: border-box;
 }
 a {

@@ -5,7 +5,6 @@
 #wrap {
   overflow: hidden;
   width: 100%; height: auto; min-width: 1280px; 
-  margin: 0 auto;
 }
 
 /* headBox */
@@ -16,7 +15,7 @@
   background-color: var(--white);
 }
 #headBox:before,
-#headBox::before {
+#headBox::before { /* nav 중간 라인 */
   content: "";
   display: block;
   position: absolute; top: 79px; left: 0; right: 0;
@@ -24,7 +23,7 @@
   border-bottom: 1px solid var(--gray-02);
 }
 #headBox:after,
-#headBox::after {
+#headBox::after { /* nav 드롭다운 배경 */
   content: "";
   display: block;
   position: absolute; left: 50%; bottom: 0; z-index: -1;
@@ -343,10 +342,10 @@
       /* orderBox > btn_large 이용방법 알아보기 버튼 */
       #orderBox .btn_large {
         display: block;
-        width: 260px; height: 56px;
-        box-sizing: border-box; padding: 16px 18px;
+        width: 260px; height: auto;
+        box-sizing: border-box; padding: 17px 18px;
         margin: auto; margin-top: 70px;
-        text-align: center; font-size: 16px; font-weight: 700; color: var(--white);
+        text-align: center; font-size: 16px; color: var(--white);
         background-color: var(--primary-01);
       }
       #orderBox .btn_large:hover { /* hover */
@@ -370,9 +369,9 @@
   /* brandBox > btn_large 브랜드소개 바로가기 버튼 */
   #brandBox .btn_large {
     display: block;
-    width: 260px; height: 56px;
-    padding: 16px 18px; box-sizing: border-box;
-    text-align: center; font-size: 16px; font-weight: 700;
+    width: 260px; height: auto;
+    padding: 17px 18px; box-sizing: border-box;
+    text-align: center; font-size: 16px;
     margin: 0 auto; margin-top: 36px; border: 1px solid var(--white);
     color: var(--white); background-color: transparent;
   }
@@ -515,9 +514,9 @@
     /* franchise > btn_large 브랜드소개 바로가기 버튼 */
     #franchise .btn_large {
       display: block;
-      width: 260px; height: 56px;
-      padding: 16px 18px; box-sizing: border-box;
-      text-align: center; font-size: 16px; font-weight: 700;
+      width: 260px; height: auto;
+      padding: 17px 18px; box-sizing: border-box;
+      text-align: center; font-size: 16px;
       margin: 0 auto; margin-top: 36px; border: 1px solid var(--deep-gray-01);
       color: var(--deep-gray-01); background-color: var(--white);
     }
@@ -585,7 +584,7 @@
         background-color: transparent;
       }
       .shop_search button {
-        position: absolute; top: 0; right: 0; bottom: 0;
+        position: absolute; top: 0; right: -1px; bottom: 0;
         width: 44px; height: 44px;
         background-color: var(--primary-01);
         background-image: url(../../img/search.png);
