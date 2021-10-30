@@ -9,7 +9,11 @@
 #wrap {
   margin: auto;
 }
-
+.container {
+  position: relative;
+  width: 1280px; height: auto;
+  margin: auto;
+}
 .blind_wrap a {
   display: block; width: 100%; height: 100%;
 }
@@ -17,82 +21,10 @@
   display: block; overflow: hidden;
   width: 0; height: 0; 
 }
-.container {
-  position: relative;
-  width: 1280px; height: auto;
-  margin: auto;
+.full {
+  display: block; width: 100%; height: 100%;
 }
-
-/* .action {
-  display: none;
-} */
-/* common_btn */
-/* .btn_small {
-  display: block;
-  width: 140px; height: 48px;
-  box-sizing: border-box; padding: 15px 18px;
-  color:#1c1c1c; text-align: center; text-transform: uppercase; font-size: 14px;
+.full_wrap a,
+.full_wrap button { 
+  display: block; width: 100%; height: 100%;
 }
-.btn_small:hover {
-  transform: scale(1.1);
-  transition: all 300ms linear;
-}
-.btn_small:focus {
-  border: 2px solid #171717;  
-}
-
-.btn_large {
-  display: block;
-  width: 260px; height: 56px;
-  box-sizing: border-box; padding: 19px 18px;
-  text-align: center; text-transform: uppercase; font-size: 14px;
-}
-.btn_large:hover {
-  transform: scale(1.1);
-  transition: all 300ms linear;
-}
-.btn_large:focus {
-  border: 2px solid #171717;  
-}
-
-.btn_round {
-  display: block;
-  width: 140px; height: 44px;
-  box-sizing: border-box; border-radius: 20px; border: 1px solid #1c1c1c;
-  padding: 12px 18px;
-  color:#1c1c1c; text-align: center; text-transform: uppercase; font-size: 14px;
-}
-.btn_circle {
-  display: block;
-  width: 60px; height: 60px;
-  box-sizing: border-box; border-radius: 100%; border: 0;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
-  background-color: #fff;
-}
-.btn_circle:hover {
-  transform: scale(1.2);
-  transition: all 300ms linear;
-}
-.btn_circle:focus {
-  border: 2px solid #171717;
-}
-
-.gallery_wrap {
-  position: relative;
-  width: 100%; height: auto;
-}
-.gallery_wrap > button {
-  position: absolute; top: 0; bottom: 0; margin: auto; z-index: 500;
-}
-.gallery_wrap > .prev {
-  left: 100px;
-}
-.gallery_wrap > .next {
-  right: 100px;
-}
-.gallery_wrap > .action {
-  display: none;
-}
-.prev > img, .next > img {
-  width: 16px; height: 27px;
-} */
