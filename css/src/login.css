@@ -102,6 +102,15 @@
       margin-top: 80px; padding-top: 152px; padding-bottom: 230px;
       background-color: rgba(0,0,0,0.3);
     }
+    #contBox:before,
+    #contBox::before {
+      content: "";
+      display: block;
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
+      background-image: url("../../img/login_bg.jpg");
+      background-size: cover; background-position: 50%; background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
 
     .page_title {
       position: relative;
