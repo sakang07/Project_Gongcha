@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!-- login.html -->
+<!-- brand_intro.html -->
 <html lang="ko-KR" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>공차 - 로그인</title>
+  <title>공차 - 브랜드 소개</title>
 
   <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="../css/common/reset.css">
   <link rel="stylesheet" href="../css/common/common.css">
   <link rel="stylesheet" href="../css/common/variable.css">
-  <link rel="stylesheet" href="../css/src/login.css">
+  <link rel="stylesheet" href="../css/src/brand_intro.css">
   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="../favicon.ico">
   <!-- js -->
@@ -87,60 +87,65 @@
       </div>
     </header><!-- //#headBox -->
 
-    <section id="contBox">
-      <div class="title">
-        <h2>로그인</h2>
-        <p>login</p>
-      </div>
-      <p>공차 회원으로 로그인 하시면<br />
-        다양한 서비스를 이용할 수 있습니다.</p>
-
-      <div class="login_box">
-        <form action="#" method="POST">
-
-          <fieldset>
-            <legend class="blind">아이디 비밀번호 입력</legend>
-            <ul class="idpw">
-              <li>
-                <label for="idKey">아이디</label>
-                <input type="text" id="idKey" name="id__key" value="" placeholder="아이디 입력" maxlength="16" />
-              </li>
-              <li>
-                <label for="pwKey">비밀번호</label>
-                <input type="password" id="pwKey" name="pw__key" value="" placeholder="비밀번호 입력" maxlength="16" />
-              </li>
-            </ul>
-          </fieldset>
-
-          <fieldset>
-            <legend class="blind">로그인 아이디 저장</legend>
-            <ul class="idcheck">
-              <li>
-                <input type="checkbox" id="idSave" name="id__save" value="로그인 아이디 저장" class="blind" />
-                <label for="idSave">
-                  <i class="far fa-check-circle"></i>
-                  <span>로그인 아이디 저장</span>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-
-          <fieldset>
-            <legend class="blind">로그인 버튼</legend>
-            <input type="submit" value="로그인" />
-          </fieldset>
-
-        </form>
-
-        <div class="other_page">
-          <ul class="clearfix">
-            <li><a href="#">아이디 찾기</a></li>
-            <li><a href="#">비밀번호 찾기</a></li>
-            <li><a href="#">회원가입</a></li>
+    <section id="viewBox">
+      <div class="container">
+        <div class="title">
+          <h2>황실에 바치는 차(茶), <br />
+            공차를 소개합니다.</h2>
+          <p>황실의 프리미엄 잎차</p>
+        </div>
+        <div class="category_tab">
+          <ul>
+            <li>공차</li>
+            <li>브랜드 아이덴티티</li>
+            <li>세계속의 공차</li>
           </ul>
         </div>
-      </div>
-    </section><!-- //#contBox -->
+
+      </div><!-- //.container -->
+
+    </section><!-- //#viewBox -->
+
+    <section id="introBox">
+      <h2 class="blind">공들여 맛있는 차, 공차</h2>
+    </section><!-- //#introBox -->
+
+    <section id="processBox">
+      <h2 class="blind">공차를 우리는 과정</h2>
+      <article class="process_area">01</article>
+      <article class="process_area">02</article>
+      <article class="process_area">03</article>
+    </section><!-- //#processBox -->
+
+    <section id="galleryBox">
+      <h2 class="blind">공차 갤러리</h2>
+    </section><!-- //#galleryBox -->
+
+    <section id="philosophyBox">
+      <h2 class="blind">공차의 철학</h2>
+    </section><!-- //#philosophyBox -->
+    
+    <section id="promiseBox">
+      <h2 class="blind">공차의 약속</h2>
+      <article class="point_01">
+        <h3></h3>
+      </article>
+      <article class="point_02">
+        <h3></h3>
+      </article>
+      <article class="point_03">
+        <h3></h3>
+      </article>
+      <article class="point_04">
+        <h3></h3>
+      </article>
+      <article class="point_05">
+        <h3></h3>
+      </article>
+    </section><!-- //#promiseBox -->
+
+
+
 
     <!-- sideBox -->
     <aside id="sideBox">
@@ -213,8 +218,5 @@
       </div>
     </footer><!-- //#footBox -->
   </div><!-- //#wrap -->
-
-  <!-- script -->
-  <script></script>
 </body>
 </html>
