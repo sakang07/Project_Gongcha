@@ -64,8 +64,8 @@
     }
     .nav_list {
       display: none;
-      width: 120px; height: 300px;
-      margin-top: 70px; margin-right: 40px; 
+      width: 120px; height: 240px;
+      margin-top: 60px; margin-right: 40px; 
       font-size: 16px; font-weight: 400; color: var(--deep-gray-01);
     }
     .nav_list li {
@@ -206,25 +206,27 @@
 
 /* menuBox */
 #menuBox {
-  position: relative;
   overflow: hidden;
   width: 100%; height: auto; min-height: 620px;
-  padding-top: 100px; padding-left: 84px;
+  padding-top: 100px; 
   background-color: var(--white);
 }
 #menuBox .title {
   position: relative;
-  padding-top: 26px;
+  padding-top: 26px; margin-left: 84px;
 }
-  #menuBox .title h2 {
-    font-size: 40px; font-weight: 700; text-align: left;
-  }
-  #menuBox .title p {
-    position: absolute; top: 0; left: 0;
-    font-size: 16px; color: var(--gray-03); font-weight: 700;
-  }
+#menuBox .title h2 {
+  font-size: 40px; font-weight: 700; text-align: left;
+}
+#menuBox .title p {
+  position: absolute; top: 0; left: 0;
+  font-size: 16px; color: var(--gray-03); font-weight: 700;
+}
 
-  /* menuBox > btn_circle 메뉴 슬라이드 좌우 버튼 */
+/* menuBox > btn_circle 메뉴 슬라이드 좌우 버튼 */
+  .slide_wrap {
+    position: relative;
+  }
   .slide_wrap .btn_circle {
     display: block;
     position: absolute; top: 50%; z-index: 500;
@@ -253,7 +255,7 @@
 
   .menu_area {
     width: 3000px; height: auto;
-    margin-top: 68px;
+    margin-top: 68px; margin-left: 54px;
   }
     .menu_area li {
       float: left;
@@ -312,8 +314,12 @@
     #orderBox ul > li:last-of-type {
       margin-right: 0;
     }
+    #orderBox dl {
+      position: relative;
+    }
       #orderBox .order_img {
-        display: block;
+        position: absolute; top: 0; left: 50%;
+        transform: translateX(-50%);
         width: 200px; height: 200px;
         margin: 0 auto; border-radius: 100%;
         background-color: var(--white);
@@ -331,7 +337,7 @@
       }
       #orderBox .order_title {
         width: 100%; height: auto;
-        margin: 0 auto; margin-top: 40px;
+        margin: 0 auto; padding-top: 240px;
         font-size: 28px; font-weight: 700;
       }
       #orderBox .order_text {
@@ -443,15 +449,10 @@
       float: left;
       width: 366px; height: 550px;
       margin-right: 26px;
-      border-radius: 20px; padding:340px 40px 0;
+      border-radius: 20px; padding: 340px 40px 0;
       background-color: #F5EEE8; 
       background-repeat: no-repeat;
       background-size: 130%; background-position: 60% 20%;
-      transition: all 300ms ease;
-    }
-    #recipeBox .card a {
-      display: block;
-      width: 100%; height: 100%;
     }
     #recipeBox .card1 {
       background-image: url(../../img/recipe_img1.jpg);
@@ -491,13 +492,17 @@
         margin-top: 4px; margin-left: 8px;
       }
 
-    .recipe_wrap .card:hover { /* hover시 이미지가 선명해지며 살짝 돌기 */
-      transform: rotateY(30deg) perspective(1000px); /* 퍼스펙티브왜안돼 */
-      box-shadow: 10px 10px 20px var(--gray-01);
+    .recipe_wrap a {
+      display: block;
+      width: 100%; height: 100%;
     }
-    .recipe_wrap a:focus .card { /* focus시 빙 돌기*/
+    .recipe_wrap a:hover .card { /* hover */
+      transform: perspective(1000px) rotateY(50deg);
+      transition: all 500ms ease;
+    }
+    .recipe_wrap a:focus .card { /* focus */
       outline: 0;
-      transform: rotateY(360deg);
+      transform: perspective(1000px) rotateY(360deg);
       transition: all 500ms ease;
     }
   
@@ -738,9 +743,6 @@
       }
       .foot_nav > ul > li:last-of-type {
         padding-right: 0; margin-right: 130px; border-right: 0;
-      }
-      .foot_nav li.bold {
-        font-weight: 700;
       }
       .foot_nav a {
         display: block;

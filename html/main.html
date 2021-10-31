@@ -23,7 +23,7 @@
   <link rel="apple-touch-icon" href="../favicon.ico">
   <!-- js -->
   <script src="../js/common/modernizr-custom.js"></script>
-  <script src="https://kit.fontawesome.com/b7d10af3f7.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/b7d10af3f7.js" crossorigin="anonymous" defer></script>
 </head>
 
 <body>
@@ -93,8 +93,8 @@
         <div class="view_inner">
           <h2 class="blind">광고 영역</h2>
           <ul class="view_btn">
-            <li class="next"><a href="#"><span class="blind">다음 광고 내용 보기</span></a></li>
-            <li class="prev"><a href="#"><span class="blind">이전 광고 내용 보기</span></a></li>
+            <li class="next"><a href="#"><span class="blind">다음 내용 보기</span></a></li>
+            <li class="prev"><a href="#"><span class="blind">이전 내용 보기</span></a></li>
           </ul><!-- //.view_btn -->
           <ul class="indicator blind_wrap">
             <li class="action"><a href="#"><span>광고 요약 01</span></a></li>
@@ -117,9 +117,11 @@
         <h2>Gongcha Menu</h2>
         <p>공차의 메뉴들을 만나보세요</p>
       </div>
-      <div class="slide_wrap">
-        <button type="button" class="btn_circle prev action"><span class="blind">이전</span></button>
-        <button type="button" class="btn_circle next"><span class="blind">다음</span></button>
+      <div class="slide_wrap clearfix">
+        <div>
+          <button type="button" class="btn_circle next action"><span class="blind">다음 내용 보기</span></button>
+          <button type="button" class="btn_circle prev"><span class="blind">이전 내용 보기</span></button>
+        </div>
         
         <ul class="menu_area">
           <li><a href="#"><div class="menu_img"></div><p>블랙 밀크티</p></a></li>
@@ -142,23 +144,29 @@
         </div>
         <ul class="clearfix">
           <li>
-            <span class="order_img img1"></span>
-            <h3 class="order_title">Tea menu</h3>
-            <p class="order_text">취향에 맞게 <br />
-              공차의 음료를 고르세요.</p>
+            <dl>
+              <dt class="order_title">Tea menu</dt>
+              <dd class="order_text">취향에 맞게 <br />
+                공차의 음료를 고르세요.</dd>
+              <dd class="order_img img1"></dd>
+            </dl>
           </li>
           <li>
-            <span class="order_img img2"></span>
-            <h3 class="order_title">Toppings</h3>
-            <p class="order_text">6가지 토핑 중<br />
-              원하는 토핑을 선택하세요.<br />
-              (최대 3가지 선택 가능)</p>
+            <dl>
+              <dt class="order_title">Toppings</dt>
+              <dd class="order_text">6가지 토핑 중<br />
+                원하는 토핑을 선택하세요.<br />
+                (최대 3가지 선택 가능)</dd>
+              <dd class="order_img img2"></dd>
+            </dl>
           </li>
           <li>
-            <span class="order_img img3"></span>
-            <h3 class="order_title">Sweet & Ice grade</h3>
-            <p class="order_text">당도와 얼음량을 <br />
-              원하시는 만큼 조절하세요.</p>
+            <dl>
+              <dt class="order_title">Sweet & Ice grade</dt>
+              <dd class="order_text">당도와 얼음량을 <br />
+                원하시는 만큼 조절하세요.</dd>
+              <dd class="order_img img3"></dd>
+            </dl>
           </li>
         </ul>
         <div class="full_wrap btn_large"><a href="#">이용방법 알아보기</a></div>
@@ -178,8 +186,10 @@
         <p>공차만의 프리미엄 티 레시피</p>
       </div>
       <div class="recipe_wrap clearfix">
-        <button type="button" class="btn_circle prev action"><span class="blind">이전</span></button>
-        <button type="button" class="btn_circle next"><span class="blind">다음</span></button>
+        <div>
+          <button type="button" class="btn_circle prev action"><span class="blind">이전</span></button>
+          <button type="button" class="btn_circle next"><span class="blind">다음</span></button>
+        </div>
         <ul>
           <li>
             <a href="#">
@@ -189,7 +199,7 @@
                   티백이나 가루가 아닌 황실에 바치던 잎차만 골라 <br />
                   1도 1초도 어기지 않고 차마다 다른 황금률로 우려<br /> 한 잔 한 잔 부드러움을 더해 만듭니다.
                 </p>
-                <p class="more clearfix"><span>더보기</span><i class="fas fa-chevron-right"></i></p>
+                <p class="more clearfix" role="button"><span class="blind">내용</span><span>더보기</span><i class="fas fa-chevron-right"></i></p>
               </article>
             </a>
           </li>
@@ -201,7 +211,7 @@
                   최적의 자연이 키워낸 입차만 골라 각 차종에 맞는 <br />황금률로 우려 담백한 우유와<br />
                   허니, 카라멜 등 새로운 맛을 더해 만듭니다.
                 </p>
-                <p class="more clearfix"><span>더보기</span><i class="fas fa-chevron-right"></i></p>
+                <p class="more clearfix" role="button"><span class="blind">내용</span><span>더보기</span><i class="fas fa-chevron-right"></i></p>
               </article>
             </a>
           </li>
@@ -213,7 +223,7 @@
                   프리미엄 잎차만 골라 차마다 다른 <br />
                   황금률로 우려 달콤짭조름한 밀크폼 또는 치즈폼을<br /> 더해 만듭니다.
                 </p>
-                <p class="more clearfix"><span>더보기</span><i class="fas fa-chevron-right"></i></p>
+                <p class="more clearfix" role="button"><span class="blind">내용</span><span>더보기</span><i class="fas fa-chevron-right"></i></p>
               </article>
             </a>
           </li>
@@ -226,7 +236,7 @@
                   최적의 온도 89℃로 우려<br />
                   달콤상큼한 과일을 더해 만듭니다.
                 </p>
-                <p class="more clearfix"><span>더보기</span><i class="fas fa-chevron-right"></i></p>
+                <p class="more clearfix" role="button"><span class="blind">내용</span><span>더보기</span><i class="fas fa-chevron-right"></i></p>
               </article>
             </a>
           </li>
@@ -239,7 +249,7 @@
                   최적의 온도 89℃로 우려<br />
                   달콤상큼한 과일을 더해 만듭니다.
                 </p>
-                <p class="more clearfix"><span>더보기</span><i class="fas fa-chevron-right"></i></p>
+                <p class="more clearfix" role="button"><span class="blind">내용</span><span>더보기</span><i class="fas fa-chevron-right"></i></p>
               </article>
             </a>
           </li>
@@ -252,7 +262,7 @@
                   최적의 온도 89℃로 우려<br />
                   달콤상큼한 과일을 더해 만듭니다.
                 </p>
-                <p class="more clearfix"><span>더보기</span><i class="fas fa-chevron-right"></i></p>
+                <p class="more clearfix" role="button"><span class="blind">내용</span><span>더보기</span><i class="fas fa-chevron-right"></i></p>
               </article>
             </a>
           </li>
@@ -265,7 +275,7 @@
                   최적의 온도 89℃로 우려<br />
                   달콤상큼한 과일을 더해 만듭니다.
                 </p>
-                <p class="more clearfix"><span>더보기</span><i class="fas fa-chevron-right"></i></p>
+                <p class="more clearfix" role="button"><span class="blind">내용</span><span>더보기</span><i class="fas fa-chevron-right"></i></p>
               </article>
             </a>
           </li>
@@ -306,12 +316,12 @@
 
         <div class="social_area">
           <div class="live_btn">
-            <button type="button" class="prev btn"><span class="blind">이전</span></button>
-            <button type="button" class="next btn"><span class="blind">다음</span></button>
-        </div>
+            <button type="button" class="next btn"><span class="blind">다음 내용 보기</span></button>
+            <button type="button" class="prev btn"><span class="blind">이전 내용 보기</span></button>
+          </div>
           <ul>
-            <li></li>
-            <li></li>
+            <li><span class="blind">첫 번째 사진</span></li>
+            <li><span class="blind">두 번째 사진</span></li>
           </ul>
         </div>
       </div>
@@ -331,11 +341,11 @@
         <div class="foot_nav clearfix">
           <ul>
             <li><a href="#">회사소개</a></li>
-            <li><a href="#">제휴/제안</a></li>
+            <li><a href="#">제휴&sol;제안</a></li>
             <li><a href="#">고객센터</a></li>
             <li class="bold"><a href="#">개인정보처리방침</a></li>
             <li><a href="#">이메일무단수집거부</a></li>
-            <li><a href="#">HOT-LINE</a></li>
+            <li class="uppercase"><a href="#">hot-line</a></li>
             <li><a href="#">사이트맵</a></li>
           </ul>
           <div class="family_site">
@@ -347,9 +357,9 @@
                   <dt><span>family site</span><i class="fas fa-sort-up"></i></dt>
                   <dd>
                     <ul>
-                      <li data-select="site_01"><a href="#">site_01</a></li>
-                      <li data-select="site_02"><a href="#">site_02</a></li>
-                      <li data-select="site_03"><a href="#">site_03</a></li>
+                      <li><a href="#">site_01</a></li>
+                      <li><a href="#">site_02</a></li>
+                      <li><a href="#">site_03</a></li>
                     </ul>
                   </dd>
                 </dl>
@@ -360,26 +370,27 @@
         <div class="foot_wrap">
           <div class="foot_info">
             <h3>(주)공차코리아</h3>
-            <p>서울 종로구 종로 47(공평동, 7층)<br />
-              대표이사 김의열<br />
-              사업자등록번호 000-00-00000<br />
-              통신판매번호 0000-서울종로-0000</p>
-            <p>GONGCHA(C)GONGCHA KOREA CO.,LTD<br />
-              ALL RIGHTS RESERVED.</p>
+            <address>
+              <p>서울 종로구 종로 47(공평동, 7층)<br />
+                대표이사 김의열<br />
+                사업자등록번호 000-00-00000<br />
+                통신판매번호 0000-서울종로-0000</p>
+              <p class="uppercase">gongcha(C)gongcha korea Co.,LTD<br />
+                all rights reserved.</p>
+            </address>
           </div>
           <div class="foot_cs">
             <h3>고객센터</h3>
-            <p><span class="phone_number">00-000-0000</span></p>
+            <p><a href="tel:00-000-0000"><span class="phone_number">00-000-0000</span></a></p>
             <p>평일 오전 9시~ 오후 6시<br />
               주말 및 공휴일 휴무</p>
           </div>
           <div class="foot_sns">
             <ul class="clearfix blind_wrap">
-              <li><a href="#"><span>fb</span></a></li>
-              <li><a href="#"><span>insta</span></a></li>
-              <li><a href="#"><span>yt</span></a></li>
+              <li><a href="#"><span>facebook</span></a></li>
+              <li><a href="#"><span>instagram</span></a></li>
+              <li><a href="#"><span>youtube</span></a></li>
             </ul>
-            <!-- <div class="foot_brand">brand sites</div> -->
           </div>
         </div>
       </div>
