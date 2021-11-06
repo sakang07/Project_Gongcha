@@ -1,0 +1,39 @@
+/* main_c_tablet.css */
+
+/* (width: 1024px ~ 1439px) / design 기준: 1024px */
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+
+  /* headBox ----------------------------------------- */
+  #headBox {  padding: 8px 42px 0; }
+    h1 {margin-right: 80px;}
+    .gnb_wrap > li { margin-right: 10px; }
+    .gnb_wrap:hover .gnb_list { /* hover */
+      display: block;  }
+
+  /* orderBox ----------------------------------------- */
+  #orderBox ul { width: 860px; } 
+    #orderBox ul > li { margin-right: 30px; }
+
+  /* liveBox ----------------------------------------- */
+
+  #liveBox { padding: 100px 26px 0; }
+
+  /* liveBox > store_search_box 매장검색 */
+  .store_search_box { width: 284px; height: 314px; padding-top: 40px; }
+    .store_search_box .shop_search { width: 220px; height: 44px; border: 3px solid var(--black-02); }
+    .shop_search input { padding: 10px; font-size: 14px; }
+    .shop_search button { right: 0; width: 38px; height: 38px; }
+
+  /* social_area SNS 영역 */
+  .social_area li { width: 284px; height: 314px; }
+
+
+  /* footBox ----------------------------------------- */
+    .foot_nav > ul { margin-left: 44px; }
+    .family_site { border-right: 0; }
+    .foot_wrap { margin-left: 44px; }
+
+
+  #footBox h2 { display: none; }
+
+}

@@ -11,7 +11,7 @@
 }
 .container {
   position: relative;
-  width: 1280px; height: auto;
+  height: auto;
   margin: auto;
 }
 .blind_wrap a {

@@ -1,0 +1,10 @@
+/* main_e_pc.css */
+
+/* (width: 1920px ~ ) / design 기준: 1920px */
+@media all and (min-width: 1920px) {
+
+  /* headBox ----------------------------------------- */
+  .gnb_wrap:hover .gnb_list { /* hover */
+    display: block;  }
+
+}

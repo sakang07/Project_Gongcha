@@ -33,7 +33,7 @@
 #headBox:hover { 
   background-color: var(--white);
 }
-  #headBox:hover .nav_title,
+  #headBox:hover .gnb_title,
   #headBox:hover #unb li { 
     color: var(--black-02);
   }
@@ -70,23 +70,23 @@
       display: block;
       width: 100%; height: 100%;
     }
-    .nav_title {
+    .gnb_title {
       font-size: 18px; font-weight: 700; color: var(--white);
     }
-    .nav_list {
+    .gnb_list {
       display: none;
       width: 120px; height: 240px;
       margin-top: 60px; margin-right: 40px; 
       font-size: 16px; font-weight: 400; color: var(--deep-gray-01);
     }
-    .nav_list li {
+    .gnb_list li {
       width: 100%; height: 25px;
       margin-bottom: 10px;
     }
-    .nav_list li:last-of-type {
+    .gnb_list li:last-of-type {
       margin-bottom: 0;
     }
-    #gnb:hover .nav_list { /* hover */
+    #gnb:hover .gnb_list { /* hover */
       display: block;
     }
     

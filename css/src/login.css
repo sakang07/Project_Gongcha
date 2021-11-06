@@ -1,6 +1,9 @@
 @charset "UTF-8";
 /* login.css */
 
+/* common */
+.container { width: 1280px;}
+
 /* design */
 #wrap {
   overflow: hidden;
@@ -59,23 +62,23 @@
       display: block;
       width: 100%; height: 100%;
     }
-    .nav_title {
+    .gnb_title {
       font-size: 18px; font-weight: 700; color: var(--black-02);
     }
-    .nav_list {
+    .gnb_list {
       display: none;
       width: 120px; height: 240px;
       margin-top: 60px; margin-right: 40px; 
       font-size: 16px; font-weight: 400; color: var(--deep-gray-01);
     }
-    .nav_list li {
+    .gnb_list li {
       width: 100%; height: 25px;
       margin-bottom: 10px;
     }
-    .nav_list li:last-of-type {
+    .gnb_list li:last-of-type {
       margin-bottom: 0;
     }
-    #gnb:hover .nav_list { /* hover */
+    #gnb:hover .gnb_list { /* hover */
       display: block;
     }
     
@@ -97,18 +100,19 @@
     /* --------------------------------------- */
 
     #contBox {
+      position: relative; z-index: 0;
       width: 100%; height: auto;
       margin-top: 80px; padding-top: 152px; padding-bottom: 230px;
-      background-color: rgba(0,0,0,0.3);
+      background-image: url("../../img/login_bg.jpg");
+      background-size: cover; background-position: 50%; background-repeat: no-repeat;
+      background-attachment: fixed;
     }
     #contBox:before,
     #contBox::before {
       content: "";
       display: block;
       position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
-      background-image: url("../../img/login_bg.jpg");
-      background-size: cover; background-position: 50%; background-repeat: no-repeat;
-      background-attachment: fixed;
+      background-color: rgba(0,0,0,0.3);
     }
 
     .title {
@@ -223,7 +227,7 @@ input[type="submit"]:hover {
 }
   #sideBox a {
     display: block;
-    width: 60px; height: 60px;
+    width: 50px; height: 50px;
     border-radius: 100%;
     margin-bottom: 16px;
     background-color: var(--white);
@@ -242,7 +246,7 @@ input[type="submit"]:hover {
       transition: all 500ms ease;
     }
     #sideBox a:hover span {
-      position: absolute; top: 14px; left: 50%; z-index: 1;
+      position: absolute; top: 10px; left: 50%; z-index: 1;
       transform: translateX(-50%);
       width: auto; height: auto;
       margin: auto;
