@@ -109,8 +109,6 @@ h1 {
   width: 100%; height: auto;
   margin-top: 80px;
   color: var(--white);
-  background-image: url("../../../img/banner_01.png");
-  background-size: cover; background-position: 50%; background-repeat: no-repeat;
 }
 #viewBox:before,
 #viewBox::before {
@@ -120,104 +118,113 @@ h1 {
   width: 100%; height: 100%;
   background-image: linear-gradient(90deg,rgba(0,0,0,0),rgba(0,0,0,0.1));
 }
-  .view_inner {
-    position: relative;
-    width: 100%; height: 670px;
-  }
+#viewBox > .container { height: 670px; }
 
-  /* viewBox > view_btn 슬라이드 좌우 버튼 */
-  .view_btn {
-    width: 100%; height: 100%;
-  }
-  .view_btn li {
-    width: 80px; height: 300px;
-    background-position: 50%;
-    background-size: 18px, 42px;
-    background-repeat: no-repeat;
-  }
-  .view_btn .prev {
-    position: absolute; top: 50%; left: 0;
-    transform: translateY(-50%);
-    background-image: url("../../../img/btn_prev.png");
-  }
-  .view_btn .next {
-    position: absolute; top: 50%; right: 0;
-    transform: translateY(-50%);
-    background-image: url("../../../img/btn_next.png");
-  }
-  .view_btn a {
-    display: block;
-    width: 100%; height: 100%;
-  }
-  .view_btn li:hover { /* hover */
-    background-color: rgba(255,255,255,0.3);
-  }
+/* viewBox > view_btn 슬라이드 좌우 버튼 */
+.view_btn {
+  width: 100%; height: 100%;
+}
+.view_btn li {
+  width: 80px; height: 300px;
+  background-position: 50%;
+  background-size: 18px, 42px;
+  background-repeat: no-repeat;
+}
+.view_btn .prev {
+  position: absolute; top: 50%; left: 0;
+  transform: translateY(-50%);
+  background-image: url("../../../img/btn_prev.png");
+}
+.view_btn .next {
+  position: absolute; top: 50%; right: 0;
+  transform: translateY(-50%);
+  background-image: url("../../../img/btn_next.png");
+}
+.view_btn a {
+  display: block;
+  width: 100%; height: 100%;
+}
+.view_btn li:hover { /* hover */
+  background-color: rgba(255,255,255,0.3);
+}
 
-  /* viewBox > indicator 슬라이드 인디케이터 */
-  .indicator {
-    display: block;
-    position: absolute; bottom: 44px; left: 50%;
-    transform: translate(-50%);
-    width: auto; height: auto;
-  }
-    .indicator li {
+/* viewBox > .view_indicator 슬라이드 인디케이터 */
+.view_indicator {
+  display: block;
+  position: absolute; bottom: 44px; left: 50%;
+  transform: translate(-50%);
+  width: auto; height: auto;
+}
+    .indi_circle li {
       float: left;
       width: 16px; height: 16px;
       border-radius: 100%;
       margin-right: 14px;
     }
-    .indicator li:last-of-type {
+    .indi_circle li:last-of-type {
       margin-right: 0;
     }
-    .indicator a {
+    .indi_circle a {
       display: block;
       width: 100%; height: 100%;
       border-radius: 100%; 
       background-color: var(--white); opacity: 0.3;
     }
-    .indicator li.action { /* action: js 처리 */
+    .indi_circle li.action { /* action: js 처리 */
       width: 50px; 
       border: 0;
     }
-    .indicator li.action a { /* action: js 처리 */
+    .indi_circle li.action a { /* action: js 처리 */
       border-radius: 10px;
       background-color: var(--white); opacity: 1;
     }
-    .indicator li:hover { /* hover */
+    .indi_circle li:hover { /* hover */
       transform: scale(1.2);
       transition: all 300ms ease;
     }
-    .indicator a:focus { /* focus */
+    .indi_circle a:focus { /* focus */
       border: 2px solid var(--black-02);
     }
+    .indi_number { display: none; }
 
-    /* viewBox > view_text 슬라이드 내부 박스 */
+    /* viewBox > view_content 슬라이드 내부 박스 */
+    .view_content .action { display: block; }
+    .view_content li { 
+      display: none; 
+      width: 100%; height: 100%;
+    }
     .view_text {
-      position: absolute; top: 164px; left: 55%; /*185px;*/ z-index: 100;
+      position: absolute; top: 164px; left: 55%; z-index: 1;
       float: right;
       width: 445px; height: 344px;
     }
-    .view_text h3 {
+    .view_text dt {
       font-size: 36px; font-weight: 700; text-transform: capitalize;
     }
-    .view_text p {
+    .view_text dd {
       margin-top: 40px;
       font-size: 18px; font-weight: 400; line-height: 1.6;
     }
+    .view_img {
+      background-image: url("../../../img/banner_01.png");
+      background-size: cover; background-position: 50%; background-repeat: no-repeat;
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
+    }
 
-    /* viewBox > view_text > btn_small 슬라이드 내부 본문 버튼 */
-    .view_text .btn_small {
+
+    /* viewBox > view_content > btn_small 슬라이드 내부 본문 버튼 */
+    .view_content .btn_small {
       display: block;
       width: 140px; height: 48px;
       box-sizing: border-box; padding: 15px 18px; margin-top: 48px; 
       color:var(--black-02); text-align: center; text-transform: uppercase; font-size: 14px;
       background-color: var(--white);
     }
-      .view_text .btn_small:hover {
+      .view_content .btn_small:hover {
         transform: scale(1.1);
         transition: all 300ms ease;
       }
-      .view_text .btn_small:focus {
+      .view_content .btn_small:focus {
         border: 3px solid var(--black-02);
       }
 
@@ -242,11 +249,12 @@ h1 {
 }
 
 /* menuBox > btn_circle 메뉴 슬라이드 좌우 버튼 */
+  .slide_wrap button { display: none; }
+  .slide_wrap button.action { display: block; }
   .slide_wrap {
     position: relative;
   }
   .slide_wrap .btn_circle {
-    display: block;
     position: absolute; top: 50%; z-index: 500;
     transform: translateY(-50%);
     width: 60px; height: 60px;
@@ -439,12 +447,12 @@ h1 {
   }
 
   /* recipeBox > btn_circle 메뉴 슬라이드 좌우 버튼 */
+  .recipe_wrap button { display: none; }
+  .recipe_wrap button.action { display: block; }
   .recipe_wrap {
     position: relative; width: 100%; height: auto;
   }
-
   .recipe_wrap .btn_circle {
-    display: block;
     position: absolute; top: 50%; z-index: 500;
     transform: translateY(-50%);
     width: 60px; height: 60px;
@@ -880,3 +888,5 @@ h1 {
       .foot_sns li:first-of-type {
         margin-left: 0;
       }
+
+
