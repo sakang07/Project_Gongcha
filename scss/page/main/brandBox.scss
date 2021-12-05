@@ -1,0 +1,7 @@
+// brandBox.scss
+/* brandBox.css */
+
+#brandBox {
+  @include pxRem(height, 400);
+  background-color: #D6222D;
+}

@@ -1,0 +1,7 @@
+// menuBox.scss
+/* menuBox.css */
+
+#menuBox {
+  @include pxRem(height, 520);
+  background-color: #63AD85;
+}

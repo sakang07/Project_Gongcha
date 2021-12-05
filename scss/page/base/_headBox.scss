@@ -1,0 +1,147 @@
+// _headBox.scss
+/* headBox.css */
+
+// Js 처리:
+// 1. 네비게이션 버튼 동작 : .gnb_title 클릭하면 .on 삽입
+// 2. 네비 안의 드롭다운 동작 : .gnb_title 클릭하면 .on 삽입
+// 3. .nav_search의 form 동작
+
+// css 처리:
+// hover랑 focus 추가
+
+// html 처리:
+// 버튼 아닌거 전부 button으로 바꾸자!
+
+#headBox {
+  width: 100%;
+  padding: 0 1.25rem;
+  @include pxRem(height, 60);
+  background-color: $color_white;
+
+  .container {
+    display: flex; justify-content: space-between; align-items: center;
+  
+    
+    @at-root h1 {
+      width: 2.625rem; height: 3.375rem;
+      & > a { @include full('logo.png', $size: contain); }
+    }
+
+    @at-root .nav_btn { 
+      width: 1.5rem; height: 1.375rem; 
+      @include font(22);
+      text-align: center;
+    }
+    
+    @at-root .gnb_mob {
+      display: none;
+      &.on {
+        // navigation menu
+        // display: block;
+        display: flex; flex-direction: column; align-items: flex-end;
+        padding-right: 1.75rem;
+        position: fixed; top: 0; left: 1.25rem; right: 0; bottom: 0; z-index: 2000;
+        background-color: $color_white;
+
+        h2 {
+          // js : h2.blind, h2.span.blind 빼기 
+          position: absolute; top: 0.875rem; right: 1.875rem;
+          width: 2.625rem; height: 3.375rem;
+          
+          & > a { @include full('logo.png', $size: contain); }
+        }
+        .nav_close {
+          position: absolute; top: 1.25rem; left: 1.25rem;
+          display: block;
+          width: 1.25rem; height: 1.25rem;
+          @include font(22);
+        }
+        @at-root .gnb_wrap {
+          width: auto; height: auto;
+          margin-top: 5.875rem;
+          text-align: right;
+
+          @at-root .gnb_title {
+            position: relative;
+            width: auto; height: 1.875rem;
+            margin-right: 2.5rem; margin-bottom: 1.25rem;
+            @include font(18, $font_weight_bold, 30px);
+
+            &:after, &::after {
+              position: absolute; top: 50%; right: -2.5rem;
+              content: "";
+              display: block;
+              width: 1.25rem; height: 1.25rem;
+              transform: translateY(-50%);
+              @include img('btn_down.png');
+            }
+
+            @at-root .gnb_list {
+              display: none;
+              margin-top: 20px; margin-bottom: 32px;
+              
+              @at-root .gnb_list li {
+                margin-bottom: 1rem; margin-right: 2.5rem;
+                
+                @include font(14, $font_weight_thin, 14px) { color: $color_deep_gray_01 };
+                
+                &:last-of-type { margin-bottom: 0; }
+              } // .gnb_list li
+            } // .gnb_list
+
+            &.on + .gnb_list { display: block; }
+          } //.gnb_title
+        } //.gnb_wrap
+
+        // &:before, &::before { // 왜 z-index: -1안먹어.....?
+        //   content: "";
+        //   display: block;
+        //   position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
+        //   width: 100%; height: 100%;
+        //   background-color: rgba($color_black_02, 0.5);}
+
+        @at-root .nav_search {
+          width: 10.25rem; height: 40px;
+          margin-top: 0.625rem; border-bottom: $line_02;
+          
+          form {
+            width: 100%; height: 100%;
+            fieldset {
+              display: flex; justify-content: space-between;
+              width: 100%; height: 100%;
+              input {
+                width: 130px; height: 100%;
+                color: $color_deep_gray_01;
+              }
+              button {
+                text-align: center;
+                @include font(20)
+              }
+            }
+          }
+        } //.nav_search
+
+        @at-root .nav_sns {
+          display: flex; justify-content: space-between;
+          margin-top: 2.5rem;
+
+          li {
+            margin-right: 1.375rem;
+            @include font(26);
+
+            &:last-of-type { margin-right: 0; }
+          }
+        } //.nav_sns
+      } //.on
+    } //.gnb_mob
+
+    // .nav_bg { 
+    //   display: block;
+    //   position: fixed; top: 0; left: 0; right: 0; bottom: 0; 
+    //   width: 100%; height: 100%;
+    //   background-color: rgba($color_black_02, 0.5);}
+      
+    @at-root .gnb_pc { display: none; }
+    @at-root .unb { display: none; }
+  } //.container
+}

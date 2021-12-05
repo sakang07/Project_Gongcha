@@ -1,0 +1,7 @@
+// _footBox.scss
+/* footBox.css */
+
+#footBox {
+  @include pxRem(height, 550);
+  background-color: #9D1EF9;
+}

@@ -1,0 +1,7 @@
+// franchiseBox.scss
+/* franchiseBox.css */
+
+#franchiseBox {
+  @include pxRem(height, 400);
+  background-color: #00172D;
+}

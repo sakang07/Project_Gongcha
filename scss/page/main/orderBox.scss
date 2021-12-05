@@ -1,0 +1,7 @@
+// orderBox.scss
+/* orderBox.css */
+
+#orderBox {
+  @include pxRem(height, 720);
+  background-color: #804ADA;
+}
