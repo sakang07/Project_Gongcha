@@ -37,7 +37,7 @@ elGnbCloseBtn.addEventListener('click', function(e){
   elGnbMob.classList.remove(ckActive);
 });
 
-// elGnbTitle을 클릭하면 submenu 열기
+// elGnbTitle을 클릭하면 submenu 열기 // 이건 왜 또 안됨
 elGnbTitle.addEventListener('click', function(e){
   e.preventDefault();
   elGnbTitle.classList.add(ckActive);
