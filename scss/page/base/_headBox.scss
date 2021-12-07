@@ -27,6 +27,7 @@
       @at-root .nav_btn { 
         width: 2.5rem; height: 2.5rem; 
         text-align: center;
+
         button { 
           @include full;
           @include font(22);
@@ -38,15 +39,15 @@
         
         &.on {
           // navigation menu
-          overflow-x: hidden;
           display: flex; flex-direction: column; align-items: flex-end;
           padding: { top: 0.875rem; right: 1.75rem; }
-          position: fixed; top: 0; left: 5%; right: 0; bottom: 0; z-index: 2000;
+          position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 2000;
+          background-color: rgba($color_black_02, 0.5);
           
           & > div { margin-bottom: 2.5rem;}
           
           @at-root .nav_close {
-            position: absolute; top: 0.625rem; left: 0.625rem;
+            position: absolute; top: 0.625rem; left: 7%;
             display: block;
             width: 2.5rem; height: 2.5rem;
             button {
@@ -107,6 +108,7 @@
           } //.gnb_wrap
   
           @at-root .unb_wrap {
+            display: flex; flex-direction: column; align-items: flex-end;
             width: auto; height: auto;
             margin-top: 0.625rem; 
   
@@ -147,26 +149,18 @@
               }
             } //.nav_sns
           } //.unb_wrap
-  
-          // 백그라운드 레이어 2개 처리방법 : 감싸는 박스에 까만 그림자 배경, 레이어하나더해서 위에 흰배경 올리기
-          &:after {
-            content: "";
-            position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
-            background-color: $color_white;
-          }
-          .nav_bg { 
-            content: "";
-            display: block;
-            position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
+
+          .nav_bg {
+            position: fixed; top: 0; left: 5%; right: 0; bottom: 0; z-index: -1;
             width: 100%; height: 100%;
-            background-color: rgba($color_black_02, 0.5);
+            background-color: $color_white;
           }
         } //.on
       } //.nav_wrap
     } //.nav_mob
 
-      
-    @at-root .gnb_pc { display: none; }
-    @at-root .unb { display: none; }
+    @at-root .nav_pc { display: none; }
   } //.container
 }
+
+

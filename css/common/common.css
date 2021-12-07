@@ -41,6 +41,7 @@
 .container {
   position: relative;
   width: 100%;
+  max-width: 64rem;
   height: 100%;
   margin: auto;
 }
@@ -60,5 +61,3 @@
 .uppercase {
   text-transform: uppercase;
 }
-
-/*# sourceMappingURL=common.css.map */

@@ -1,0 +1,13 @@
+{
+  "name": "project_gongcha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "server": "browser-sync --start --watch && sass --watch --no-source-map scss:css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SA K",
+  "license": "ISC"
+}
