@@ -5,14 +5,15 @@
 
 /* headBox.css */
 #wrap {
-  min-width: 320px;
+  min-width: 20rem;
 }
 
 #headBox {
   width: 100%;
-  padding: 0 12px;
+  padding: 0 0.75rem;
   height: 60px;
   height: 3.75rem;
+  border-bottom: 0.0625rem solid #ccc;
   background-color: #fff;
 }
 #headBox .container {
@@ -21,7 +22,7 @@
   align-items: center;
 }
 h1 {
-  width: 50px;
+  width: 3.125rem;
   height: 3.375rem;
 }
 h1 > a {
@@ -43,6 +44,10 @@ h1 > a > span {
   overflow: hidden;
 }
 
+.nav_mob {
+  width: auto;
+  height: auto;
+}
 .nav_btn {
   width: 2.5rem;
   height: 2.5rem;
@@ -56,14 +61,15 @@ h1 > a > span {
   font-size: 1.375rem;
 }
 
-.nav_mob {
+.nav_wrap {
   display: none;
 }
-.nav_mob.on {
+.nav_wrap.on {
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  padding-top: 0.875rem;
   padding-right: 1.75rem;
   position: fixed;
   top: 0;
@@ -71,33 +77,12 @@ h1 > a > span {
   right: 0;
   bottom: 0;
   z-index: 2000;
+  background-color: rgba(23, 23, 23, 0.5);
 }
-.nav_mob.on h2 {
-  position: absolute;
-  top: 0.875rem;
-  right: 1.875rem;
-  width: 2.625rem;
-  height: 3.375rem;
+.nav_wrap.on > div {
+  margin-bottom: 2.5rem;
 }
-.nav_mob.on h2 > a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-image: url(../../multi/img/logo.png);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: contain;
-}
-.nav_mob.on h2 > a > span {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  clip: rect(0 0 0 0);
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-.nav_mob.on .nav_close {
+.nav_close {
   position: absolute;
   top: 0.625rem;
   left: 0.625rem;
@@ -105,7 +90,7 @@ h1 > a > span {
   width: 2.5rem;
   height: 2.5rem;
 }
-.nav_mob.on .nav_close button {
+.nav_close button {
   display: block;
   width: 100%;
   height: 100%;
@@ -114,20 +99,43 @@ h1 > a > span {
   line-height: 2.5rem;
   text-align: center;
 }
-.nav_mob.on .nav_close button:focus {
+.nav_close button:focus {
   outline: 0.25rem solid #171717;
 }
+
+.nav_logo {
+  width: 2.625rem;
+  height: 3.375rem;
+}
+.nav_logo > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../multi/img/logo.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.nav_logo > a > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 .gnb_wrap {
   width: auto;
   height: auto;
-  margin-top: 5.875rem;
   text-align: right;
 }
 .gnb_title {
   position: relative;
   width: auto;
   height: 2.5rem;
-  margin-bottom: 18px;
+  margin-bottom: 1.125rem;
   padding-right: 2.5rem;
   font-size: 22px;
   font-size: 1.375rem;
@@ -164,7 +172,7 @@ h1 > a > span {
   overflow: hidden;
 }
 .gnb_title > a.on:after, .gnb_title > a.on::after {
-  transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-60%) rotate(180deg);
 }
 .gnb_list {
   display: none;
@@ -174,7 +182,7 @@ h1 > a > span {
 .gnb_list li {
   width: auto;
   height: 2.5rem;
-  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
   margin-right: 2.5rem;
   font-size: 18px;
   font-size: 1.125rem;
@@ -198,14 +206,13 @@ h1 > a > span {
 .unb_wrap {
   width: auto;
   height: auto;
-  text-align: right;
+  margin-top: 0.625rem;
 }
 .nav_search {
   width: 60%;
-  min-width: 246px;
-  max-width: 300px;
+  min-width: 15.375rem;
+  max-width: 18.75rem;
   height: 3.125rem;
-  margin-top: 0.625rem;
   border-bottom: 1px solid #777;
 }
 .nav_search form {
@@ -234,24 +241,28 @@ h1 > a > span {
   height: 100%;
   font-size: 24px;
   font-size: 1.5rem;
-  line-height: 50px;
+  line-height: 3.125rem;
 }
 
 .nav_sns {
-  display: flex;
-  justify-content: right;
   margin-top: 2.5rem;
 }
-.nav_sns li {
+.nav_sns ul {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  height: 100%;
+}
+.nav_sns ul li {
   margin-right: 1.375rem;
   font-size: 26px;
   font-size: 1.625rem;
 }
-.nav_sns li:last-of-type {
+.nav_sns ul li:last-of-type {
   margin-right: 0;
 }
 
-.nav_mob.on:after {
+.nav_wrap.on:after {
   content: "";
   position: absolute;
   top: 0;
@@ -261,7 +272,7 @@ h1 > a > span {
   z-index: -1;
   background-color: #fff;
 }
-.nav_mob .nav_bg {
+.nav_wrap.on .nav_bg {
   content: "";
   display: block;
   position: fixed;
@@ -272,7 +283,6 @@ h1 > a > span {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background-color: rgba(23, 23, 23, 0.5);
 }
 
 .gnb_pc {

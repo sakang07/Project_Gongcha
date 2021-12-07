@@ -11,16 +11,16 @@
 // =============================================================
 
 // 변수 --------------------------------------------------------
-var elGnbMob = document.querySelector('.nav_mob');
-var elGnbOpenBtn = document.querySelector('.nav_btn > button');
-var elGnbCloseBtn = elGnbMob.querySelector('.nav_close > button');
+var elNavMob = document.querySelector('.nav_mob > .nav_wrap');
+var elNavMOpenBtn = document.querySelector('.nav_btn > button');
+var elNavMCloseBtn = elNavMob.querySelector('.nav_close > button');
 
-var elGnbWrap = elGnbMob.querySelector('.gnb_wrap');
+var elGnbWrap = elNavMob.querySelector('.gnb_wrap');
 var elGnbWrapLi = elGnbWrap.children;
 var elGnbWrapLiArr = Array.prototype.slice.call(elGnbWrapLi);
 
 var elGnbTitle = elGnbWrap.querySelectorAll('.gnb_title');
-var elGnbTitleA = elGnbMob.querySelectorAll('.gnb_title > a');
+var elGnbTitleA = elNavMob.querySelectorAll('.gnb_title > a');
 
 // 기능 활성화 클래스 문자열
 var ckActive = 'on';
@@ -44,17 +44,17 @@ var fnCloseSubMenu = function (el) {
 
 // 이벤트 --------------------------------------------------------
 
-// elGnbOpenBtn을 클릭하면 gnb 열기----------------------
-elGnbOpenBtn.addEventListener('click', function(e) {
+// elNavMOpenBtn을 클릭하면 gnb 열기----------------------
+elNavMOpenBtn.addEventListener('click', function(e) {
   e.preventDefault();
-  elGnbMob.classList.add(ckActive);
-  elGnbCloseBtn.focus();
+  elNavMob.classList.add(ckActive);
+  elNavMCloseBtn.focus();
 });
 
-// elGnbCloseBtn을 클릭하면 gnb 닫기----------------------
-elGnbCloseBtn.addEventListener('click', function(e){
+// elNavMCloseBtn을 클릭하면 gnb 닫기----------------------
+elNavMCloseBtn.addEventListener('click', function(e){
   e.preventDefault();
-  elGnbMob.classList.remove(ckActive);
+  elNavMob.classList.remove(ckActive);
 });
 
 // elGnbTitleA를 클릭하면 서브메뉴 열기--------------------
