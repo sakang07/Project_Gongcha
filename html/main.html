@@ -31,16 +31,16 @@
     <header id="headBox" class="action">
       <div class="container blind_wrap">
         <h1><a href="../index.html"><span>Gongcha</span></a></h1>
-        
+
         <!-- mobile gnb -->
-        <div class="nav_btn"><i class="fas fa-bars"></i></div>
-        <nav class="gnb_mob">
-          <!-- <h2 class="blind"><span class="blind">global navigation</span></h2> -->
+        <div class="nav_btn"><button type="button"><i class="fas fa-bars"></i></button></div>
+        <nav class="nav_mob">
           <h2><a href="#"><span>global navigation</span></a></h2>
-          <div class="nav_close"><i class="fas fa-times"></i></div>
+          
+          <div class="nav_close"><button type="button"><i class="fas fa-times"></i></button></div>
           <ul class="gnb_wrap">
             <li>
-              <div class="gnb_title on"><a href="#">메뉴소개</a></div>
+              <div class="gnb_title"><a href="#">메뉴소개</a></div>
               <ul class="gnb_list">
                 <li><a href="#">음료</a></li>
                 <li><a href="#">디저트</a></li>
@@ -82,25 +82,27 @@
             </li>
           </ul>
 
-          <div class="nav_search">
-            <!-- search form -->
-            <form action="#" method="POST">
-              <fieldset>
-                <legend class="blind">site search</legend>
-                <label for="searchInput"></label>
-                <input type="search" id="searchInput" value="" name="search__Input" />
-                <button type="button"><i class="fas fa-search"></i></button>
-              </fieldset>
-            </form>
+          <div class="unb_wrap">
+            <div class="nav_search">
+              <!-- search form -->
+              <form action="#" method="POST">
+                <fieldset>
+                  <legend class="blind">site search</legend>
+                  <label for="searchInput"></label>
+                  <input type="search" id="searchInput" value="" name="search__Input" />
+                  <button type="button"><i class="fas fa-search"></i></button>
+                </fieldset>
+              </form>
+            </div>
+            <ul class="nav_sns">
+              <li><a href="#"><i class="fab fa-facebook"></i><span class="blind">facebook</span></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i><span class="blind">instagram</span></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i><span class="blind">youtube</span></a></li>
+            </ul>
           </div>
-          <ul class="nav_sns">
-            <li><a href="#"><i class="fab fa-facebook"></i><span class="blind">facebook</span></a></li>
-              <li><a href="#"><i class="fab fa-instagram"></i><span class="blind">instagram</span></a></li>
-              <li><a href="#"><i class="fab fa-youtube"></i><span class="blind">youtube</span></a></li>
-          </ul>
 
-        </nav><!-- //.gnb_mob -->
-        <!-- <div class="nav_bg"></div> -->
+          <div class="nav_bg"></div>
+        </nav><!-- //.nav_mob -->
 
         <!-- pc gnb -->
         <nav class="gnb_pc">
