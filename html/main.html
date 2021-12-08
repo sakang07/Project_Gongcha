@@ -164,9 +164,9 @@
             </ul>
           </div><!-- //.gnb -->
 
-          <div class="unb on">
+          <div class="unb">
             <ul class="unb_wrap">
-              <li><a href="#"><i class="fas fa-search"></i><span>search</span></a></li>
+              <li class="search"><a href="#"><i class="fas fa-search"></i><span>search</span></a></li>
               <li><a href="./login.html"><i class="fas fa-user"></i><span>user</span></a></li>
             </ul>
 
@@ -177,7 +177,7 @@
                   <fieldset>
                     <legend class="blind">site search</legend>
                     <label for="searchInput"></label>
-                    <input type="search" id="searchInput" value="" name="search__Input" />
+                    <input type="search" id="searchInput" value="" name="search__Input" placeholder="검색어를 입력하세요" />
                     <button type="button"><i class="fas fa-search"></i></button>
                   </fieldset>
                 </form>
@@ -520,7 +520,7 @@
               주말 및 공휴일 휴무</p>
           </div>
           <div class="foot_sns">
-            <ul class= blind_wrap">
+            <ul class="blind_wrap">
               <li><a href="#"><i class="fab fa-facebook"></i><span class="blind">facebook</span></a></li>
               <li><a href="#"><i class="fab fa-instagram"></i><span class="blind">instagram</span></a></li>
               <li><a href="#"><i class="fab fa-youtube"></i><span class="blind">youtube</span></a></li>
@@ -532,6 +532,7 @@
   </div><!-- //#wrap -->
 
   <!-- script -->
-  <script src="../js/src/navigation_drop.js"></script>
+  <script src="../js/src/drop_navigation.js"></script>
+  <script src="../js/src/open_unb_search.js"></script>
 </body>
 </html>

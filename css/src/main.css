@@ -397,6 +397,11 @@ h1 > a > span {
   }
 
   .unb_search {
+    display: none;
+  }
+
+  .unb.on .unb_search {
+    display: block;
     position: absolute;
     top: calc(100% + 1px);
     right: 0;
@@ -406,8 +411,8 @@ h1 > a > span {
     border-bottom: 0.0625rem solid #ccc;
     background-color: #fff;
   }
-  .unb_search .search_area {
-    width: 1000px;
+  .unb.on .unb_search .search_area {
+    width: 800px;
     height: 70px;
     margin-left: 50%;
     margin-top: 52px;
@@ -415,8 +420,30 @@ h1 > a > span {
     background-color: #eee;
     transform: translateX(-50%);
   }
+  .unb.on .unb_search .search_area form, .unb.on .unb_search .search_area fieldset {
+    width: 100%;
+    height: 100%;
+  }
+  .unb.on .unb_search .search_area fieldset {
+    display: flex;
+    justify-content: space-between;
+  }
+  .unb.on .unb_search .search_area input {
+    width: calc(100% - 55px);
+    height: 100%;
+    font-size: 20px;
+    font-size: 1.25rem;
+    text-indent: 48px;
+    background-color: transparent;
+  }
+  .unb.on .unb_search .search_area button {
+    width: 80px;
+    height: 100%;
+    font-size: 28px;
+    font-size: 1.75rem;
+  }
 }
-/*==================== laptop 320px - 1023px ====================*/
+/*==================== pc 1024px - ====================*/
 @media all and (min-width: 1440px) {
   #headBox {
     min-height: 5rem;
@@ -502,11 +529,11 @@ h1 > a > span {
     background-color: #ccc;
   }
 
-  .unb .unb_wrap {
+  .unb_wrap {
     display: flex;
     justify-content: space-between;
   }
-  .unb .unb_wrap li {
+  .unb_wrap li {
     width: 60px;
     height: 60px;
     margin-right: 16px;
@@ -515,13 +542,60 @@ h1 > a > span {
     text-align: center;
     line-height: 72px;
   }
-  .unb .unb_wrap li:last-of-type {
+  .unb_wrap li:last-of-type {
     margin-right: 0;
   }
-  .unb .unb_wrap li > a {
+  .unb_wrap li > a {
     display: block;
     width: 100%;
     height: 100%;
+  }
+
+  .unb_search {
+    display: none;
+  }
+
+  .unb.on .unb_search {
+    display: block;
+    position: absolute;
+    top: calc(100% + 1px);
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    border-bottom: 0.0625rem solid #ccc;
+    background-color: #fff;
+  }
+  .unb.on .unb_search .search_area {
+    width: 1000px;
+    height: 70px;
+    margin-left: 50%;
+    margin-top: 52px;
+    border-radius: 10px;
+    background-color: #eee;
+    transform: translateX(-50%);
+  }
+  .unb.on .unb_search .search_area form, .unb.on .unb_search .search_area fieldset {
+    width: 100%;
+    height: 100%;
+  }
+  .unb.on .unb_search .search_area fieldset {
+    display: flex;
+    justify-content: space-between;
+  }
+  .unb.on .unb_search .search_area input {
+    width: calc(100% - 55px);
+    height: 100%;
+    font-size: 20px;
+    font-size: 1.25rem;
+    text-indent: 48px;
+    background-color: transparent;
+  }
+  .unb.on .unb_search .search_area button {
+    width: 80px;
+    height: 100%;
+    font-size: 28px;
+    font-size: 1.75rem;
   }
 }
 /* viewBox.css */

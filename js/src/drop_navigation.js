@@ -1,4 +1,4 @@
-// navigation_drop.js
+// drop_navigation.js
 
 // =============================================================
 // mobile
