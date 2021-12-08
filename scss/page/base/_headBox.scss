@@ -208,7 +208,7 @@
           .gnb_title {
             width: 120px;
             height: 66px;
-            & > a { @include full; line-height: 66px; text-align: center; }
+            & > a { @include full; line-height: 66px; text-align: center; } 
           }
           .gnb_list { display: none; }
         }//.gnb_wrap li
