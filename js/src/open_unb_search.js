@@ -12,6 +12,7 @@ var elUnb = navPc.querySelector('.unb');
 var elUnbSearchA = elUnb.querySelector('.search > a');
 var elSearchArea = elUnb.querySelector('.search_area');
 var elViewBox = document.querySelector('#viewBox');
+var elPcGnbWrap = navPc.querySelector('.gnb_wrap');
 
 // 이벤트
 // 서치버튼 클릭시 .unb에 .on 추가
@@ -26,7 +27,7 @@ elViewBox.addEventListener('click', function(e){
   elUnb.classList.remove(ckActive);
 });
 
-// 외부 영역(.gnb_wrap) 클릭시 .unb에 .on 제거 : 안됨...
-elGnbWrap.addEventListener('click', function(e){
+// 외부 영역(.gnb_wrap) 클릭시 .unb에 .on 제거
+elPcGnbWrap.addEventListener('mouseover', function(e){
   elUnb.classList.remove(ckActive);
 });

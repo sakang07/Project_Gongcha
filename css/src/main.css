@@ -600,10 +600,6 @@ h1 > a > span {
 }
 /* viewBox.css */
 #viewBox {
-  height: 540px;
-  height: 33.75rem;
-  height: 168.75vw;
-  max-width: 100vh;
   background-color: #FAF7E8;
 }
 

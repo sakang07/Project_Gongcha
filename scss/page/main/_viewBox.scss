@@ -2,7 +2,8 @@
 /* viewBox.css */
 
 #viewBox {
-  @include vw(height, 540, 320); max-width: 100vh;
+  // @include vw(height, 540, 320); 
+  // max-width: 100vh;
   // @include pxRem(height, 600); height: calc(100vh - 60px);
   background-color: #FAF7E8;
 }
