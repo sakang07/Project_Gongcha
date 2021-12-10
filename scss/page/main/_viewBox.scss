@@ -2,8 +2,22 @@
 /* viewBox.css */
 
 #viewBox {
-  // @include vw(height, 540, 320); 
-  // max-width: 100vh;
-  // @include pxRem(height, 600); height: calc(100vh - 60px);
+  position: relative;
+  width: 100%; height: calc(100vh - 3.75rem); max-height: 50rem;
+  padding-top: 3.75rem;
   background-color: #FAF7E8;
+  
+  @at-root .view_btn { display: none; }
+  @at-root .view_indicator {
+    .indi_circle { display: none; }
+    .indi_number {
+      position: absolute; bottom: 1.25rem; right: 0.75rem;
+      width: 3.5rem; height: 1.625rem;
+      border-radius: 1.25rem; @include font(14, $line:28px){ color: $color_white; text-align: center };
+      background-color: $color_deep_gray_01;
+    }
+  } //.view_indicator
+  .view_content {
+    
+  } //.view_content
 }

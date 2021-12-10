@@ -4,10 +4,6 @@
 }
 
 /* headBox.css */
-#wrap {
-  min-width: 20rem;
-}
-
 #headBox {
   position: absolute;
   top: 0;
@@ -600,7 +596,33 @@ h1 > a > span {
 }
 /* viewBox.css */
 #viewBox {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 3.75rem);
+  max-height: 50rem;
+  padding-top: 3.75rem;
   background-color: #FAF7E8;
+}
+.view_btn {
+  display: none;
+}
+
+.view_indicator .indi_circle {
+  display: none;
+}
+.view_indicator .indi_number {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 0.75rem;
+  width: 3.5rem;
+  height: 1.625rem;
+  border-radius: 1.25rem;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 28px;
+  color: #fff;
+  text-align: center;
+  background-color: #505050;
 }
 
 /* menuBox.css */
@@ -656,3 +678,5 @@ h1 > a > span {
   height: 34.375rem;
   background-color: #9D1EF9;
 }
+
+/*# sourceMappingURL=main.css.map */
