@@ -124,7 +124,6 @@ fnNextSlide = function fnNextSlide(el) {
   i++;
   el.style.transform = "translateX(-".concat(i * slideW, "%)");
   el.style.transition = 'all 500ms ease';
-  console.log(el.style.transform);
 }; // 이전 슬라이드로 이동하는 함수
 
 
@@ -132,7 +131,6 @@ fnPrevSlide = function fnPrevSlide(el) {
   i--;
   el.style.transform = "translateX(-".concat(i * slideW, "%)");
   el.style.transition = 'all 500ms ease';
-  console.log(el.style.transform);
 }; // 다음 인디케이터로 이동하는 함수
 
 
@@ -172,13 +170,11 @@ elViewBtnPrev.addEventListener('click', function (e) {
     if (0 < i && i < sildeLen) {
       fnPrevSlide(elViewContUl);
       fnNextIndiCir(elIndiCircleLi);
-      console.log('첫번쨰', i);
     } else {
       console.log(i);
       i = sildeLen;
       fnPrevSlide(elViewContUl);
       fnNextIndiCir(elIndiCircleLi);
-      console.log('두번쨰', i);
     }
 
     permission = true;

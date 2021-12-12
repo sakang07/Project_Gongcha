@@ -700,14 +700,11 @@ h1 > a > span {
     content: "";
   }
 }
-/*==================== desktop 1024 - ====================*/
+/*==================== desktop 1024px - ====================*/
 @media all and (min-width: 1024px) {
   #viewBox {
     height: 48.75rem;
     margin-top: 5rem;
-  }
-  #viewBox .container {
-    max-width: 64rem;
   }
   .view_btn {
     position: absolute;
@@ -814,7 +811,7 @@ h1 > a > span {
     width: 100%;
     height: 100%;
   }
-  .view_content_inner .view_text {
+  .view_text {
     display: flex;
     justify-content: right;
     width: 100%;
@@ -824,10 +821,10 @@ h1 > a > span {
     padding-top: 180px;
     padding-right: 50px;
   }
-  .view_content_inner .view_text dl {
+  .view_text dl {
     width: 400px;
   }
-  .view_content_inner .view_text dl dt {
+  .view_text dl dt {
     font-size: 36px;
     font-size: 2.25rem;
     font-weight: 700;
@@ -836,14 +833,14 @@ h1 > a > span {
     text-transform: capitalize;
     margin-bottom: 34px;
   }
-  .view_content_inner .view_text dl dd {
+  .view_text dl dd {
     font-size: 18px;
     font-size: 1.125rem;
     line-height: 1.6;
     color: #fff;
     margin-bottom: 74px;
   }
-  .view_content_inner .view_text dl .btn_small {
+  .view_text dl .btn_small {
     width: 8.75rem;
     height: 3rem;
     padding: 0.75rem 1.125rem 0;
@@ -854,11 +851,12 @@ h1 > a > span {
     text-align: center;
     color: #171717;
   }
-  .view_content_inner .view_text dl .btn_small > a {
+  .view_text dl .btn_small > a {
     display: block;
     width: 100%;
     height: 100%;
   }
+
   .view_img {
     position: absolute;
     top: 0;
@@ -886,14 +884,11 @@ h1 > a > span {
 }
 /*==================== pc 1440px - ====================*/
 @media all and (min-width: 1440px) {
-  #viewBox .container {
-    max-width: 80rem;
-  }
   .view_btn {
     max-width: 80rem;
   }
 
-  .view_content_inner {
+  .view_text {
     max-width: 80rem;
   }
 }

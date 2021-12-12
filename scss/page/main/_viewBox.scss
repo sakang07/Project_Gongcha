@@ -4,10 +4,7 @@
 #viewBox {
   position: relative;
   width: 100%; 
-
 }
-
-
 
 /*==================== handhels 320px - 1023px ====================*/
 @include handhelds {
@@ -36,8 +33,6 @@
         @at-root .view_content_inner {
           overflow-X: hidden;
           width: 100%; height: 100%;
-          
-          
 
           dl { 
             padding: 180px 40px 0;
@@ -67,13 +62,11 @@
 } // @incluse handhelds
 
 
-/*==================== desktop 1024 - ====================*/
+/*==================== desktop 1024px - ====================*/
 @include desktop {
   #viewBox {
     height: calc(43.75rem + 5rem);
     margin-top: 5rem;
-    
-    .container { max-width: 64rem; }
 
     @at-root .view_btn {
       position: absolute; top: 0; left: 50%; bottom: 0;
@@ -118,7 +111,7 @@
           position: relative;
           width: 100%; height: 100%;
           
-          .view_text {
+          @at-root .view_text {
             display: flex; justify-content: right;
             width: 100%; height: 100%; max-width: 64rem;
             margin: auto; padding: {top: 180px; right: 50px}
@@ -158,11 +151,11 @@
 @include pc {
 
   #viewBox {
-    .container { max-width: 80rem; }
+
     @at-root .view_btn {
       max-width: 80rem;
     }
-    @at-root .view_content_inner {
+    @at-root .view_text {
       max-width: 80rem;
     }
   } //#viewBox
