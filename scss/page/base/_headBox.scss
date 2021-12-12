@@ -14,7 +14,7 @@
 
     @at-root h1 { 
       width: 3.125rem; height: 3.375rem;
-      & > a { @include full('logo.png', $size: contain); }
+      & > a { @include full('logo.png', contain); }
     }
   } //.container
 }
@@ -68,7 +68,7 @@
             @at-root .nav_logo {
               width: 2.625rem; height: 3.375rem;
               
-              & > a { @include full('logo.png', $size: contain); }
+              & > a { @include full('logo.png', contain); }
             }
 
             @at-root .gnb_wrap {
@@ -279,7 +279,7 @@
       }// .unb.on
     } //.unb
   } //.nav_pc
-} // laptop
+} // @include laptop
 
 
 /*==================== pc 1024px - ====================*/
@@ -388,4 +388,4 @@
       }// .unb.on
     } //.unb
   } //.nav_pc
-} // laptop
+} // @include pc

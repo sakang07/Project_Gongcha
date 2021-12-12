@@ -1,13 +1,18 @@
 {
-  "name": "project_gongcha",
+  "name": "b_step_03",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
-    "server": "browser-sync --start --watch && sass --watch --no-source-map scss:css",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel dist --out-dir js"
   },
-  "author": "SA K",
-  "license": "ISC"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4"
+  }
 }

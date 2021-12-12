@@ -35,12 +35,12 @@ $imgPath: '../../multi/img/';
 
 // @mixin img와 @mixin full은 연결되어 있다(full 안에 img가 들어가 있음)
 // 먼저 img를 정의한 뒤에 img를 포함하고 있는 full을 정의해야 한다
-@mixin img($file, $repeat:no-repeat, $position:50% 50%, $size:initial) {
+@mixin img($file, $size:initial, $position:50% 50%, $repeat:no-repeat) {
 	background : {
 		image: url(#{$imgPath}#{$file});
-		repeat: $repeat;
-		position: $position;
 		size: $size;
+		position: $position;
+		repeat: $repeat;
 	}
 	> span {
 		display: block;
@@ -49,14 +49,35 @@ $imgPath: '../../multi/img/';
 	}
 	@content;
 }
-@mixin full($file:false, $repeat:no-repeat, $position:50% 50%, $size:initial) {
+@mixin full($file:false, $size:initial, $position:50% 50%, $repeat:no-repeat) {
 	display: block; width: 100%; height: 100%;
 	// $img가 초기값인 false일 경우에는 if문이 처리되지 않음
 	@if ($file) { 
-		@include img($file, $repeat, $position, $size) {
+		@include img($file, $size, $position, $repeat) {
 			@content;
 		}
 	}
+}
+
+
+// btn
+
+@mixin btn_small($bgCo: $color_white, $color: $color_black_02, $font:1rem) {
+	width: 8.75rem; height: 3rem;
+	padding: 0.75rem 1.125rem 0; border: $line_01;
+	background-color: $bgCo;
+	font: { weight: $font_weight_bold; size: $font }
+	text-align: center; color: $color;
+	& > a { @include full; }
+}
+
+@mixin btn_big ($bgCo: $color_white, $color: $color_black_02, $font:1rem) {
+	min-width: 260px; height: 56px;
+	padding: 20px 18px; border: $line_01;
+	background-color: $bgCo;
+	font: { weight: $font_weight_bold; size: $font }
+	text-align: center; color: $color;
+	& > a { @include full; }
 }
 
 
