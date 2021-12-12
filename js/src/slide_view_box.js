@@ -47,8 +47,8 @@ var BANNER_DATA = [{
 
 BANNER_DATA.reverse(); // ==============================================
 // 변수-------------------------------------
-
-var elViewBox = document.querySelector('#viewBox'); // pc_view_arrow
+// const elViewBox = document.querySelector('#viewBox');
+// pc_view_arrow
 
 var elViewBtn = elViewBox.querySelector('.view_btn');
 var elViewBtnNext = elViewBtn.querySelector('.next > a');
@@ -67,18 +67,48 @@ var elViewCont = elViewBox.querySelector('.view_content'); // 기능------------
 
 var mkViewContUl = document.createElement('ul');
 elViewCont.append(mkViewContUl);
-var elViewContUL = elViewCont.querySelector('ul');
-console.log(elViewContUL); // BANNER_DATA의 길이만큼 li.view_content_inner 요소 생성
+var elViewContUL = elViewCont.querySelector('ul'); // BANNER_DATA의 길이만큼 li.view_content_inner 요소 생성
 
 for (var i = 0; i < BANNER_DATA.length; i++) {
   var _mkViewContLi = document.createElement('li');
 
   var _dataSelect = BANNER_DATA[i];
-  var DATA_CODE = "<dl class=\"view_text\"><dt>".concat(_dataSelect.titleText, "</dt><dd>").concat(c_dataSelect.ontentText, "</dd><dd class=\"btn_small full_wrap\"><a href=\"").concat(_dataSelect.moveUrl, "\">\uBC14\uB85C\uAC00\uAE30</a></dd></dl><div class=\"view_img\"></div>");
-  _mkViewContLi.innerHTML = DATA_CODE;
 
-  _mkViewContLi.setAttribute('class', 'view_content_inner');
+  var _DATA_CODE = "<dl class=\"view_text\"><dt>".concat(_dataSelect.titleText, "</dt><dd>").concat(_dataSelect.contentText, "</dd><dd class=\"btn_small full_wrap\"><a href=\"").concat(_dataSelect.moveUrl, "\">\uBC14\uB85C\uAC00\uAE30</a></dd></dl><div class=\"view_img\"></div>");
 
-  elViewContUL.append('_mkViewContLi');
+  _mkViewContLi.innerHTML = _DATA_CODE;
+  elViewContUL.append(_mkViewContLi);
+
+  _mkViewContLi.setAttribute('class', 'view_content_inner'); // 순번에 맞는 이미지 배경 삽입
+
+
+  var _imgPath = '../multi/img/';
+
+  var _elViewImg = elViewCont.querySelectorAll('.view_img');
+
+  _elViewImg[i].style.backgroundImage = "url(".concat(_imgPath).concat(_dataSelect.img, ")");
+} // BANNER_DATA의 길이만큼 mobile .view_indicator 숫자 변경
+
+
+elIndiNumTotal.innerText = BANNER_DATA.length; // BANNER_DATA의 길이만큼 pc .view_indicator 생성
+
+for (var _i = 0; _i < BANNER_DATA.length; _i++) {
+  var _dataSelect2 = BANNER_DATA[_i];
+  var mkViewIndiLi = document.createElement('li');
+
+  var _DATA_CODE2 = "<a href=\"#\"><span>".concat(_dataSelect2.titleText, "</span></a>");
+
+  mkViewIndiLi.innerHTML = _DATA_CODE2;
+  elIndiCircle.append(mkViewIndiLi);
+
+  var _elIndiCircleLi = elIndiCircle.querySelectorAll('li');
+
+  _elIndiCircleLi[0].classList.add(ckActive);
 } // 함수-------------------------------------
 // 이벤트-------------------------------------
+// pc: 오른쪽 버튼 누르면 오른쪽으로 슬라이드 이동
+// elViewBtnNext.addEventListener('click', e => {
+//   e.preventDefault();
+// });
+// elViewBtnPrev
+// elIndiCircleLi

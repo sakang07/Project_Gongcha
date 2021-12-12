@@ -52,7 +52,7 @@ BANNER_DATA.reverse();
 // ==============================================
 
 // 변수-------------------------------------
-let elViewBox = document.querySelector('#viewBox');
+// const elViewBox = document.querySelector('#viewBox');
 
 // pc_view_arrow
 const elViewBtn = elViewBox.querySelector('.view_btn');
@@ -79,20 +79,46 @@ const elViewCont = elViewBox.querySelector('.view_content');
 const mkViewContUl = document.createElement('ul');
 elViewCont.append(mkViewContUl);
 const elViewContUL = elViewCont.querySelector('ul');
-console.log(elViewContUL);
 
 // BANNER_DATA의 길이만큼 li.view_content_inner 요소 생성
 for (let i = 0; i < BANNER_DATA.length; i++) {
   const _mkViewContLi = document.createElement('li');
   let _dataSelect = BANNER_DATA[i];
 
-  const DATA_CODE = `<dl class="view_text"><dt>${_dataSelect.titleText}</dt><dd>${c_dataSelect.ontentText}</dd><dd class="btn_small full_wrap"><a href="${_dataSelect.moveUrl}">바로가기</a></dd></dl><div class="view_img"></div>`;
+  const _DATA_CODE = `<dl class="view_text"><dt>${_dataSelect.titleText}</dt><dd>${_dataSelect.contentText}</dd><dd class="btn_small full_wrap"><a href="${_dataSelect.moveUrl}">바로가기</a></dd></dl><div class="view_img"></div>`;
 
-  _mkViewContLi.innerHTML = DATA_CODE;
+  _mkViewContLi.innerHTML = _DATA_CODE;
+  elViewContUL.append(_mkViewContLi);
   _mkViewContLi.setAttribute('class', 'view_content_inner');
-  elViewContUL.append('_mkViewContLi');
+
+  // 순번에 맞는 이미지 배경 삽입
+  const _imgPath = '../multi/img/'
+  const _elViewImg = elViewCont.querySelectorAll('.view_img');
+  _elViewImg[i].style.backgroundImage = `url(${_imgPath}${_dataSelect.img})`;
+}
+// BANNER_DATA의 길이만큼 mobile .view_indicator 숫자 변경
+elIndiNumTotal.innerText = BANNER_DATA.length;
+
+// BANNER_DATA의 길이만큼 pc .view_indicator 생성
+for (let i = 0; i < BANNER_DATA.length; i++) {
+  let _dataSelect = BANNER_DATA[i];
+
+  const mkViewIndiLi = document.createElement('li');
+  const _DATA_CODE = `<a href="#"><span>${_dataSelect.titleText}</span></a>`;
+  mkViewIndiLi.innerHTML = _DATA_CODE;
+  elIndiCircle.append(mkViewIndiLi);
+  const elIndiCircleLi = elIndiCircle.querySelectorAll('li');
+  elIndiCircleLi[0].classList.add(ckActive);
 }
 
 // 함수-------------------------------------
 
 // 이벤트-------------------------------------
+
+// pc: 오른쪽 버튼 누르면 오른쪽으로 슬라이드 이동
+// elViewBtnNext.addEventListener('click', e => {
+//   e.preventDefault();
+
+// });
+// elViewBtnPrev
+// elIndiCircleLi

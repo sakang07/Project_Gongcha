@@ -46,7 +46,7 @@
             
           .view_img { 
             position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
-            @include img('banner_01.png', cover, 30% 50%); 
+            background: { size: cover; repeat: no-repeat; position: 30% 50%; }
             
             &::before, &:before {
               position: absolute; top: 0; left: 0; right: 0; bottom: 0;
@@ -70,14 +70,14 @@
   #viewBox {
     height: calc(43.75rem + 5rem);
     margin-top: 5rem; padding: 0.375rem 2.5rem;
-    @include img('banner_01.png', cover);
     
-    .container { position: relative; max-width: 64rem; }
+    .container { max-width: 64rem; }
 
     @at-root .view_btn {
       position: absolute; top: 0; left: 0; right: 0; bottom: 0;
       display: flex; justify-content: space-between; flex-direction: row-reverse; align-items: center;
       width: 100%; height: 100%;
+      padding: 0 2.5rem;
       & > li > a { padding: 100px 30px; box-sizing: border-box; }
       .next > a { @include full('btn_next.png', 18px 42px) }
       .prev > a { @include full('btn_prev.png', 18px 42px) }
@@ -112,7 +112,7 @@
         .view_content_inner {
           overflow-X: hidden;
           width: 100%; height: 100%;
-          padding-left: 450px;
+          padding-left: 560px;
           
           dl { 
             padding: 180px 40px 0;
@@ -123,7 +123,7 @@
             
           .view_img { 
             position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
-            @include img('banner_01.png', cover, 30% 50%); 
+            background: { size: cover; repeat: no-repeat; position: 30% 50%; }
             
             &::before, &:before {
               position: absolute; top: 0; left: 0; right: 0; bottom: 0;
