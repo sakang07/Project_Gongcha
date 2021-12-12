@@ -1,0 +1,7 @@
+// recipeBox.scss
+/* recipeBox.css */
+
+#recipeBox {
+  @include pxRem(height, 720);
+  background-color: #E40A34;
+}

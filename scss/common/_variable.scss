@@ -1,0 +1,39 @@
+// _variable.scss
+
+// color ================================
+$color_primary_01: #c30e2f;
+$color_primary_01: #c30e2f;
+$color_brown_01: #4d3c3b;
+$color_mint_01: #6ab29a;
+$color_skyblue_01: #94c6e1;
+$color_pale_01: #f3ebe0;
+$color_white: #fff;
+$color_gray_01: #eee;
+$color_gray_02: #ccc;
+$color_gray_03: #aaa;
+$color_gray_04: #777;
+$color_deep_gray_01: #505050;
+$color_black_01: #333;
+$color_black_02: #171717;
+
+
+// font ==================================
+$font_family_en: "Mulish";
+$font_family_kr: "Pretendard";
+$font_family_common: sans-serif;
+$font_weight_thin: 200;
+$font_weight_normal: 400;
+$font_weight_bold: 700;
+$font_weight: (200, 400, 700);
+
+
+// line ==================================
+$line_01: 0.0625rem solid $color_gray_02;
+$line_02: 0.0625rem solid $color_gray_04;
+$line_03: 0.0625rem solid $color_black_02;
+
+// device ==================================
+$mobile : 320px;
+$tablet : 600px;
+$laptop : 1024px;
+$pc : 1440px;

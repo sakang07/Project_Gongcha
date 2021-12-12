@@ -1,0 +1,7 @@
+// liveBox.scss
+/* liveBox.css */
+
+#liveBox {
+  @include pxRem(height, 780);
+  background-color: #3FB58A;
+}

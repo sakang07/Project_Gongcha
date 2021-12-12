@@ -1,0 +1,164 @@
+// viewBox.scss
+/* viewBox.css */
+
+#viewBox {
+  position: relative;
+  width: 100%; 
+}
+
+/*==================== handhels 320px - 1023px ====================*/
+@include handhelds {
+  #viewBox {
+    height: calc(100vh - 3.75rem); max-height: 700px;
+    margin-top: 3.75rem;
+
+    @at-root .view_btn { display: none; }
+    @at-root .view_indicator {
+      .indi_circle { display: none; }
+      .indi_number { display: block;
+        position: absolute; bottom: 1.25rem; right: 20px;
+        width: 3.5rem; height: 1.625rem;
+        border-radius: 1.25rem; @include font(14, $line:28px){ color: $color_white; text-align: center };
+        background-color: $color_deep_gray_01;
+      } //.indi_number
+    } // .view_indicator
+
+    @at-root .view_content {
+      width: 300%; height: 100%;
+      
+      ul { 
+        height: 100%; // width: 100% * 슬라이드 개수
+        display: flex;
+        
+        @at-root .view_content_inner {
+          overflow-X: hidden;
+          width: 100%; height: 100%;
+
+          dl { 
+            padding: 180px 40px 0;
+            dt { @include font(28, $font_weight_bold, 1.2){ color: $color_white; text-transform: capitalize; } margin-bottom: 28px; }
+            dd { @include font(16, $line:1.6){ color: $color_white} margin-bottom: 50px; }
+            .btn_small { @include btn_small; }
+          } // dl
+            
+          .view_img { 
+            position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
+            background: { size: cover; repeat: no-repeat; position: 30% 50%; }
+            
+            &::before, &:before {
+              position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+              background-color: rgba($color_black_02, 0.2);
+              display: block;
+              content: "";
+            } // &:before
+          } // .view_img
+
+        } //.view_content_inner
+      } // .view_content ul
+
+    } //.view_content
+
+  } // #viewBox
+} // @incluse handhelds
+
+
+/*==================== desktop 1024px - ====================*/
+@include desktop {
+  #viewBox {
+    height: calc(43.75rem + 5rem);
+    margin-top: 5rem;
+
+    @at-root .view_btn {
+      position: absolute; top: 0; left: 50%; bottom: 0;
+      display: flex; justify-content: space-between; flex-direction: row-reverse; align-items: center;
+      width: 100%; height: 100%; max-width: 64rem;
+      transform: translateX(-50%);
+      & > li > a { padding: 100px 30px; box-sizing: border-box; }
+      .next > a { @include full('btn_next.png', 18px 42px) }
+      .prev > a { @include full('btn_prev.png', 18px 42px) }
+    }
+    @at-root .view_indicator {
+      .indi_circle {
+        display: flex; justify-content: center; align-items: center;
+        position: absolute; bottom: 32px; left: 50%;
+        transform: translateX(-50%);
+        & > li {
+          width: 1rem; height: 1rem;
+          margin-right: 1rem; border-radius: 1rem;
+          background-color: rgba($color_deep_gray_01, 0.8);
+
+          &.on {
+            width: 3.125rem; height: 1.25rem;
+            background-color: $color_white;
+          }
+          & > a { @include full; }
+        }
+      } // .indi_circle
+      .indi_number { display: none; }
+    } // .view_indicator
+
+    @at-root .view_content {
+      overflow: hidden;
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
+      width: 100%; height: 100%;
+      
+      ul { 
+        height: 100%; // width: 100% * 슬라이드 개수
+        // transform: translateX(-50%); // 100/4
+        display: flex; 
+        
+        @at-root .view_content_inner {
+          position: relative;
+          width: 100%; height: 100%;
+          
+          @at-root .view_text {
+            display: flex; justify-content: right;
+            width: 100%; height: 100%; max-width: 64rem;
+            margin: auto; padding: {top: 180px; right: 50px}
+
+            dl { 
+              width: 400px;
+              dt { @include font(36, $font_weight_bold, 1.2){ color: $color_white; text-transform: capitalize; } margin-bottom: 34px; }
+              dd { @include font(18, $line:1.6){ color: $color_white} margin-bottom: 74px; }
+              .btn_small { @include btn_small; }
+            } // dl
+          }//.view_text
+          
+          @at-root .view_img { // img url은 js로 설정
+            position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
+            width: 100%; height: 100%;
+            background: { size: cover; repeat: no-repeat; position: 30% 50%; }
+            
+            &::before, &:before {
+              position: absolute; top: 0; left: 0; bottom: 0;
+              width: 100%; height: 100%;
+              background-color: rgba($color_black_02, 0.2);
+              display: block;
+              content: "";
+            } // &:before
+          } // .view_img
+
+        } //.view_content_inner
+      } // .view_content ul
+
+    } //.view_content
+  } // #viewBox
+
+} // @include desktop
+
+
+/*==================== pc 1440px - ====================*/
+@include pc {
+
+  #viewBox {
+
+    @at-root .view_btn {
+      max-width: 80rem;
+    }
+    @at-root .view_text {
+      max-width: 80rem;
+    }
+  } //#viewBox
+  
+
+} // @include pc
