@@ -108,6 +108,11 @@ $pc:1440px;
 		@content;
 	}
 }
+@mixin desktop() {
+	@media all and (min-width: $laptop) {
+		@content;
+	}
+}
 @mixin pc() {
 	@media all and (min-width: $pc) {
 		@content;
