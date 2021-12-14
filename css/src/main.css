@@ -665,13 +665,13 @@ h1 > a > span {
   .view_content_inner .view_text dl .btn_small {
     width: 8.75rem;
     height: 3rem;
-    padding: 0.75rem 1.125rem 0;
     border: 0.0625rem solid #ccc;
     background-color: #fff;
     font-weight: 700;
     font-size: 1rem;
     text-align: center;
     color: #171717;
+    line-height: 3rem;
   }
   .view_content_inner .view_text dl .btn_small > a {
     display: block;
@@ -843,13 +843,13 @@ h1 > a > span {
   .view_text dl .btn_small {
     width: 8.75rem;
     height: 3rem;
-    padding: 0.75rem 1.125rem 0;
     border: 0.0625rem solid #ccc;
     background-color: #fff;
     font-weight: 700;
     font-size: 1rem;
     text-align: center;
     color: #171717;
+    line-height: 3rem;
   }
   .view_text dl .btn_small > a {
     display: block;
@@ -932,7 +932,7 @@ h1 > a > span {
 /*==================== handhelds 320px - 1023px ====================*/
 @media all and (max-width: 1023px) {
   #menuBox {
-    padding: 80px 2rem;
+    padding: 5rem 2rem;
   }
   #menuBox .title {
     display: flex;
@@ -999,16 +999,23 @@ h1 > a > span {
   }
 
   .slide_wrap .menu_btn_mob {
-    width: 7.875rem;
+    width: auto;
     height: 2.375rem;
     margin: auto;
     margin-top: 3.125rem;
-    padding: 0.5rem 0;
     border-radius: 2.375rem;
     border: 0.0625rem solid #ccc;
     font-size: 1rem;
     text-align: center;
     color: #171717;
+    line-height: 2.375rem;
+    background-color: #fff;
+    width: 7.8125rem;
+  }
+  .slide_wrap .menu_btn_mob > a {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
   .slide_wrap .menu_btn_mob > button {
     font-size: inherit;
@@ -1041,7 +1048,7 @@ h1 > a > span {
 @media all and (min-width: 1024px) {
   #menuBox {
     position: relative;
-    padding: 100px 2rem;
+    padding: 6.25rem 2rem;
   }
   #menuBox .container {
     max-width: 64rem;
@@ -1153,26 +1160,874 @@ h1 > a > span {
   }
 }
 /* orderBox.css */
-#orderBox {
-  height: 720px;
-  height: 45rem;
-  background-color: #804ADA;
+/*==================== mobile 320px - 599px ====================*/
+@media all and (max-width: 599px) {
+  #orderBox {
+    padding: 6.25rem 2rem;
+    background-color: #f3ebe0;
+  }
+  #orderBox .container {
+    max-width: 350px;
+  }
+  #orderBox .title {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+  #orderBox .title h2 {
+    margin-top: 4px;
+    font-size: 28px;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #171717;
+    text-transform: capitalize;
+  }
+  #orderBox .title p {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #aaa;
+  }
+  #orderBox .order_inner {
+    width: 100%;
+    height: 100%;
+  }
+  #orderBox .order_inner > li {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: auto;
+    height: 100%;
+    margin-bottom: 40px;
+  }
+  #orderBox .order_inner > li:last-of-type {
+    margin-bottom: 0;
+  }
+  #orderBox .order_inner > li dl {
+    width: 180px;
+  }
+  #orderBox .order_inner > li .order_title {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  #orderBox .order_inner > li .order_text {
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: #505050;
+  }
+  #orderBox .order_inner > li .order_img {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: -1;
+    width: 110px;
+    height: 110px;
+    border-radius: 100%;
+    background-color: #fff;
+  }
+  #orderBox .order_inner > li .img1 {
+    background-image: url(../../multi/img/order_img1.png);
+    background-size: 30% auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  #orderBox .order_inner > li .img1 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  #orderBox .order_inner > li .img2 {
+    top: -10px;
+    background-image: url(../../multi/img/order_img2.png);
+    background-size: 30% auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  #orderBox .order_inner > li .img2 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  #orderBox .order_inner > li .img3 {
+    background-image: url(../../multi/img/order_img3.png);
+    background-size: 45% auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  #orderBox .order_inner > li .img3 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  #orderBox .btn_large {
+    width: auto;
+    height: 2.375rem;
+    margin: auto;
+    margin-top: 3.125rem;
+    border-radius: 2.375rem;
+    border: 0.0625rem solid transparent;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    line-height: 2.375rem;
+    background-color: #c30e2f;
+    width: 200px;
+  }
+  #orderBox .btn_large > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  #orderBox .btn_large > button {
+    font-size: inherit;
+  }
 }
-
+/*==================== tablet 600px - 1023px ====================*/
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #orderBox {
+    padding: 6.25rem 2rem;
+    background-color: #f3ebe0;
+  }
+  #orderBox .title {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+  #orderBox .title h2 {
+    margin-top: 4px;
+    font-size: 28px;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #171717;
+    text-transform: capitalize;
+  }
+  #orderBox .title p {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #aaa;
+  }
+  #orderBox .order_inner {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+  }
+  #orderBox .order_inner > li {
+    position: relative;
+    width: 176px;
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+  }
+  #orderBox .order_inner > li .order_title {
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-size: 1.375rem;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  #orderBox .order_inner > li .order_text {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: #505050;
+  }
+  #orderBox .order_inner > li .order_img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    transform: translateX(-50%);
+    background-color: #fff;
+  }
+  #orderBox .order_inner > li .img1 {
+    background-image: url(../../multi/img/order_img1.png);
+    background-size: 30% auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  #orderBox .order_inner > li .img1 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  #orderBox .order_inner > li .img2 {
+    top: -10px;
+    background-image: url(../../multi/img/order_img2.png);
+    background-size: 30% auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  #orderBox .order_inner > li .img2 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  #orderBox .order_inner > li .img3 {
+    background-image: url(../../multi/img/order_img3.png);
+    background-size: 45% auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  #orderBox .order_inner > li .img3 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  #orderBox .btn_large {
+    width: auto;
+    height: 2.375rem;
+    margin: auto;
+    margin-top: 3.125rem;
+    border-radius: 2.375rem;
+    border: 0.0625rem solid transparent;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    line-height: 2.375rem;
+    background-color: #c30e2f;
+    width: 200px;
+  }
+  #orderBox .btn_large > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  #orderBox .btn_large > button {
+    font-size: inherit;
+  }
+}
+/*==================== desktop 1024px - ====================*/
+@media all and (min-width: 1024px) {
+  #orderBox {
+    padding: 8.125rem 2rem;
+    background-color: #f3ebe0;
+  }
+  #orderBox .container {
+    max-width: 64rem;
+  }
+  #orderBox .title {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+  #orderBox .title h2 {
+    margin-top: 4px;
+    font-size: 40px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #171717;
+    text-transform: capitalize;
+  }
+  #orderBox .title p {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #aaa;
+  }
+  #orderBox .order_inner {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  #orderBox .order_inner > li {
+    position: relative;
+    width: 270px;
+    height: 100%;
+    padding-top: 250px;
+    text-align: center;
+  }
+  #orderBox .order_inner > li .order_title {
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  #orderBox .order_inner > li .order_text {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #505050;
+  }
+  #orderBox .order_inner > li .order_img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    transform: translateX(-50%);
+    background-color: #fff;
+  }
+  #orderBox .order_inner > li .img1 {
+    background-image: url(../../multi/img/order_img1.png);
+    background-size: 30% auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  #orderBox .order_inner > li .img1 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  #orderBox .order_inner > li .img2 {
+    top: -10px;
+    background-image: url(../../multi/img/order_img2.png);
+    background-size: 30% auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  #orderBox .order_inner > li .img2 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  #orderBox .order_inner > li .img3 {
+    background-image: url(../../multi/img/order_img3.png);
+    background-size: 45% auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  #orderBox .order_inner > li .img3 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  #orderBox .btn_large {
+    min-width: 16.25rem;
+    height: 3.5rem;
+    border: 0.0625rem solid #ccc;
+    background-color: #c30e2f;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    line-height: 3.5rem;
+    width: 200px;
+    margin: auto;
+  }
+  #orderBox .btn_large > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+/*==================== pc 1440px - ====================*/
+@media all and (min-width: 1440px) {
+  #orderBox .container {
+    max-width: 80rem;
+  }
+}
 /* brandBox.css */
 #brandBox {
-  height: 400px;
-  height: 25rem;
-  background-color: #D6222D;
+  position: relative;
+  z-index: 0;
+  padding: 7.25rem 2rem;
+  background-image: url(../../multi/img/main_bg2.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+#brandBox > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+#brandBox:before, #brandBox::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  display: block;
+  content: "";
+  background-color: rgba(23, 23, 23, 0.6);
+}
+#brandBox .title {
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 30px;
+}
+#brandBox .btn_large {
+  min-width: 16.25rem;
+  height: 3.5rem;
+  border: 0.0625rem solid #ccc;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: #fff;
+  text-align: center;
+  color: #fff;
+  line-height: 3.5rem;
+  width: 210px;
+  height: 50px;
+  line-height: 50px;
+  border-width: 2px;
+}
+#brandBox .btn_large > a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
+/*==================== handhelds 320px - 1023px ====================*/
+@media all and (max-width: 1023px) {
+  #brandBox .title {
+    margin-bottom: 36px;
+    font-size: 22px;
+    text-align: center;
+  }
+  #brandBox .btn_large {
+    width: 260px;
+    height: 56px;
+    line-height: 56px;
+    margin: auto;
+  }
+}
+/*==================== desktop 1024px - 1023px ====================*/
+@media all and (min-width: 1024px) {
+  #brandBox .title {
+    margin-bottom: 36px;
+    font-size: 28px;
+    text-align: center;
+  }
+  #brandBox .btn_large {
+    width: 260px;
+    height: 56px;
+    line-height: 56px;
+    margin: auto;
+  }
+}
 /* recipeBox.css */
-#recipeBox {
-  height: 720px;
-  height: 45rem;
-  background-color: #E40A34;
+/*==================== mobile 320px - 599px ====================*/
+@media all and (max-width: 599px) {
+  #recipeBox {
+    position: relative;
+    padding: 6.25rem 0;
+    background-color: #fff;
+  }
+  #recipeBox .title {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+  #recipeBox .title h2 {
+    margin-top: 4px;
+    font-size: 28px;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #171717;
+    text-transform: capitalize;
+  }
+  #recipeBox .title p {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #aaa;
+  }
+  .recipe_wrap .recipe_btn_mob {
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .recipe_wrap .recipe_btn_mob ul {
+    display: flex;
+    justify-content: center;
+  }
+  .recipe_wrap .recipe_btn_mob li {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin-right: 12px;
+    background-color: #ccc;
+  }
+  .recipe_wrap .recipe_btn_mob li:last-of-type {
+    margin-right: 0;
+  }
+  .recipe_wrap .recipe_btn_pc {
+    display: none;
+  }
+  .recipe_content {
+    display: flex;
+    justify-content: space-between;
+    width: 400%;
+  }
+  .recipe_content li {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .recipe_content li .card {
+    width: 75%;
+    max-width: 400px;
+    margin: auto;
+  }
+  .recipe_content li .card .card1 {
+    background-image: url(../../multi/img/recipe_img1.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  .recipe_content li .card .card1 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .recipe_content li .card .card2 {
+    background-image: url(../../multi/img/recipe_img2.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  .recipe_content li .card .card2 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .recipe_content li .card .card3 {
+    background-image: url(../../multi/img/recipe_img3.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  .recipe_content li .card .card3 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .recipe_content li .card .card4 {
+    background-image: url(../../multi/img/recipe_img4.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  .recipe_content li .card .card4 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .recipe_content li .more {
+    display: none;
+  }
+  .recipe_content li figure {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 75%;
+    height: 230px;
+    max-width: 400px;
+    border-radius: 10px;
+    margin: auto;
+    transform: translateX(-50%);
+  }
+  .recipe_content li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .recipe_content li h3 {
+    font-size: 18px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-top: 280px;
+    margin-bottom: 14px;
+  }
+  .recipe_content li p {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 50px;
+  }
+  .recipe_content li p br {
+    display: none;
+  }
 }
-
+/*==================== tablet 600px - 1023px ====================*/
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #recipeBox {
+    position: relative;
+    z-index: 0;
+    padding: 6.25rem 2rem;
+    background-color: #fff;
+  }
+  #recipeBox .container {
+    max-width: 64rem;
+  }
+  #recipeBox .title {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 50px;
+    text-align: left;
+  }
+  #recipeBox .title h2 {
+    margin-top: 4px;
+    font-size: 28px;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #171717;
+    text-transform: capitalize;
+  }
+  #recipeBox .title p {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #aaa;
+  }
+  .recipe_wrap .recipe_btn_mob {
+    display: none;
+  }
+  .recipe_wrap .recipe_btn_pc {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    position: absolute;
+    top: 49%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 0 6%;
+  }
+  .recipe_wrap .recipe_btn_pc .next {
+    display: none;
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 100%;
+    box-shadow: 0.1875rem 0.25rem 0.625rem rgba(23, 23, 23, 0.15);
+    background-color: #fff;
+    background-image: url(../../multi/img/btn_next2.png);
+    background-size: 16px auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  .recipe_wrap .recipe_btn_pc .next > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .recipe_wrap .recipe_btn_pc .prev {
+    display: none;
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 100%;
+    box-shadow: 0.1875rem 0.25rem 0.625rem rgba(23, 23, 23, 0.15);
+    background-color: #fff;
+    background-image: url(../../multi/img/btn_prev2.png);
+    background-size: 16px auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  .recipe_wrap .recipe_btn_pc .prev > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .recipe_wrap .recipe_btn_pc .next.on, .recipe_wrap .recipe_btn_pc .prev.on {
+    display: block;
+  }
+  .recipe_content {
+    display: flex;
+    justify-content: space-between;
+    width: 1025px;
+    margin-top: 28px;
+  }
+  .recipe_content li {
+    position: relative;
+    width: 250px;
+    height: auto;
+    margin-right: 30px;
+  }
+  .recipe_content li .card {
+    margin: auto;
+  }
+  .recipe_content li .card .card1 {
+    background-image: url(../../multi/img/recipe_img1.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  .recipe_content li .card .card1 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .recipe_content li .card .card2 {
+    background-image: url(../../multi/img/recipe_img2.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  .recipe_content li .card .card2 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .recipe_content li .card .card3 {
+    background-image: url(../../multi/img/recipe_img3.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  .recipe_content li .card .card3 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .recipe_content li .card .card4 {
+    background-image: url(../../multi/img/recipe_img4.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  .recipe_content li .card .card4 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .recipe_content li .more {
+    display: none;
+  }
+  .recipe_content li figure {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    width: 230px;
+    height: 180px;
+    border-radius: 10px;
+    margin: auto;
+    transform: translateX(-50%);
+  }
+  .recipe_content li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .recipe_content li h3 {
+    font-size: 18px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-top: 220px;
+    margin-bottom: 14px;
+  }
+  .recipe_content li p {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 50px;
+  }
+  .recipe_content li p br {
+    display: none;
+  }
+}
 /* franchiseBox.css */
 #franchiseBox {
   height: 400px;

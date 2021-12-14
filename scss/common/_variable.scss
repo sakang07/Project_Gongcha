@@ -36,7 +36,7 @@ $line_03: 0.0625rem solid $color_black_02;
 // space ==================================
 $container: ("laptop": 64rem, "pc": 80rem);
 $pd_lr: 2rem;
-$pd_tb: (80px, 100px);
+$pd_tb: (5rem, 6.25rem, 8.125rem);
 // nth($padding_mob, 1)
 // map-get($container, "laptop")
 

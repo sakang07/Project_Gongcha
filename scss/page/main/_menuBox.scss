@@ -53,7 +53,7 @@
         } //.menu_area li
       } //.menu_area
   
-      .menu_btn_mob { @include btnRound; }
+      .menu_btn_mob { @include btnRound; width: 7.8125rem; }
   
     } //.slide_wrap
   } // #menuBox
@@ -127,7 +127,7 @@
   #menuBox {
 
     @at-root .menu_btn_pc {
-       padding: 0 6%;
+      padding: 0 6%;
     }
   } //#menuBox
   

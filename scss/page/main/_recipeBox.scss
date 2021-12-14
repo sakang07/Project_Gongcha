@@ -1,7 +1,140 @@
 // recipeBox.scss
 /* recipeBox.css */
 
-#recipeBox {
-  @include pxRem(height, 720);
-  background-color: #E40A34;
-}
+
+/*==================== mobile 320px - 599px ====================*/
+@include mobile {
+  #recipeBox {
+    position: relative;
+    padding: nth($pd_tb, 2) 0;
+    background-color: $color_white;
+    
+    .title { @include mainTitle; }
+  
+    @at-root .recipe_wrap {
+  
+      .recipe_btn_mob {
+        position: absolute; bottom: 90px; left: 50%; 
+  
+        transform: translateX(-50%);
+        ul { display: flex; justify-content: center;}
+        li { 
+          width: 20px; height: 20px; 
+          border-radius: 100%; margin-right: 12px;
+          background-color: $color_gray_02;
+          &:last-of-type {margin-right: 0;}
+        }
+      }
+  
+      .recipe_btn_pc { display: none; }
+      @at-root .recipe_content {
+        display: flex; justify-content: space-between;
+        width: 400%;
+        
+        li {
+          position: relative;
+          width: 100%; height: 100%;
+          // padding: 0 $pd_lr;
+  
+          .card {
+            width: 75%; max-width: 400px; margin: auto;
+            
+            .card1 { @include img('recipe_img1.jpg', cover) }
+            .card2 { @include img('recipe_img2.jpg', cover) }
+            .card3 { @include img('recipe_img3.jpg', cover) }
+            .card4 { @include img('recipe_img4.jpg', cover) }
+          } // .card
+  
+            
+          .more {display: none;}
+          figure {
+            position: absolute; top: 0; left: 50%;
+            width: 75%; height: 230px; max-width: 400px;
+            border-radius: 10px; margin: auto;
+            transform: translateX(-50%);
+          }
+          a { @include full; }
+          h3 { @include font(18, $font_weight_bold){text-transform: capitalize}; margin-top: 280px; margin-bottom: 14px; }
+          p { 
+            @include font(14, $line:1.6) {color: $color_black_01} 
+            margin-bottom: 50px;
+            br { display: none; }
+          } //p
+  
+        }// li
+      }//.recipe_content
+    } //.recipe_wrap
+  }
+
+} //@include mobile
+
+
+/*==================== tablet 600px - 1023px ====================*/
+@include tablet {
+  #recipeBox {
+    position: relative; z-index: 0;
+    padding: nth($pd_tb, 2) $pd_lr;
+    background-color: $color_white;
+    
+    .container { max-width: map-get($container, "laptop")}
+    .title { @include mainTitle(left); }
+
+    @at-root .recipe_wrap {
+  
+      .recipe_btn_mob { display: none; }
+  
+      .recipe_btn_pc { 
+        display: flex; flex-direction: row-reverse; justify-content: space-between;
+        position: absolute; top: 49%; left: 0; right: 0;
+        margin: auto; padding: 0 6%;
+
+        .next {
+          display: none;
+          @include btnCircle;
+        }
+        .prev {
+          display: none;
+          @include btnCircle('btn_prev2.png');
+        }
+        .next.on, .prev.on { display: block; }
+      }//.recipe_btn_pc
+
+      @at-root .recipe_content {
+        display: flex; justify-content: space-between;
+        width: 1025px; margin-top: 28px;
+        
+        li {
+          position: relative;
+          width: 250px; height: auto; margin-right: 30px;
+  
+          .card {
+            margin: auto;
+            
+            .card1 { @include img('recipe_img1.jpg', cover) }
+            .card2 { @include img('recipe_img2.jpg', cover) }
+            .card3 { @include img('recipe_img3.jpg', cover) }
+            .card4 { @include img('recipe_img4.jpg', cover) }
+          } // .card
+  
+            
+          .more {display: none;}
+          figure {
+            position: absolute; top: 0; left: 50%; z-index: -1;
+            width: 230px; height: 180px;
+            border-radius: 10px; margin: auto;
+            transform: translateX(-50%);
+          }//figure
+          a { @include full; }
+          h3 { @include font(18, $font_weight_bold){text-transform: capitalize}; margin-top: 220px; margin-bottom: 14px; }
+          p { 
+            @include font(14, $line:1.6) {color: $color_black_01} 
+            margin-bottom: 50px;
+            br { display: none; }
+          } //p
+  
+        }// li
+      }//.recipe_content
+    } //.recipe_wrap
+  } // #recipeBox
+
+} // @include tablet

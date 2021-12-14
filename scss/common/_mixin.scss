@@ -74,28 +74,30 @@ $imgPath: '../../multi/img/';
 // btn
 @mixin btnSmall($bgCo: $color_white, $color: $color_black_02, $font:1rem) {
 	width: 8.75rem; height: 3rem;
-	padding: 0.75rem 1.125rem 0; border: $line_01;
+	border: $line_01;
 	background-color: $bgCo;
 	font: { weight: $font_weight_bold; size: $font }
-	text-align: center; color: $color;
+	text-align: center; color: $color; line-height: 3rem;
 	& > a { @include full; }
 }
 
 @mixin btnBig ($bgCo: $color_white, $color: $color_black_02, $font:1rem) {
-	min-width: 260px; height: 56px;
-	padding: 20px 18px; border: $line_01;
+	min-width: 16.25rem; height: 3.5rem;
+	border: $line_01;
 	background-color: $bgCo;
 	font: { weight: $font_weight_bold; size: $font }
-	text-align: center; color: $color;
+	text-align: center; color: $color; line-height: 3.5rem;
 	& > a { @include full; }
 }
 
-@mixin btnRound () {
-	width: 7.875rem; height: 2.375rem;
-	margin: auto; margin-top: 3.125rem; padding: 0.5rem 0;
-	border-radius: 2.375rem; border: $line_01;
+@mixin btnRound ($bgColor: $color_white, $bdColor: $color_gray_02, $color: $color_black_02) {
+	width: auto; height: 2.375rem;
+	margin: auto; margin-top: 3.125rem;
+	border-radius: 2.375rem; border: 0.0625rem solid $bdColor;;
 	font: { size:1rem; }
-	text-align: center; color: $color_black_02;
+	text-align: center; color: $color; line-height: 2.375rem;
+	background-color: $bgColor;
+	& > a { display: block; width: 100%; height: 100%; }
 	& > button { font-size: inherit; }
 }
 
