@@ -893,45 +893,19 @@ h1 > a > span {
   }
 }
 /* menuBox.css */
-#menuBox {
-  padding: 80px 2rem;
-}
-#menuBox .title {
-  display: flex;
-  flex-direction: column-reverse;
-  padding-bottom: 50px;
-  text-align: center;
-}
-#menuBox .title h2 {
-  margin-top: 4px;
-  font-size: 28px;
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #171717;
-  text-transform: capitalize;
-}
-#menuBox .title p {
-  font-size: 16px;
-  font-size: 1rem;
-  font-weight: 700;
-  color: #aaa;
-}
-.slide_wrap .menu_btn_mob {
-  display: none;
-}
 .menu_area {
   display: flex;
   width: 960px;
 }
 .menu_area > li {
-  width: 120px;
+  width: auto;
   height: auto;
   margin-right: 8px;
 }
 .menu_area > li .menu_img {
   width: 120px;
   height: 120px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   background-image: url(../../multi/img/drink.png);
   background-size: contain;
   background-position: 50% 50%;
@@ -952,31 +926,232 @@ h1 > a > span {
   height: 100%;
 }
 .menu_area > li p {
-  margin-top: 1.5rem;
   transform: translateY(-50%);
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-weight: 700;
-  line-height: 1.2;
-  text-align: center;
 }
 
-.slide_wrap .menu_btn_pc {
-  width: 7.875rem;
-  height: 2.375rem;
-  margin: auto;
-  margin-top: 3.125rem;
-  padding: 0.5rem 0;
-  border-radius: 2.375rem;
-  border: 0.0625rem solid #ccc;
-  font-size: 1rem;
-  text-align: center;
-  color: #171717;
-}
-.slide_wrap .menu_btn_pc > button {
-  font-size: inherit;
-}
+/*==================== handhelds 320px - 1023px ====================*/
+@media all and (max-width: 1023px) {
+  #menuBox {
+    padding: 80px 2rem;
+  }
+  #menuBox .title {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+  #menuBox .title h2 {
+    margin-top: 4px;
+    font-size: 28px;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #171717;
+    text-transform: capitalize;
+  }
+  #menuBox .title p {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #aaa;
+  }
+  .slide_wrap .menu_btn_pc {
+    display: none;
+  }
+  .menu_area {
+    display: flex;
+    width: 960px;
+  }
+  .menu_area > li {
+    width: auto;
+    height: auto;
+    margin-right: 8px;
+  }
+  .menu_area > li .menu_img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 30px;
+    background-image: url(../../multi/img/drink.png);
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  .menu_area > li .menu_img > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .menu_area > li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .menu_area > li p {
+    transform: translateY(-50%);
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+  }
 
+  .slide_wrap .menu_btn_mob {
+    width: 7.875rem;
+    height: 2.375rem;
+    margin: auto;
+    margin-top: 3.125rem;
+    padding: 0.5rem 0;
+    border-radius: 2.375rem;
+    border: 0.0625rem solid #ccc;
+    font-size: 1rem;
+    text-align: center;
+    color: #171717;
+  }
+  .slide_wrap .menu_btn_mob > button {
+    font-size: inherit;
+  }
+}
+/*==================== tablet 600px - 1023px ====================*/
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #menuBox .title {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 50px;
+    text-align: left;
+  }
+  #menuBox .title h2 {
+    margin-top: 4px;
+    font-size: 28px;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #171717;
+    text-transform: capitalize;
+  }
+  #menuBox .title p {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #aaa;
+  }
+}
+/*==================== desktop 1024px - ====================*/
+@media all and (min-width: 1024px) {
+  #menuBox {
+    position: relative;
+    padding: 100px 2rem;
+  }
+  #menuBox .container {
+    max-width: 64rem;
+  }
+  #menuBox .title {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 50px;
+    text-align: left;
+  }
+  #menuBox .title h2 {
+    margin-top: 4px;
+    font-size: 40px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #171717;
+    text-transform: capitalize;
+  }
+  #menuBox .title p {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #aaa;
+  }
+  .menu_btn_pc {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    position: absolute;
+    top: 49%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 0 6%;
+  }
+  .menu_btn_pc .next {
+    display: none;
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 100%;
+    box-shadow: 0.1875rem 0.25rem 0.625rem rgba(23, 23, 23, 0.15);
+    background-color: #fff;
+    background-image: url(../../multi/img/btn_next2.png);
+    background-size: 16px auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  .menu_btn_pc .next > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .menu_btn_pc .prev {
+    display: none;
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 100%;
+    box-shadow: 0.1875rem 0.25rem 0.625rem rgba(23, 23, 23, 0.15);
+    background-color: #fff;
+    background-image: url(../../multi/img/btn_prev2.png);
+    background-size: 16px auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  .menu_btn_pc .prev > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .menu_btn_pc .next.on, .menu_btn_pc .prev.on {
+    display: block;
+  }
+
+  .menu_area {
+    width: 1280px;
+  }
+  .menu_area > li {
+    margin-right: 20px;
+  }
+  .menu_area > li .menu_img {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 40px;
+  }
+  .menu_area > li p {
+    transform: translateY(-50%);
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .slide_wrap .menu_btn_mob {
+    display: none;
+  }
+}
+/*==================== pc 1440px - ====================*/
+@media all and (min-width: 1440px) {
+  .menu_btn_pc {
+    padding: 0 6%;
+  }
+}
 /* orderBox.css */
 #orderBox {
   height: 720px;

@@ -60,13 +60,15 @@ $imgPath: '../../multi/img/';
 }
 
 // main
-@mixin mainTitleMop ($align: center) {
+// $fontSize : mob 28 / pc: 40
+@mixin mainTitle ($align: center, $fontSize: 28) {
 	display: flex; flex-direction: column-reverse;
   padding-bottom: 50px;
 	text-align: $align;
-	h2 { margin-top: 4px; @include font(28, $font_weight_bold){ color: $color_black_02; text-transform: capitalize; } }
+	h2 { margin-top: 4px; @include font($fontSize, $font_weight_bold){ color: $color_black_02; text-transform: capitalize; } }
 	p { @include font(16, $font_weight_bold){ color: $color_gray_03}}
 } // @mixin mainTitleMop
+
 
 
 // btn
@@ -97,6 +99,13 @@ $imgPath: '../../multi/img/';
 	& > button { font-size: inherit; }
 }
 
+// 'btn_next2.png' / 'btn_prev2.png'
+@mixin btnCircle($file: 'btn_next2.png') {
+	width: 3.75rem; height: 3.75rem;
+	border-radius: 100%; box-shadow: 0.1875rem 0.25rem 0.625rem rgba($color_black_02, 0.15);
+	background-color: $color_white;
+	@include img($file, 16px auto);
+}
 
 
 // @media query --------------------------------------
