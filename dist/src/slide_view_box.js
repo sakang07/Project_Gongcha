@@ -1,46 +1,31 @@
 // slide_view_box.js
 
 // ==============================================
-// 슬라이드 이동
-// 1. Mob : #viewBox 영역에서 손가락으로 슬라이딩하면 슬라이드 이동
-//  1-1. 오른쪽으로 슬라이딩하면 오른쪽으로 이동
-//  1-2. 가장 왼쪽에 있는 슬라이드 삭제
-//  1-3. 가장 오른쪽에 있는 슬라이드 생성
-//  1-4. 슬라이드 오른쪽으로 이동
-//  1-5. 반대쪽 반복
-//  1-6. 이동을 마치면 .indi_number 수정
-
-// 2. Pc : .view_btn > a 누르면 슬라이드 이동
-//  2-1. .view_btn > .next > a 누르면 오른쪽으로 이동
-//  2-2. 가장 왼쪽에 있는 슬라이드 삭제
-//  2-3. 가장 오른쪽에 있는 슬라이드 생성
-//  2-4. 슬라이드 오른쪽으로 이동
-//  2-5. 반대쪽 반복
-//  2-6. 이동을 마치면 .indi_circle의 .on 수정
+// 시나리오... 정리...
 
 // ==============================================
 
 // data : 꼭 3개 이상 작성!!
 const BANNER_DATA = [{
-  titleText : 'We serve you <br />all about choco1',
+  titleText : 'We serve you <br />all about choco',
   contentText : '공차가 선물하는 달콤한 충전<br />초코 신메뉴 마시면 공차 스탬프 3배 적립!',
   url : '#',
   img : 'banner_01.png'
 },
 {
-  titleText : 'We serve you <br />all about choco2',
+  titleText : 'We serve you <br />all about choco',
   contentText : '공차가 선물하는 달콤한 충전<br />초코 신메뉴 마시면 공차 스탬프 3배 적립!',
   url : '#',
   img : 'drink.png'
 },
 {
-  titleText : 'We serve you <br />all about choco3',
+  titleText : 'We serve you <br />all about choco',
   contentText : '공차가 선물하는 달콤한 충전<br />초코 신메뉴 마시면 공차 스탬프 3배 적립!',
   url : '#',
   img : 'recipe_img1.jpg'
 },
 {
-  titleText : 'We serve you <br />all about choco4',
+  titleText : 'We serve you <br />all about choco',
   contentText : '공차가 선물하는 달콤한 충전<br />초코 신메뉴 마시면 공차 스탬프 3배 적립!',
   url : '#',
   img : 'banner_01.png'
@@ -119,7 +104,6 @@ for (let i = 0; i < sildeLen; i++) {
 const elIndiCircleLi = elIndiCircle.querySelectorAll('li');
 const elIndiCircleLiA = elIndiCircle.querySelectorAll('li > a');
 
-
 // 함수-------------------------------------
 
 const slideW = 100 / sildeLen;
@@ -132,6 +116,7 @@ fnNextSlide = el => {
   el.style.transform = `translateX(-${i * slideW}%)`;
   el.style.transition = 'all 500ms ease';
 };
+
 // 이전 슬라이드로 이동하는 함수
 fnPrevSlide = el => {
   i--;
@@ -144,6 +129,17 @@ fnNextIndiCir = el => {
   el.forEach((_d, _i) => {
     _i === i ? el[_i].classList.add(ckActive) : el[_i].classList.remove(ckActive);
   })
+};
+
+// 전체 배열 중 선택한 순번을 제외한 나머지 형제 선택하는 함수
+const fnSiblings = (select, idx = ckIdx) => {
+  const otherArr = [];
+  select.forEach((d,i) => {
+    if(idx !== i) {
+      otherArr.push(d);
+    }
+  });
+  return otherArr;
 };
 
 
@@ -189,17 +185,30 @@ elViewBtnPrev.addEventListener('click', e => {
 });
 
 // pc: 인디케이터 누르면 해당 슬라이드 이동
-// elIndiCircleLiA.forEach((d, i) => {
-//   console.log(d, i);
-//   // .on 클래스 모두 제거
-//   elIndiCircleLi[i].classList.remove(ckActive);
-  
-//   d.addEventListener('click', e => {
-//     e.preventDefault();
-//     e.forEach((_d, _i) => {
-//       d.classList.add(ckActive);
-//     });
+elIndiCircleLiA.forEach((d, i) => {
+  console.log(d, i);
 
+  d.addEventListener('click', e => {
+    e.preventDefault();
+    
+    // .on 포함한 클래스 파악
+    const ckContains = d.parentNode.classList.contains(ckActive);
+    
+    // 클릭한 요소에 .on이 없으면 추가하고 나머지 .on 제거
+    if(!ckContains) {
+      const ckIdx = i
+      d.parentNode.classList.add(ckActive);
 
-//     });
-// });
+      const otherArr = [];
+      d.forEach((d,i) => {
+        if(idx !== i) {
+          otherArr.push(d);
+        }
+      });
+      return otherArr;
+      // fnSiblings(d,i).forEach(el => {
+      //   el.classList.remove(ckActive);
+      // });
+    } 
+  });
+});

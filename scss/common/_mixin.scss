@@ -59,10 +59,18 @@ $imgPath: '../../multi/img/';
 	}
 }
 
+// main
+@mixin mainTitleMop ($align: center) {
+	display: flex; flex-direction: column-reverse;
+  padding-bottom: 50px;
+	text-align: $align;
+	h2 { margin-top: 4px; @include font(28, $font_weight_bold){ color: $color_black_02; text-transform: capitalize; } }
+	p { @include font(16, $font_weight_bold){ color: $color_gray_03}}
+} // @mixin mainTitleMop
+
 
 // btn
-
-@mixin btn_small($bgCo: $color_white, $color: $color_black_02, $font:1rem) {
+@mixin btnSmall($bgCo: $color_white, $color: $color_black_02, $font:1rem) {
 	width: 8.75rem; height: 3rem;
 	padding: 0.75rem 1.125rem 0; border: $line_01;
 	background-color: $bgCo;
@@ -71,13 +79,22 @@ $imgPath: '../../multi/img/';
 	& > a { @include full; }
 }
 
-@mixin btn_big ($bgCo: $color_white, $color: $color_black_02, $font:1rem) {
+@mixin btnBig ($bgCo: $color_white, $color: $color_black_02, $font:1rem) {
 	min-width: 260px; height: 56px;
 	padding: 20px 18px; border: $line_01;
 	background-color: $bgCo;
 	font: { weight: $font_weight_bold; size: $font }
 	text-align: center; color: $color;
 	& > a { @include full; }
+}
+
+@mixin btnRound () {
+	width: 7.875rem; height: 2.375rem;
+	margin: auto; margin-top: 3.125rem; padding: 0.5rem 0;
+	border-radius: 2.375rem; border: $line_01;
+	font: { size:1rem; }
+	text-align: center; color: $color_black_02;
+	& > button { font-size: inherit; }
 }
 
 

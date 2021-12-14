@@ -643,10 +643,10 @@ h1 > a > span {
     width: 100%;
     height: 100%;
   }
-  .view_content_inner dl {
+  .view_content_inner .view_text dl {
     padding: 180px 40px 0;
   }
-  .view_content_inner dl dt {
+  .view_content_inner .view_text dl dt {
     font-size: 28px;
     font-size: 1.75rem;
     font-weight: 700;
@@ -655,14 +655,14 @@ h1 > a > span {
     text-transform: capitalize;
     margin-bottom: 28px;
   }
-  .view_content_inner dl dd {
+  .view_content_inner .view_text dl dd {
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.6;
     color: #fff;
     margin-bottom: 50px;
   }
-  .view_content_inner dl .btn_small {
+  .view_content_inner .view_text dl .btn_small {
     width: 8.75rem;
     height: 3rem;
     padding: 0.75rem 1.125rem 0;
@@ -673,7 +673,7 @@ h1 > a > span {
     text-align: center;
     color: #171717;
   }
-  .view_content_inner dl .btn_small > a {
+  .view_content_inner .view_text dl .btn_small > a {
     display: block;
     width: 100%;
     height: 100%;
@@ -894,9 +894,87 @@ h1 > a > span {
 }
 /* menuBox.css */
 #menuBox {
-  height: 520px;
-  height: 32.5rem;
-  background-color: #63AD85;
+  padding: 80px 2rem;
+}
+#menuBox .title {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-bottom: 50px;
+  text-align: center;
+}
+#menuBox .title h2 {
+  margin-top: 4px;
+  font-size: 28px;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #171717;
+  text-transform: capitalize;
+}
+#menuBox .title p {
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #aaa;
+}
+.slide_wrap .menu_btn_mob {
+  display: none;
+}
+.menu_area {
+  display: flex;
+  width: 960px;
+}
+.menu_area > li {
+  width: 120px;
+  height: auto;
+  margin-right: 8px;
+}
+.menu_area > li .menu_img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 10px;
+  background-image: url(../../multi/img/drink.png);
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.menu_area > li .menu_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.menu_area > li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.menu_area > li p {
+  margin-top: 1.5rem;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.slide_wrap .menu_btn_pc {
+  width: 7.875rem;
+  height: 2.375rem;
+  margin: auto;
+  margin-top: 3.125rem;
+  padding: 0.5rem 0;
+  border-radius: 2.375rem;
+  border: 0.0625rem solid #ccc;
+  font-size: 1rem;
+  text-align: center;
+  color: #171717;
+}
+.slide_wrap .menu_btn_pc > button {
+  font-size: inherit;
 }
 
 /* orderBox.css */

@@ -34,12 +34,15 @@
           overflow-X: hidden;
           width: 100%; height: 100%;
 
-          dl { 
-            padding: 180px 40px 0;
-            dt { @include font(28, $font_weight_bold, 1.2){ color: $color_white; text-transform: capitalize; } margin-bottom: 28px; }
-            dd { @include font(16, $line:1.6){ color: $color_white} margin-bottom: 50px; }
-            .btn_small { @include btn_small; }
-          } // dl
+          .view_text {
+            
+            dl { 
+              padding: 180px 40px 0;
+              dt { @include font(28, $font_weight_bold, 1.2){ color: $color_white; text-transform: capitalize; } margin-bottom: 28px; }
+              dd { @include font(16, $line:1.6){ color: $color_white} margin-bottom: 50px; }
+              .btn_small { @include btnSmall; }
+            } // dl
+          } // .view_text
             
           .view_img { 
             position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
@@ -120,7 +123,7 @@
               width: 400px;
               dt { @include font(36, $font_weight_bold, 1.2){ color: $color_white; text-transform: capitalize; } margin-bottom: 34px; }
               dd { @include font(18, $line:1.6){ color: $color_white} margin-bottom: 74px; }
-              .btn_small { @include btn_small; }
+              .btn_small { @include btnSmall; }
             } // dl
           }//.view_text
           
