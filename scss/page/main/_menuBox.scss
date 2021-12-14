@@ -2,6 +2,37 @@
 /* menuBox.css */
 
 #menuBox {
-  @include pxRem(height, 520);
-  background-color: #63AD85;
-}
+  // @include pxRem(height, 520);
+  .title { @include mainTitleMop; }
+  padding: nth($pd_mob_tb, 1) $pd_mob_lr;
+
+  @at-root .slide_wrap {
+    .menu_btn_mob { display: none; }
+
+    @at-root .menu_area {
+      display: flex; 
+      width: calc(120px * 8);
+      
+      & > li {
+        width: 120px; height: auto;
+        margin-right: 8px;
+        // transform: translateX(-$pd_mob_lr);
+
+        .menu_img { 
+          width: 120px; height: 120px; margin-bottom: 10px;
+          @include img('drink.png', contain)
+        }
+        a { @include full; }
+        p {
+          margin-top: 1.5rem;
+          transform: translateY(-50%); 
+          @include font(14, $font_weight_bold, 1.2){text-align: center;} 
+        }
+      } //.menu_area li
+    } //.menu_area
+
+    .menu_btn_pc { @include btnRound; }
+
+  } //.slide_wrap
+} // #menuBox
+
