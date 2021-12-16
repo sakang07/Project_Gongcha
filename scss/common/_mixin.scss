@@ -109,6 +109,13 @@ $imgPath: '../../multi/img/';
 	@include img($file, 16px auto);
 }
 
+@mixin btnSquare($file: 'btn_next2.png') {
+	width: 3.75rem; height: 3.75rem;
+	box-shadow: 0.1875rem 0.25rem 0.625rem rgba($color_black_02, 0.15);
+	background-color: $color_white;
+	@include img($file, 16px auto);
+}
+
 
 // @media query --------------------------------------
 $mobile : 320px;

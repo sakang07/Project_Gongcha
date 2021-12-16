@@ -2,11 +2,9 @@
 /* liveBox.css */
 
 #liveBox {
-  position: relative;
-  background-color: $color_white;
+  background-color: rgba($color_gray_01, 0.5);
 
   .title { 
-    padding: nth($pd_tb, 1) $pd_lr;
     @include mainTitle;
   }
 
@@ -20,10 +18,10 @@
       @include font(22, $font-weight-bold); margin-bottom: 10px; 
       i { margin-left: 12px; }
     }
-    p { @include font(16, $line:1.6); margin-bottom: 56px; br{display: none;} }
+    p { @include font(16, $line:1.6); }
 
     .shop_search {
-      width: 256px; height: 53px;
+      width: 80%;
       margin: auto; border: 3px solid $color_black_01;
 
       form { width: 100%; height: 100%; }
@@ -40,17 +38,11 @@
 
   @at-root .social_area {
     width: 100%; height: auto;
-
-    .live_btn { display: none; }
-
+    
     .live_content {
       display: flex; justify-content: center;
       width: 100%;
-
-      & > li {
-        // @include vw(width, 126, 320); @include vw(height, 140, 320);
-        // margin-bottom: nth($pd_tb, 2);
-      } // li
+      margin: auto;
 
         .live_img_01 { @include img('main_live_img1.png', cover); margin-right: 10px; }
         .live_img_02 { @include img('main_live_img2.png', cover) }
@@ -81,8 +73,7 @@
       p { @include font(16, $line:1.6); margin-bottom: 56px; br{display: none;} }
   
       .shop_search {
-        width: 256px; height: 53px;
-        margin: auto; border: 3px solid $color_black_01;
+        min-width: 256px; max-width: 400px; height: 53px;
   
         form { width: 100%; height: 100%; }
         fieldset { display: flex; justify-content: space-between; }
@@ -122,6 +113,25 @@
 @include tablet {
   #liveBox {
 
+    @at-root .store_search_box {
+      text-align: center;
+  
+      .shop_search {
+        height: 53px;
+  
+        form { width: 100%; height: 100%; }
+        fieldset { display: flex; justify-content: space-between; }
+        input {
+          width: calc(100% - 47px);
+          padding-left: 12px;
+          background-color: rgba($color_white, 0.5);
+        }
+        button { width: 47px; height: 47px; background-color: $color_primary_01; }
+        i { @include font(20) { color: $color_white } }
+      }
+    } //.store_search_box
+  
+
     .live_content {
 
       & > li {
@@ -130,8 +140,6 @@
         &:last-of-type { margin-right: 0; }
       } // li
 
-        .live_img_01 { @include img('main_live_img1.png', cover) }
-        .live_img_02 { @include img('main_live_img2.png', cover) }
         .live_img_03 { @include img('main_live_img1.png', cover) }
         .live_img_04 { @include img('main_live_img2.png', cover) }
     } //.live_content
@@ -144,36 +152,88 @@
 @include desktop {
   #liveBox {
     .title {
-      padding: nth($pd_tb, 1) $pd_lr; margin-bottom: 100px;
-      @include mainTitle(center, 40);
+      padding: nth($pd_tb, 1) $pd_lr 0;
+      @include mainTitle(center, 40); margin-bottom: 50px;
     }
 
     .container {
       display: flex; justify-content: space-between;
       max-width: map-get($container, "laptop");
+      padding: 0 $pd_lr nth($pd_tb, 2);
     }
 
     @at-root .store_search_box {
-      width: 280px; height: 310px;
+      width: 280px; height: 310px; margin-right: 22px;
+      padding: 40px 30px;
+
+      h3 { margin-bottom: 20px; }
+      p { margin-bottom: 78px;}
+
+      .shop_search {
+        width: 220px; height: 44px;
+        input { width: calc(100% - 38px); font-size: 14px; }
+        button { width: 38px; height: 38px; }
+      }
     }
 
     @at-root .social_area {
+      position: relative;
       width: 100%; height: auto;
   
-      .live_btn { display: none; }
+      .live_btn { 
+        display: flex; justify-content: space-between; flex-direction: row-reverse; align-items: center;
+        position: absolute; top: 50%; left: 0; right: 0;
+        width: auto; height: 0;
+        transform: translateY(-50%);
+        & .next { @include btnSquare; }
+        & .prev { @include btnSquare('btn_prev2.png'); }
+      }
   
       .live_content {
         display: flex; justify-content: center;
-        width: 650px;
+        width: auto;
   
         & > li {
           width: 280px; height: 310px;
-          margin-bottom: nth($pd_tb, 2);
         } // li
   
-          .live_img_01 { @include img('main_live_img1.png', cover); margin-right: 10px; }
-          .live_img_02 { @include img('main_live_img2.png', cover) }
       } // .live_content
     } // .social_area
   }
 } //@include desktop
+
+
+
+/*==================== pc 1440px - ====================*/
+@include pc {
+  #liveBox {
+    .container { max-width: map-get($container, "pc"); }
+
+    @at-root .store_search_box {
+      width: 380px; height: 420px; margin-right: 70px;
+      padding: 74px 30px;
+
+      .shop_search { 
+        width: 283px; height: 53px;
+        margin-top: 120px;
+
+        input {
+          width: calc(100% - 47px);
+          font-size: 16px;
+        }
+        button { width: 47px; height: 47px; }
+      }
+    }
+  
+      .live_content {
+        display: flex; justify-content: center;
+  
+        & > li {
+          width: 380px; height: 420px;
+
+          .live_img_01 { margin-right: 30px; }
+        } // li
+  
+      } // .live_content
+  } //#liveBox
+} // @include pc

@@ -20,25 +20,25 @@ const BANNER_DATA = [{
 {
   titleText : 'We serve you <br />all about choco',
   contentText : '공차가 선물하는 달콤한 충전<br />초코 신메뉴 마시면 공차 스탬프 3배 적립!',
-  url : '#',
+  url : './main.html',
   img : 'drink.png'
 },
 {
   titleText : 'We serve you <br />all about choco',
   contentText : '공차가 선물하는 달콤한 충전<br />초코 신메뉴 마시면 공차 스탬프 3배 적립!',
-  url : '#',
+  url : './main.html',
   img : 'recipe_img1.jpg'
 },
 {
   titleText : 'We serve you <br />all about choco',
   contentText : '공차가 선물하는 달콤한 충전<br />초코 신메뉴 마시면 공차 스탬프 3배 적립!',
-  url : '#',
+  url : './main.html',
   img : 'banner_01.png'
 },
 {
   titleText : 'We serve you <br />all about choco',
   contentText : '공차가 선물하는 달콤한 충전<br />초코 신메뉴 마시면 공차 스탬프 3배 적립!',
-  url : '#',
+  url : './main.html',
   img : 'banner_01.png'
 }]
 
@@ -83,7 +83,7 @@ for (let i = 0; i < sildeLen; i++) {
   let _dataSelect = BANNER_DATA[i];
 
   const _DATA_CODE = `<div class="view_text">
-    <dl><dt>${_dataSelect.titleText}</dt><dd>${_dataSelect.contentText}</dd><dd class="btn_small full_wrap"><a href="${_dataSelect.moveUrl}">바로가기</a></dd></dl>
+    <dl><dt>${_dataSelect.titleText}</dt><dd>${_dataSelect.contentText}</dd><dd class="btn_small full_wrap"><a href="${_dataSelect.url}">바로가기</a></dd></dl>
   </div><div class="view_img"></div>`;
 
   _mkViewContLi.innerHTML = _DATA_CODE;

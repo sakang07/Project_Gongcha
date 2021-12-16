@@ -72,18 +72,20 @@
     margin-top: 5rem;
 
     @at-root .view_btn {
-      position: absolute; top: 0; left: 50%; bottom: 0;
+      position: absolute; top: 50%; left: 50%; z-index: 100;
       display: flex; justify-content: space-between; flex-direction: row-reverse; align-items: center;
-      width: 100%; height: 100%; max-width: 64rem;
+      width: 100%; height: 0; max-width: 64rem;
       transform: translateX(-50%);
       & > li > a { padding: 100px 30px; box-sizing: border-box; }
       .next > a { @include full('btn_next.png', 18px 42px) }
       .prev > a { @include full('btn_prev.png', 18px 42px) }
     }
     @at-root .view_indicator {
+      width: auto; height: auto;
+
       .indi_circle {
         display: flex; justify-content: center; align-items: center;
-        position: absolute; bottom: 32px; left: 50%;
+        position: absolute; bottom: 32px; left: 50%; z-index: 100;
         transform: translateX(-50%);
         & > li {
           width: 1rem; height: 1rem;
@@ -102,7 +104,7 @@
 
     @at-root .view_content {
       overflow: hidden;
-      position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
       width: 100%; height: 100%;
       
       ul { 
