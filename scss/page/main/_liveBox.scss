@@ -48,8 +48,8 @@
       width: 100%;
 
       & > li {
-        @include vw(width, 126, 320); @include vw(height, 140, 320);
-        margin-bottom: nth($pd_tb, 2);
+        // @include vw(width, 126, 320); @include vw(height, 140, 320);
+        // margin-bottom: nth($pd_tb, 2);
       } // li
 
         .live_img_01 { @include img('main_live_img1.png', cover); margin-right: 10px; }
@@ -121,8 +121,59 @@
 /*==================== tablet 600px - 1023px ====================*/
 @include tablet {
   #liveBox {
-    
 
+    .live_content {
+
+      & > li {
+        @include vw(width, 126, 600); @include vw(height, 140, 600);
+        margin-bottom: nth($pd_tb, 2); margin-right: 10px; 
+        &:last-of-type { margin-right: 0; }
+      } // li
+
+        .live_img_01 { @include img('main_live_img1.png', cover) }
+        .live_img_02 { @include img('main_live_img2.png', cover) }
+        .live_img_03 { @include img('main_live_img1.png', cover) }
+        .live_img_04 { @include img('main_live_img2.png', cover) }
+    } //.live_content
   } //#liveBox
 
 } // @include tablet
+
+
+/*==================== desktop 1024px - 1439px ====================*/
+@include desktop {
+  #liveBox {
+    .title {
+      padding: nth($pd_tb, 1) $pd_lr; margin-bottom: 100px;
+      @include mainTitle(center, 40);
+    }
+
+    .container {
+      display: flex; justify-content: space-between;
+      max-width: map-get($container, "laptop");
+    }
+
+    @at-root .store_search_box {
+      width: 280px; height: 310px;
+    }
+
+    @at-root .social_area {
+      width: 100%; height: auto;
+  
+      .live_btn { display: none; }
+  
+      .live_content {
+        display: flex; justify-content: center;
+        width: 650px;
+  
+        & > li {
+          width: 280px; height: 310px;
+          margin-bottom: nth($pd_tb, 2);
+        } // li
+  
+          .live_img_01 { @include img('main_live_img1.png', cover); margin-right: 10px; }
+          .live_img_02 { @include img('main_live_img2.png', cover) }
+      } // .live_content
+    } // .social_area
+  }
+} //@include desktop

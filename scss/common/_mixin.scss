@@ -67,7 +67,7 @@ $imgPath: '../../multi/img/';
 	text-align: $align;
 	h2 { margin-top: 4px; @include font($fontSize, $font_weight_bold){ color: $color_black_02; text-transform: capitalize; } }
 	p { @include font(16, $font_weight_bold){ color: $color_gray_03}}
-} // @mixin mainTitleMop
+} // @mixin mainTitle
 
 
 

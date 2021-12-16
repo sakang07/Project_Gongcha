@@ -2361,15 +2361,6 @@ h1 > a > span {
   justify-content: center;
   width: 100%;
 }
-.social_area .live_content > li {
-  width: 126px;
-  width: 7.875rem;
-  width: 39.375vw;
-  height: 140px;
-  height: 8.75rem;
-  height: 43.75vw;
-  margin-bottom: 6.25rem;
-}
 .social_area .live_content .live_img_01 {
   background-image: url(../../multi/img/main_live_img1.png);
   background-size: cover;
@@ -2503,6 +2494,164 @@ h1 > a > span {
   }
 }
 /*==================== tablet 600px - 1023px ====================*/
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #liveBox .live_content > li {
+    width: 126px;
+    width: 7.875rem;
+    width: 21vw;
+    height: 140px;
+    height: 8.75rem;
+    height: 23.3333333333vw;
+    margin-bottom: 6.25rem;
+    margin-right: 10px;
+  }
+  #liveBox .live_content > li:last-of-type {
+    margin-right: 0;
+  }
+  #liveBox .live_content .live_img_01 {
+    background-image: url(../../multi/img/main_live_img1.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  #liveBox .live_content .live_img_01 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  #liveBox .live_content .live_img_02 {
+    background-image: url(../../multi/img/main_live_img2.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  #liveBox .live_content .live_img_02 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  #liveBox .live_content .live_img_03 {
+    background-image: url(../../multi/img/main_live_img1.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  #liveBox .live_content .live_img_03 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  #liveBox .live_content .live_img_04 {
+    background-image: url(../../multi/img/main_live_img2.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  #liveBox .live_content .live_img_04 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
+/*==================== desktop 1024px - 1439px ====================*/
+@media all and (min-width: 1024px) {
+  #liveBox .title {
+    padding: 5rem 2rem;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+  #liveBox .title h2 {
+    margin-top: 4px;
+    font-size: 40px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #171717;
+    text-transform: capitalize;
+  }
+  #liveBox .title p {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #aaa;
+  }
+  #liveBox .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 64rem;
+  }
+  .store_search_box {
+    width: 280px;
+    height: 310px;
+  }
+
+  .social_area {
+    width: 100%;
+    height: auto;
+  }
+  .social_area .live_btn {
+    display: none;
+  }
+  .social_area .live_content {
+    display: flex;
+    justify-content: center;
+    width: 650px;
+  }
+  .social_area .live_content > li {
+    width: 280px;
+    height: 310px;
+    margin-bottom: 6.25rem;
+  }
+  .social_area .live_content .live_img_01 {
+    background-image: url(../../multi/img/main_live_img1.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+  }
+  .social_area .live_content .live_img_01 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .social_area .live_content .live_img_02 {
+    background-image: url(../../multi/img/main_live_img2.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  .social_area .live_content .live_img_02 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
 /* sideBox.css */
 #sideBox {
   display: none;
