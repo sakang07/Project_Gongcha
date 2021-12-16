@@ -41,7 +41,7 @@
       elLiveBox.prepend(elStoreSearch)
       elLiveBox.append(elSocialArea);
     } else {
-      console.log('dfsf');
+      // console.log('dfsf');
       elStoreSearch.remove();
       elSocialArea.remove();
       elLiveBox.append(elContainer);
@@ -53,10 +53,10 @@
       const browserW = this.matchMedia("all and (min-width: 600px) and (max-width: 1023px)").matches;
       const resizeW = this.innerWidth;
 
-      if(browserW || resizeW > 600) {
+      if(browserW) {
         elLiveCon.append(mkLi3);
         elLiveCon.append(mkLi4);
-      } else {
+      }  else {
         mkLi3.remove();
         mkLi4.remove();
       }
