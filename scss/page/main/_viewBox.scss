@@ -10,7 +10,6 @@
 @include handhelds {
   #viewBox {
     height: calc(100vh - 3.75rem); max-height: 700px;
-    margin-top: 3.75rem;
 
     @at-root .view_btn { display: none; }
     @at-root .view_indicator {
@@ -69,7 +68,7 @@
 @include desktop {
   #viewBox {
     height: calc(43.75rem + 5rem);
-    margin-top: 5rem;
+    // margin-top: 5rem;
 
     @at-root .view_btn {
       position: absolute; top: 50%; left: 50%; z-index: 100;

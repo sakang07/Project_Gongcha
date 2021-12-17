@@ -80,7 +80,7 @@
     .title { @include mainTitle(left, 40); }
 
     @at-root .slide_wrap {
-      
+
       @at-root .menu_btn_pc {
         display: flex; flex-direction: row-reverse; justify-content: space-between;
         position: absolute; top: 49%; left: 0; right: 0;

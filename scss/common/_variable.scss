@@ -38,7 +38,7 @@ $line_04: 0.0625rem solid $color_deep_gray_01;
 $container: ("laptop": 64rem, "pc": 80rem);
 $pd_lr: 2rem;
 $pd_tb: (5rem, 6.25rem, 8.125rem);
-// nth($padding_mob, 1)
+// nth($pd_tb, 1)
 // map-get($container, "laptop")
 
 

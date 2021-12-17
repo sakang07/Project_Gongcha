@@ -42,7 +42,7 @@ $imgPath: '../../multi/img/';
 		position: $position;
 		repeat: $repeat;
 	}
-	> span {
+	& > span {
 		display: block;
 		position: absolute; z-index: -1; clip: rect(0 0 0 0);
 		width: 0; height: 0; overflow: hidden;
@@ -59,6 +59,40 @@ $imgPath: '../../multi/img/';
 	}
 }
 
+// hover
+@mixin hoverScl($scale: 1.2, $ms: 300) {
+	&:hover {
+		display: block;
+		transform: scale($scale);
+		transition: all $ms + ms ease;
+		@content;
+	}
+}
+
+@mixin hoverBold($color:$color_black_02) {
+	&:hover { font-weight: $font_weight_bold; color: $color; }
+}
+
+@mixin hoverLine($color:$color_gray_04) {
+	& {position: relative;}
+	&:hover { font-weight: $font_weight_bold; color: $color_black_02; }
+	&::before {
+		content: '';
+		position: absolute;	bottom: -4px; left: 0; 
+		width: 100%; height: 1px; margin: auto;
+		background: $color;
+		display: block;
+		transform-origin: right top;
+		transform: scale(0, 1);
+		transition: transform 400ms cubic-bezier(1, 0, 0, 1);
+	}
+	&:hover::before {
+		transform-origin: left top;
+		transform: scale(1, 1);
+		@content;
+	}		
+}
+
 // main
 // $fontSize : mob 28 / pc: 40
 @mixin mainTitle ($align: center, $fontSize: 28) {
@@ -68,8 +102,6 @@ $imgPath: '../../multi/img/';
 	h2 { margin-top: 4px; @include font($fontSize, $font_weight_bold){ color: $color_black_02; text-transform: capitalize; } }
 	p { @include font(16, $font_weight_bold){ color: $color_gray_03}}
 } // @mixin mainTitle
-
-
 
 // btn
 @mixin btnSmall($bgCo: $color_white, $color: $color_black_02, $font:1rem) {

@@ -27,8 +27,7 @@
   width: 100%; height: 100%;
   margin: auto; }
 
-body { overflow-x: hidden; overflow-y: auto; }
-#wrap { margin: auto; }
+#wrap { margin: auto; position: relative; }
 .none { display: none; }
 .bold { font-weight: 700; }
 .uppercase { text-transform: uppercase; }

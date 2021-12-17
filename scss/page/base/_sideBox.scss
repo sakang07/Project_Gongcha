@@ -1,0 +1,63 @@
+// sideBox.scss
+/* sideBox.css */
+
+/*==================== handhelds 320px - 599px ====================*/
+@include handhelds {
+  #sideBox { display: none; }
+} //@include handhelds
+
+/*==================== desktop 1024px - 1439px ====================*/
+@include desktop {
+  #sideBox {
+    position: fixed; right: 30px; bottom: 80px; z-index: 4000;
+    width: 50px; height: auto;
+
+    a {
+    display: block;
+    width: 50px; height: 50px;
+    border-radius: 100%;
+    margin-bottom: 16px;
+    background-color: $color_white;
+    box-shadow: 5px 5px 10px rgba($color_black_02, 0.15);
+    transition: all 500ms ease;
+
+    &.app { 
+      @include img('side_app.png',30px auto); background-color: $color_primary_01; color: $color_white;
+    }
+    &.kakao { 
+      @include img('side_kakaotalk.png',30px auto); background-color: #FFCD00; color: $color_black_02;
+    }
+
+    /* sideBox > &:hover */
+    &:hover { 
+      transform: scale(1.3);
+      transition: all 500ms ease;
+    }
+    &:hover span {
+      position: absolute; top: 10px; left: 50%; z-index: 1;
+      transform: translateX(-50%);
+      width: auto; height: auto;
+      margin: auto;
+      @include font(12, $font_weight_bold) {text-align: center; word-spacing: -3px; }
+      clip: initial;
+    }
+    &:hover:before, &:hover::before {
+      content: "";
+      display: block;
+      position: absolute; top: 0; left: 0; bottom: 0; right: 0;
+      border-radius: 100%;
+      background-color: inherit; 
+    }
+    /* sideBox > &:focus */
+    &:focus { 
+      animation: myMove 300ms ease 1;
+    }
+    @keyframes myMove {
+      0% { transform: scale(1.3); }
+      30% { transform: scale(0.3); }
+      70% { transform: scale(1.6); }
+      100% { transform: scale(1.3); }
+    } /* @keyframes myMove */
+    } //a
+  } //#sideBox
+}//@include desktop

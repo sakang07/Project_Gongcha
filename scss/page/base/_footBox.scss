@@ -4,13 +4,15 @@
 #footBox {
   position: relative;
   background-color: $color_black_01; color: $color_gray_02;
-
+  
+  a{ @include hoverScl(1.1); }
+  
   @at-root .foot_nav {
     .foot_nav_cont {
       display: flex; flex-flow: wrap; 
       width: auto; height: 100%;
       padding: 16px 32px; border-bottom: $line_04;
-
+      
       li {
         @include font(12); margin: { top:7px; right: 12px; bottom: 7px;}
         &:last-of-type { margin-right: 0; }
@@ -75,61 +77,6 @@
       .foot_sns { bottom: 406px; }
     // padding: 16px 32px;
   }
-
-  // #footBox {
-  //   position: relative;
-  //   background-color: $color_black_01; color: $color_gray_02;
-  
-  //   @at-root .foot_nav {
-  //     .foot_nav_cont {
-  //       display: flex; flex-flow: wrap; 
-  //       width: auto; height: 100%;
-  //       padding: 16px 32px; border-bottom: $line_04;
-  
-  //       li {
-  //         @include font(12); margin: { top:7px; right: 12px; bottom: 7px;}
-  //         &:last-of-type { margin-right: 0; }
-  //       }
-  //     } //.foot_nav_cont
-  
-  //     .family_site {
-  //       position: absolute; left: 154px; bottom: 420px;
-  //       width: 136px; height: 30px;
-  //       border-bottom: $line_01; padding: 4px 8px;
-  //       @include font(14, $font_weight_thin){color: $color_white; text-transform: capitalize;}
-  
-  //       i { margin-left: 42px; }
-  //       form, fieldset, input { width: 100%; height: 100%; }
-  //       dl ul { display: none; }
-  //     } //.family_site
-  
-  //   } //.foot_nav
-  
-  //   @at-root .foot_wrap {
-  //     // padding: 92px 32px 124px;
-  
-  //     h3 { @include font(16, $font-weight-bold); margin-bottom: 20px; }
-  //     p { @include font(12, $line:1.6) }
-  
-  //     .foot_info {
-  //       .copyright {
-  //         position: absolute; left: 32px; bottom: 56px;
-  //       }
-  //     }
-  //     .foot_cs {
-  //       margin-top: 30px; 
-  //       .phone_number { @include font(22, $font-weight-bold, 20px); }
-  //     }
-  //     .foot_sns {
-  //       position: absolute; left: 32px; bottom: 426px;
-  //       width: 80px; height: 16px;
-  
-  //       ul {
-  //         display: flex; justify-content: space-between;
-  //       }
-  //     }
-  //   } // .foot_wrap
-  // }
 } // @include mobile
 
 
@@ -172,8 +119,16 @@
       max-width: map-get($container, "laptop")
     }
 
+    h2 {
+      position: absolute; top: 100px; left: $pd_lr;
+      width: 62px; height: 82px;
+      @include img('logo_white.png', contain)
+    }
+
     @at-root .foot_nav {
+      width: 930px;
       display: flex; justify-content: space-between; align-items: center;
+      margin: auto;
 
       .foot_nav_cont {
         display: flex; flex-flow: wrap; 
@@ -196,14 +151,14 @@
 
     .foot_wrap {
       display: flex; justify-content: space-between;
-      padding: 38px 0 120px;
+      padding: 38px 0 120px; margin-left: 140px;
       
 
       h3 { @include font(22) }
       p { @include font(14) }
 
       .foot_info { 
-        .copyright { position: static; margin-top: 20px; }
+        .copyright { position: static; margin-top: 20px;  }
       }
 
       .foot_cs { 
@@ -226,5 +181,9 @@
 @include pc {
   #footBox {
     .container { max-width: map-get($container, "pc"); }
+
+    @at-root .foot_nav {
+      width: 100%;
+    }
   }
 } //@include pc
