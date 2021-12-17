@@ -19,7 +19,7 @@
   }
 
   .btn_large {
-    @include btnBig($color_white, $color_black_02, $color_black_02);
+    @include btnBig($color_white, $color_black_02);
     width: 210px; height: 50px; line-height: 50px; border-width: 2px;
   }
 
