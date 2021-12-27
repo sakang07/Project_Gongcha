@@ -1,0 +1,30 @@
+[{
+  "titleText" : "We serve you <br />all about choco 5",
+  "contentText" : "공차가 선물하는 달콤한 충전<br />초코 신메뉴 마시면 공차 스탬프 3배 적립!",
+  "url" : "#",
+  "img" : "banner_01.png"
+},
+{
+  "titleText" : "We serve you <br />all about choco 4",
+  "contentText" : "공차가 선물하는 달콤한 충전<br />초코 신메뉴 마시면 공차 스탬프 3배 적립!",
+  "url" : "./main.html",
+  "img" : "drink.png"
+},
+{
+  "titleText" : "We serve you <br />all about choco 3",
+  "contentText" : "공차가 선물하는 달콤한 충전<br />초코 신메뉴 마시면 공차 스탬프 3배 적립!",
+  "url" : "./main.html",
+  "img" : "recipe_img1.jpg"
+},
+{
+  "titleText" : "We serve you <br />all about choco 2",
+  "contentText" : "공차가 선물하는 달콤한 충전<br />초코 신메뉴 마시면 공차 스탬프 3배 적립!",
+  "url" : "./main.html",
+  "img" : "banner_01.png"
+},
+{
+  "titleText" : "We serve you <br />all about choco 1",
+  "contentText" : "공차가 선물하는 달콤한 충전<br />초코 신메뉴 마시면 공차 스탬프 3배 적립!",
+  "url" : "./main.html",
+  "img" : "banner_01.png"
+}]

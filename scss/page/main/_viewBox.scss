@@ -15,7 +15,7 @@
     @at-root .view_indicator {
       .indi_circle { display: none; }
       .indi_number { display: block;
-        position: absolute; bottom: 1.25rem; right: 20px;
+        position: absolute; bottom: 1.25rem; right: 20px; z-index: 100;
         width: 3.5rem; height: 1.625rem;
         border-radius: 1.25rem; @include font(14, $line:28px){ color: $color_white; text-align: center };
         background-color: $color_deep_gray_01;
@@ -23,13 +23,14 @@
     } // .view_indicator
 
     @at-root .view_content {
-      width: 300%; height: 100%;
+      width: 100%; height: 100%;
       
       ul { 
         height: 100%; // width: 100% * 슬라이드 개수
         display: flex;
         
         @at-root .view_content_inner {
+          position: relative;
           overflow-X: hidden;
           width: 100%; height: 100%;
 
