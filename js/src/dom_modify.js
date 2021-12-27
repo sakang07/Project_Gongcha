@@ -30,11 +30,12 @@
 
 
 
+
   // 함수
   // 브라우저가 1024px보다 작거나 작게 리사이징 되면 실행하는 함수
   const fnWidthHandhelds = () => {
     const browserW = this.matchMedia("all and (max-width: 1023px)").matches;
-    // const resizeW = this.innerWidth;
+    const resizeW = this.innerWidth;
     if(browserW || resizeW < 1024) {
 
       elContainer.remove();

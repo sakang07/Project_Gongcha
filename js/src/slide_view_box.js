@@ -67,6 +67,7 @@ const elIndiNumTotal = elIndiNum.querySelector('.total');
 // view_content
 const elViewCont = elViewBox.querySelector('.view_content');
 
+const ckActive = 'on';
 const sildeLen = BANNER_DATA.length;
 
 
