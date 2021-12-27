@@ -7,6 +7,8 @@
 const mobHeadCode = './temp/mob_header.html';
 const mobAddCode = '../js/src/drop_navigation.js';
 const pcHeadCode = './temp/pc_header.html';
+const pcAddCode = '../js/src/open_unb_search.js';
+
 const elBody = document.querySelector('body');
 const elWrap = elBody.querySelector('#wrap');
 
@@ -58,7 +60,8 @@ const fnPc = () => {
   fetch(pcHeadCode)
     .then(response => response.text())
     .then(data => mkNavPc.innerHTML = data)
-    .then(elContainer.append(mkNavPc));
+    .then(elContainer.append(mkNavPc))
+    .then(fnMkScript(pcAddCode));
 };
 
 // 기본 수행

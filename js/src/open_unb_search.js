@@ -6,6 +6,8 @@
 // 2. 영역 바깥 클릭시 .on 제거 : 보충 필요!
 // ==============================================
 
+(() => {
+
 // 변수
 var navPc = document.querySelector('.nav_pc');
 var elUnb = navPc.querySelector('.unb');
@@ -13,6 +15,8 @@ var elUnbSearchA = elUnb.querySelector('.search > a');
 var elSearchArea = elUnb.querySelector('.search_area');
 var elViewBox = document.querySelector('#viewBox');
 var elPcGnbWrap = navPc.querySelector('.gnb_wrap');
+
+var ckActive = 'on';
 
 // 이벤트
 // 서치버튼 클릭시 .unb에 .on 추가
@@ -31,3 +35,6 @@ elViewBox.addEventListener('click', function(e){
 elPcGnbWrap.addEventListener('mouseover', function(e){
   elUnb.classList.remove(ckActive);
 });
+
+
+})()
