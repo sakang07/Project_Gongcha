@@ -1,4 +1,4 @@
-// slide_function.js
+// pc_slide_function.js
 
 // ==============================================
 // 1. data 불러오기
@@ -7,7 +7,6 @@
 // 3-2. 슬라이드 좌우 버튼에 따른 인디케이터 동작
 // 4. 인디케이터 클릭하면 해당 슬라이드로 이동
 // 5. 일정 시간마다 다음 슬라이드로 이동
-// * setTimeout 고치기
 // ==============================================
 
 (()=>{
@@ -26,9 +25,9 @@ const elViewIndi = elViewBox.querySelector('.view_indicator');
 const elIndiCircle = elViewIndi.querySelector('.indi_circle');
 
 // mob_view_indicator
-const elIndiNum = elViewIndi.querySelector('.indi_number');
-const elIndiNumNow = elIndiNum.querySelector('.now');
-const elIndiNumTotal = elIndiNum.querySelector('.total');
+// const elIndiNum = elViewIndi.querySelector('.indi_number');
+// const elIndiNumNow = elIndiNum.querySelector('.now');
+// const elIndiNumTotal = elIndiNum.querySelector('.total');
 
 // view_content
 const elViewCont = elViewBox.querySelector('.view_content');
@@ -84,7 +83,7 @@ elViewContUl.append(cloneSlide); // 복제한 요소 맨 앞으로 삽입
 
 // indicator 
 // data의 길이만큼 mobile .view_indicator 숫자 변경
-elIndiNumTotal.innerText = sildeLen;
+// elIndiNumTotal.innerText = sildeLen;
 
 // data의 길이만큼 pc .view_indicator 생성
 for (let i = 0; i < sildeLen; i++) {
@@ -129,6 +128,15 @@ const fnSiblings = (select, idx) => {
   return otherArr;
 };
 
+// 비동기 동작을 기다리게 하는 함수
+const fnDelay = async (time = 0) => {
+  return await new Promise ((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, time);
+  });
+};
+
 // 다음 슬라이드로 이동하는 함수
 fnNextSlide = e => {
   e.preventDefault();
@@ -140,19 +148,23 @@ fnNextSlide = e => {
       SLIDE_COUNT++;
       fnMoveSlide(elViewContUl, SLIDE_COUNT);
       fnNextIndiCir(elIndiCircleLi, SLIDE_COUNT);
+
       PERMISSION = true;
     } else {
       // 마지막 슬라이드에서 첫 슬라이드로 넘어갈 때 무한루프 처리
+      const fnAny = async e => {
       SLIDE_COUNT++;
       fnMoveSlide(elViewContUl, SLIDE_COUNT);
       fnNextIndiCir(elIndiCircleLi, 0);
       // 넘어간 후 복제 슬라이드에서 첫 번째 슬라이드로 이동
-      setTimeout(e => {
+        await fnDelay(TIME_ANI);
         elViewContUl.style.transform = null;
         elViewContUl.style.transition = null;
         SLIDE_COUNT = 0;
+        await fnDelay();
         PERMISSION = true;
-      }, TIME_ANI);
+      }
+      fnAny();
     }
   }
 };
