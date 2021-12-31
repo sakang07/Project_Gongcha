@@ -1,12 +1,13 @@
 // pc_slide_function.js
 
 // ==============================================
-// 1. data 불러오기
+// 1. data 불러오기 완료(BANNER_DATA)
 // 2. 불러온 data의 길이만큼 슬라이드와 인디케이터 생성
 // 3-1. 슬라이드 좌우 버튼 동작
 // 3-2. 슬라이드 좌우 버튼에 따른 인디케이터 동작
 // 4. 인디케이터 클릭하면 해당 슬라이드로 이동
-// 5. 일정 시간마다 다음 슬라이드로 이동
+// 5-1. 일정 시간마다 다음 슬라이드로 이동
+// 5-2. 영역에 hover하면 슬라이드 이동 멈춤
 // ==============================================
 
 (()=>{
@@ -23,11 +24,6 @@ const elViewBtnPrev = elViewBtn.querySelector('.prev > a');
 // pc_view_indicator
 const elViewIndi = elViewBox.querySelector('.view_indicator');
 const elIndiCircle = elViewIndi.querySelector('.indi_circle');
-
-// mob_view_indicator
-// const elIndiNum = elViewIndi.querySelector('.indi_number');
-// const elIndiNumNow = elIndiNum.querySelector('.now');
-// const elIndiNumTotal = elIndiNum.querySelector('.total');
 
 // view_content
 const elViewCont = elViewBox.querySelector('.view_content');
@@ -80,10 +76,6 @@ const elViewContLiArr = [...elViewContLi];
 const elViewContLiFirst = elViewContLiArr.at(0); // 첫 번째 슬라이드 요소 선택
 const cloneSlide = elViewContLiFirst.cloneNode(true); // 요소 내부까지 복제
 elViewContUl.append(cloneSlide); // 복제한 요소 맨 앞으로 삽입
-
-// indicator 
-// data의 길이만큼 mobile .view_indicator 숫자 변경
-// elIndiNumTotal.innerText = sildeLen;
 
 // data의 길이만큼 pc .view_indicator 생성
 for (let i = 0; i < sildeLen; i++) {
