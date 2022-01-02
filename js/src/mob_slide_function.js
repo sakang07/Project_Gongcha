@@ -7,7 +7,7 @@
 // 3-2. 터치 조작에 따라 인디케이터 숫자 변동
 // 4-1. 일정 시간마다 다음 슬라이드로 이동
 // 4-2. 영역 focus하면 슬라이드 이동 멈춤
-// 5. 영역 클릭하면 다음 슬라이드로 이동
+// 5. 영역 클릭하면 이전/다음 슬라이드로 이동
 // ==============================================
 
 (()=>{
@@ -169,8 +169,18 @@
   // 광고영역에서 마우스 벗어나면 광고 슬라이드 다시 재생
   elViewBox.addEventListener('mouseleave', fnIntervalSlide);
 
-  // 광고영역에서 클릭/터치하면 다음 슬라이드
-  elViewBox.addEventListener('click', fnNextSlide);
+  // 광고영역에서 클릭/터치하면 영역에 따라 이전/다음 슬라이드
+  elViewBox.addEventListener('click', e => {
+    console.log(e.pageX);
+    pointer.click = e.pageX;
+
+    // 클릭 영역 판별
+    if(pointer.click < window.innerWidth / 2 ) {
+      fnPrevSlide();
+    } else { 
+      fnNextSlide();
+    }
+  });
 
   // 광고영역에 터치를 시작하면 시작점 값 산출
   elViewBox.addEventListener('touchstart', e => {
