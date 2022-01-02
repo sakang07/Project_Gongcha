@@ -156,19 +156,6 @@
     clearInterval(slideGo);
   };
 
-  // 터치하면 이동시키는 함수
-  const fnTouchMoveSlide = () => {
-    if(PERMISSION) {
-      PERMISSION = false;
-      if ( pointer.gap >= 100 && SLIDE_COUNT < slideLen ) {
-        SLIDE_COUNT++;
-      } else if ( pointer.gap <= -100 && SLIDE_COUNT > 0 ) {
-        SLIDE_COUNT--;
-      }
-      // el[0].style.left = -100 * SLIDE_COUNT + '%';
-      setTimeout(()=>{  PERMISSION = true; }, TIME_ANI);
-    }
-  };
   
   // 기본 함수 수행-----------------------------
   fnIntervalSlide();
