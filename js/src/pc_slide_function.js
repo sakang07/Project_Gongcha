@@ -29,7 +29,7 @@
   const elViewCont = elViewBox.querySelector('.view_content');
 
   const slideLen = BANNER_DATA.length; // 슬라이드 개수
-  const slideW = 100 / (slideLen + 1); // 각 슬라이드 너비
+  const slideW = 100 / (slideLen + 1); // 각 슬라이드 너비(%)
   const TIME_ANI = 500; // 슬라이드 애니메이션 시간
   const TIME_MOVE = 3000; // 슬라이드 자동으로 이동하는 시간
   let SLIDE_COUNT = 0;

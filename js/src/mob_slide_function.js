@@ -8,6 +8,7 @@
 // 4-1. 일정 시간마다 다음 슬라이드로 이동
 // 4-2. 영역 focus하면 슬라이드 이동 멈춤
 // 5. 영역 클릭하면 이전/다음 슬라이드로 이동
+// * 모바일 터치 슬라이드 1>2 / 5>1 자연스럽게 고치기(무한루프때문인듯)
 // ==============================================
 
 (()=>{
@@ -26,7 +27,7 @@
   const elViewCont = elViewBox.querySelector('.view_content');
   
   const slideLen = BANNER_DATA.length; // 슬라이드 개수
-  const slideW = 100 / (slideLen + 1); // 각 슬라이드 너비
+  const slideW = 100 / (slideLen + 1); // 각 슬라이드 너비(%)
   const TIME_ANI = 500; // 슬라이드 애니메이션 시간
   const TIME_MOVE = 3000; // 슬라이드 자동으로 이동하는 시간
   let SLIDE_COUNT = 0;
@@ -171,9 +172,7 @@
 
   // 광고영역에서 클릭/터치하면 영역에 따라 이전/다음 슬라이드
   elViewBox.addEventListener('click', e => {
-    console.log(e.pageX);
     pointer.click = e.pageX;
-
     // 클릭 영역 판별
     if(pointer.click < window.innerWidth / 2 ) {
       fnPrevSlide();
@@ -187,6 +186,17 @@
     fnPauseSlide();
     pointer.start = e.changedTouches[0].pageX;
   });
+  
+  // 터치하는 동안 슬라이드가 따라오게 하기
+  elViewBox.addEventListener('touchmove', e => {
+    let _nowPointer = e.targetTouches[0].pageX;
+    let _pointerMove = pointer.start - _nowPointer; // 움직인 수치 계산
+    let _movePer = parseInt(_pointerMove / window.innerWidth * 100) // 움직인 값을 %로 변환
+    // 움직이는 범위 제한
+    if(Math.abs(_movePer) < slideW) {
+      slideStyle.transform = `translateX(-${SLIDE_COUNT * slideW + _movePer}%)`;
+    } 
+  });
 
   // 광고영역에서 터치가 끝나면 이동 방향을 파악하여 슬라이드 이동
   elViewBox.addEventListener('touchend', e => {
@@ -196,6 +206,8 @@
       fnNextSlide();
     } else if ( pointer.gap <= -100) {
       fnPrevSlide();
+    } else {
+      fnMoveSlide();
     }
   });
 

@@ -83,7 +83,7 @@
 
       @at-root .menu_btn_pc {
         display: flex; flex-direction: row-reverse; justify-content: space-between;
-        position: absolute; top: 49%; left: 0; right: 0;
+        position: absolute; top: 49%; left: 0; right: 0; z-index: 100;
         margin: auto; padding: 0 6%;
 
         .next {
@@ -98,7 +98,7 @@
       }
   
       @at-root .menu_area {
-        width: calc(160px * 8);
+        // width: calc(160px * 8); // js에서 컨트롤
         
         & > li {
           margin-right: 20px;
