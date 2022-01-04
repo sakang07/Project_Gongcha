@@ -26,6 +26,12 @@
   const slideLen = elMenuLiArr.length; // li 갯수
 
   let slideWidth, slideTrs, limitTrs; // 슬라이드 너비, 슬라이드 translateX값, 최대 translateX값
+  const pointer = {
+    start: 0,
+    end: 0,
+    gap : 0,
+    move:0
+  }; // 터치 X값 파악
 
   const TIME = 300; // 슬라이드 이동 애니메이션 시간
   let SLIDE_COUNT = 0; // 슬라이드 순번
@@ -41,7 +47,6 @@
     slideTrs = slideWidth * SLIDE_COUNT; // 슬라이드 이동값
     const _slideWrapWidth = slideWidth * slideLen; // 슬라이드 전체 너비
     limitTrs = _slideWrapWidth - window.innerWidth + slideWidth; // 슬라이드가 이동할 수 있는 최대 X값
-    console.log(slideTrs, limitTrs, _slideWrapWidth)
   }
   
   // 슬라이드 이동
@@ -52,10 +57,10 @@
 
     if (slideTrs < limitTrs - slideWidth && slideTrs > 0) {
       // X값이 최대값(에서 슬라이드 1개분 뺀 값)보다 작고 0이나 음수가 아닐 때
-      slideStyle.transform = `translateX(${-(slideTrs)}px)`;
+      slideStyle.transform = `translateX(-${slideTrs}px)`;
     } else {
       // X값이 최대값을 넘었거나 음수일 때
-      slideStyle.transform = slideTrs > slideWidth ? `translateX(${-(limitTrs)}px)` : null; // 이전이면 X값 0, 다음이면 최대X값으로 설정
+      slideStyle.transform = slideTrs > slideWidth ? `translateX(-${limitTrs}px)` : null; // 이전이면 X값 0, 다음이면 최대X값으로 설정
 
       // 누른 버튼 삭제
       _btnArr.forEach((d) => {
@@ -99,6 +104,34 @@
   });
 
   // 모바일 터치
+  // 시작점 파악
+  elMenuArea.addEventListener('touchstart', e => {
+    fnCkSlide();
+    pointer.start =pointer.move + e.changedTouches[0].pageX;
+    console.log(pointer.start, 'start');
+  });
   
+
+  // 터치하는 동안 슬라이드가 따라오기
+  elMenuArea.addEventListener('touchmove', e => {
+    let _nowPointer = e.targetTouches[0].pageX ;
+    let _pointerMove = (pointer.start - _nowPointer); // 움직인 수치 계산
+    pointer.move = (_pointerMove < 0) ? 0: _pointerMove ;
+    console.log(_pointerMove );
+
+    // 움직이는 범위 제한
+    if(Math.abs(_pointerMove) < limitTrs) {
+      slideStyle.transform = `translateX(-${_pointerMove}px)`;
+    }
+    SLIDE_COUNT = parseInt((_pointerMove) / slideWidth);
+    // console.log(SLIDE_COUNT);
+  });
+  
+  // 터치가 끝나면 이동 방향 파악하여 슬라이드 이동
+  elMenuArea.addEventListener('touchend', e => {
+    pointer.end = e.changedTouches[0].pageX;
+    pointer.gap = pointer.start + pointer.end;
+
+  });
 
 }
