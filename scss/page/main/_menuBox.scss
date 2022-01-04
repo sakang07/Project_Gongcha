@@ -82,19 +82,21 @@
     @at-root .slide_wrap {
 
       @at-root .menu_btn_pc {
-        display: flex; flex-direction: row-reverse; justify-content: space-between;
         position: absolute; top: 49%; left: 0; right: 0; z-index: 100;
+        width: 100%; height: 0;
         margin: auto; padding: 0 6%;
 
         .next {
+          float: right;
           display: none;
           @include btnCircle;
         }
         .prev {
+          float: left;
           display: none;
           @include btnCircle('btn_prev2.png');
         }
-        .next.on, .prev.on { display: block; }
+        .next.on, .prev.on { display: flex; }
       }
   
       @at-root .menu_area {
