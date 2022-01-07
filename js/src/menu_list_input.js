@@ -24,7 +24,7 @@
   const slideLen = elMenuLiArr.length; // li 갯수
 
   let slideWidth, slideLeftSpace, slideTrs, limitTrs; // 슬라이드 너비, 슬라이드 translateX값, 최대 translateX값
-  const pointer = { start: 0, end: 0, gap: 0, move: 0 }; // 터치 X값 파악
+  const pointer = { start: 0, move: 0 }; // 터치 X값 파악
 
   const TIME = 300; // 슬라이드 이동 애니메이션 시간
   let SLIDE_COUNT = 0; // 슬라이드 순번
@@ -84,7 +84,7 @@
       pointer.move = slideTrs;
     } else {
       // X값이 최대값을 넘었거나 음수일 때
-      slideStyle.transform = slideTrs > slideWidth ? `translateX(-${limitTrs + slideWidth}px)` : null; // 이전이면 X값 0, 다음이면 최대X값(+ 슬라이드 1개너비)으로 설정
+      slideStyle.transform = slideTrs > slideWidth ? `translateX(-${limitTrs + window.innerWidth * 0.1}px)` : null; // 이전이면 X값 0, 다음이면 최대X값(+ 슬라이드 1개너비)으로 설정
       pointer.move = slideTrs > slideWidth ? limitTrs : 0;
     }
   };
@@ -105,7 +105,7 @@
     } else {
       pointer.move = _pointerMove
     }
-    console.log(pointer.move);
+
     slideStyle.transform = `translateX(-${pointer.move}px)`; // 이동값만큼 슬라이드 이동
     SLIDE_COUNT = parseInt(pointer.move / slideWidth); // 리사이즈 고려해서 SLIDE_COUNT에 값 주기
   };

@@ -1,30 +1,18 @@
 [{
-  "titleText" : "We serve you <br />all about choco 5",
-  "contentText" : "공차가 선물하는 달콤한 충전<br />초코 신메뉴 마시면 공차 스탬프 3배 적립!",
-  "url" : "#",
-  "img" : "banner_01.png"
+  "titleText" : "best combination<br />of Gongcha",
+  "contentText" : "공차가 제안하는 가장 맛있는 조합",
+  "url" : "./main.html",
+  "img" : "banner_03.jpg"
 },
 {
-  "titleText" : "We serve you <br />all about choco 4",
+  "titleText" : "we serve you <br />all about choco",
   "contentText" : "공차가 선물하는 달콤한 충전<br />초코 신메뉴 마시면 공차 스탬프 3배 적립!",
   "url" : "./main.html",
-  "img" : "drink.png"
+  "img" : "banner_01.jpg"
 },
 {
-  "titleText" : "We serve you <br />all about choco 3",
-  "contentText" : "공차가 선물하는 달콤한 충전<br />초코 신메뉴 마시면 공차 스탬프 3배 적립!",
+  "titleText" : "이것이 바로 <br />한국 하동의 호지 밀크티",
+  "contentText" : "하동 호지 밀크티 + 펄",
   "url" : "./main.html",
-  "img" : "recipe_img1.jpg"
-},
-{
-  "titleText" : "We serve you <br />all about choco 2",
-  "contentText" : "공차가 선물하는 달콤한 충전<br />초코 신메뉴 마시면 공차 스탬프 3배 적립!",
-  "url" : "./main.html",
-  "img" : "banner_01.png"
-},
-{
-  "titleText" : "We serve you <br />all about choco 1",
-  "contentText" : "공차가 선물하는 달콤한 충전<br />초코 신메뉴 마시면 공차 스탬프 3배 적립!",
-  "url" : "./main.html",
-  "img" : "banner_01.png"
+  "img" : "banner_02.jpg"
 }]

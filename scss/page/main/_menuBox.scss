@@ -96,7 +96,7 @@
           display: none;
           @include btnCircle('btn_prev2.png');
         }
-        .next.on, .prev.on { display: flex; }
+        .next.on, .prev.on { display: block; }
       }
   
       @at-root .menu_area {

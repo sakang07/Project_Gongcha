@@ -14,12 +14,12 @@
     {
       type: 'mobile',
       htmlUrl: './temp/mob_main_slide.html',
-      scriptUrl: '../js/src/mob_slide_function.js',
+      scriptUrl: '../js/src/mob_main_slide.js',
       size: 1023,
     }, {
       type: 'pc',
       htmlUrl: './temp/pc_main_slide.html',
-      scriptUrl: '../js/src/pc_slide_function.js',
+      scriptUrl: '../js/src/pc_main_slide.js',
     }
   ];
   const mediaSize = `screen and (max-width:${setDevice[0].size}px)`; // mobile 환경

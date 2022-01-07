@@ -46,7 +46,7 @@
             
           .view_img { 
             position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
-            background: { size: cover; repeat: no-repeat; position: 30% 50%; }
+            background: { size: cover; repeat: no-repeat; position: 50% 50%; }
             
             &::before, &:before {
               position: absolute; top: 0; left: 0; right: 0; bottom: 0;
@@ -132,7 +132,7 @@
           @at-root .view_img { // img url은 js로 설정
             position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
             width: 100%; height: 100%;
-            background: { size: cover; repeat: no-repeat; position: 30% 50%; }
+            background: { size: cover; repeat: no-repeat; position: 70% 50%; }
             
             &::before, &:before {
               position: absolute; top: 0; left: 0; bottom: 0;
