@@ -13,12 +13,12 @@
   const setDevice = [
     {
       type: 'mobile',
-      htmlUrl: './temp/mob_main_slide.html',
+      htmlUrl: './temp/main/mob_main_slide.html',
       scriptUrl: '../js/src/mob_main_slide.js',
       size: 1023,
     }, {
       type: 'pc',
-      htmlUrl: './temp/pc_main_slide.html',
+      htmlUrl: './temp/main/pc_main_slide.html',
       scriptUrl: '../js/src/pc_main_slide.js',
     }
   ];

@@ -2,18 +2,6 @@
 /* main.css */
 
 @import '../common/mixin', '../common/variable';
-
-#wrap {
-  width: 100%;
-}
-
-@import '../page/base/headBox', 
-'../page/main/viewBox', 
-'../page/main/menuBox', 
-'../page/main/orderBox', 
-'../page/main/brandBox', 
-'../page/main/recipeBox', 
-'../page/main/franchiseBox', 
-'../page/main/liveBox', 
-'../page/base/sideBox', 
-'../page/base/footBox'; 
+@import '../page/base/headBox', '../page/base/sideBox', '../page/base/footBox'; 
+@import '../page/main/viewBox', '../page/main/menuBox', '../page/main/orderBox', 
+'../page/main/brandBox', '../page/main/recipeBox', '../page/main/franchiseBox', '../page/main/liveBox';

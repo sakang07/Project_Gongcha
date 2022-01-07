@@ -1,0 +1,20 @@
+// brand_intro.scss
+/* brand_intro.css */
+
+@import '../common/mixin', '../common/variable';
+@import '../page/base/headBox', '../page/base/footBox', '../page/base/sideBox';
+@import '../page/base/title_mob';
+
+
+/*==================== handhelds 320px - 599px ====================*/
+@include handhelds {
+
+
+} // @include handhelds
+
+
+/*==================== desktop 1024px - 1439px ====================*/
+@include desktop {
+
+
+} // @include desktop

@@ -11,12 +11,12 @@
   const setDevice = [
     {
       type: 'mobile',
-      htmlUrl: './temp/mob_header.html',
+      htmlUrl: './temp/base/mob_header.html',
       scriptUrl: '../js/src/drop_navigation.js',
       size: 1023,
     }, {
       type: 'pc',
-      htmlUrl: './temp/pc_header.html',
+      htmlUrl: './temp/base/pc_header.html',
       scriptUrl: '../js/src/open_unb_search.js'
     }
   ];

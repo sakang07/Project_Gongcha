@@ -1,8 +1,4 @@
 /* main.css */
-#wrap {
-  width: 100%;
-}
-
 /* headBox.css */
 #headBox {
   position: absolute;
@@ -650,6 +646,372 @@ h1 > a > span {
     height: 100%;
     font-size: 28px;
     font-size: 1.75rem;
+  }
+}
+/* sideBox.css */
+/*==================== handhelds 320px - 599px ====================*/
+@media all and (max-width: 1023px) {
+  #sideBox {
+    display: none;
+  }
+}
+/*==================== desktop 1024px - 1439px ====================*/
+@media all and (min-width: 1024px) {
+  #sideBox {
+    position: fixed;
+    right: 30px;
+    bottom: 80px;
+    z-index: 4000;
+    width: 50px;
+    height: auto;
+  }
+  #sideBox a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-bottom: 16px;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px rgba(23, 23, 23, 0.15);
+    transition: all 500ms ease;
+    /* sideBox > &:hover */
+    /* sideBox > &:focus */
+    /* @keyframes myMove */
+  }
+  #sideBox a.app {
+    background-image: url(../../multi/img/side_app.png);
+    background-size: 30px auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: #c30e2f;
+    color: #fff;
+  }
+  #sideBox a.app > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  #sideBox a.kakao {
+    background-image: url(../../multi/img/side_kakaotalk.png);
+    background-size: 30px auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: #FFCD00;
+    color: #171717;
+  }
+  #sideBox a.kakao > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  #sideBox a:hover {
+    transform: scale(1.3);
+    transition: all 500ms ease;
+  }
+  #sideBox a:hover span {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+    width: auto;
+    height: auto;
+    margin: auto;
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-align: center;
+    word-spacing: -3px;
+    clip: initial;
+  }
+  #sideBox a:hover:before, #sideBox a:hover::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 100%;
+    background-color: inherit;
+  }
+  #sideBox a:focus {
+    animation: myMove 300ms ease 1;
+  }
+  @keyframes myMove {
+    0% {
+      transform: scale(1.3);
+    }
+    30% {
+      transform: scale(0.3);
+    }
+    70% {
+      transform: scale(1.6);
+    }
+    100% {
+      transform: scale(1.3);
+    }
+  }
+}
+/* footBox.css */
+#footBox {
+  position: relative;
+  background-color: #333;
+  color: #ccc;
+}
+#footBox a:hover {
+  display: block;
+  transform: scale(1.1);
+  transition: all 300ms ease;
+}
+.foot_nav .foot_nav_cont {
+  display: flex;
+  flex-flow: wrap;
+  width: auto;
+  height: 100%;
+  padding: 16px 32px;
+  border-bottom: 0.0625rem solid #505050;
+}
+.foot_nav .foot_nav_cont li {
+  font-size: 12px;
+  font-size: 0.75rem;
+  margin-top: 7px;
+  margin-right: 12px;
+  margin-bottom: 7px;
+}
+.foot_nav .foot_nav_cont li:last-of-type {
+  margin-right: 0;
+}
+.foot_nav .family_site {
+  position: absolute;
+  left: 154px;
+  bottom: 420px;
+  width: 136px;
+  height: 30px;
+  border-bottom: 0.0625rem solid #ccc;
+  padding: 4px 8px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 200;
+  color: #fff;
+  text-transform: capitalize;
+}
+.foot_nav .family_site i {
+  margin-left: 42px;
+}
+.foot_nav .family_site form, .foot_nav .family_site fieldset, .foot_nav .family_site input {
+  width: 100%;
+  height: 100%;
+}
+.foot_nav .family_site dl ul {
+  display: none;
+}
+
+.foot_wrap h3 {
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.foot_wrap p {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+.foot_wrap .foot_info .copyright {
+  position: absolute;
+  left: 32px;
+  bottom: 56px;
+}
+.foot_wrap .foot_cs {
+  margin-top: 30px;
+}
+.foot_wrap .foot_cs .phone_number {
+  font-size: 22px;
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 20px;
+}
+.foot_wrap .foot_sns {
+  position: absolute;
+  left: 32px;
+  bottom: 426px;
+  width: 80px;
+  height: 16px;
+}
+.foot_wrap .foot_sns ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*==================== mobile 320px - 599px ====================*/
+@media all and (max-width: 599px) {
+  .foot_nav .family_site {
+    bottom: 400px;
+  }
+
+  .foot_wrap {
+    padding: 92px 32px 124px;
+  }
+
+  #footBox .foot_sns {
+    bottom: 406px;
+  }
+}
+/*==================== tablet 600px - 1023px ====================*/
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #footBox .foot_nav > .foot_nav_cont > li {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 18px;
+  }
+  #footBox .foot_wrap {
+    display: flex;
+    justify-content: flex-start;
+    padding: 90px 32px 110px;
+  }
+  .foot_nav > .family_site {
+    left: 276px;
+    bottom: 250px;
+  }
+
+  #footBox .foot_wrap .foot_sns {
+    bottom: 260px;
+  }
+  #footBox .foot_wrap .foot_info {
+    margin-right: 70px;
+  }
+  #footBox .foot_wrap .foot_info .copyright br {
+    display: none;
+  }
+  #footBox .foot_wrap .foot_cs {
+    margin-top: 0;
+  }
+}
+/*==================== desktop 1024px - ====================*/
+@media all and (min-width: 1024px) {
+  #footBox:before, #footBox::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 58px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #505050;
+  }
+  #footBox .container {
+    position: relative;
+    padding: 0 2rem;
+    max-width: 64rem;
+  }
+  #footBox h2 {
+    position: absolute;
+    top: 100px;
+    left: 2rem;
+    width: 62px;
+    height: 82px;
+    background-image: url(../../multi/img/logo_white.png);
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  #footBox h2 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .foot_nav {
+    width: 930px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+  }
+  .foot_nav .foot_nav_cont {
+    display: flex;
+    flex-flow: wrap;
+    width: auto;
+    height: 100%;
+    padding: 20px 0;
+    border-bottom: 0;
+  }
+  .foot_nav .foot_nav_cont li {
+    font-size: 14px;
+    font-size: 0.875rem;
+    margin: 0 30px 0 0;
+  }
+  .foot_nav .foot_nav_cont li:last-of-type {
+    margin-right: 0;
+  }
+
+  #footBox .family_site {
+    position: static;
+    width: auto;
+    height: 100%;
+    border-bottom: 0;
+    border-left: 0.0625rem solid #505050;
+    padding: 20px 0;
+    padding-left: 32px;
+    text-align: center;
+  }
+  #footBox .foot_wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 38px 0 120px;
+    margin-left: 140px;
+  }
+  #footBox .foot_wrap h3 {
+    font-size: 22px;
+    font-size: 1.375rem;
+  }
+  #footBox .foot_wrap p {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+  #footBox .foot_wrap .foot_info .copyright {
+    position: static;
+    margin-top: 20px;
+  }
+  #footBox .foot_wrap .foot_cs {
+    margin-top: 0;
+  }
+  #footBox .foot_wrap .foot_cs p {
+    margin-top: 14px;
+  }
+  #footBox .foot_wrap .foot_cs .phone_number {
+    font-size: 36px;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 20px;
+    margin-top: 0;
+  }
+  #footBox .foot_wrap .foot_sns {
+    position: static;
+    width: 140px;
+    font-size: 30px;
+    font-size: 1.875rem;
+  }
+}
+/*==================== pc 1440px - ====================*/
+@media all and (min-width: 1440px) {
+  #footBox .container {
+    max-width: 80rem;
+  }
+  .foot_nav {
+    width: 100%;
   }
 }
 /* viewBox.css */
@@ -2834,371 +3196,5 @@ h1 > a > span {
   }
   #liveBox .live_content > li:nth-child(2n) {
     right: 18px;
-  }
-}
-/* sideBox.css */
-/*==================== handhelds 320px - 599px ====================*/
-@media all and (max-width: 1023px) {
-  #sideBox {
-    display: none;
-  }
-}
-/*==================== desktop 1024px - 1439px ====================*/
-@media all and (min-width: 1024px) {
-  #sideBox {
-    position: fixed;
-    right: 30px;
-    bottom: 80px;
-    z-index: 4000;
-    width: 50px;
-    height: auto;
-  }
-  #sideBox a {
-    display: block;
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    margin-bottom: 16px;
-    background-color: #fff;
-    box-shadow: 5px 5px 10px rgba(23, 23, 23, 0.15);
-    transition: all 500ms ease;
-    /* sideBox > &:hover */
-    /* sideBox > &:focus */
-    /* @keyframes myMove */
-  }
-  #sideBox a.app {
-    background-image: url(../../multi/img/side_app.png);
-    background-size: 30px auto;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-color: #c30e2f;
-    color: #fff;
-  }
-  #sideBox a.app > span {
-    display: block;
-    position: absolute;
-    z-index: -1;
-    clip: rect(0 0 0 0);
-    width: 0;
-    height: 0;
-    overflow: hidden;
-  }
-  #sideBox a.kakao {
-    background-image: url(../../multi/img/side_kakaotalk.png);
-    background-size: 30px auto;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-color: #FFCD00;
-    color: #171717;
-  }
-  #sideBox a.kakao > span {
-    display: block;
-    position: absolute;
-    z-index: -1;
-    clip: rect(0 0 0 0);
-    width: 0;
-    height: 0;
-    overflow: hidden;
-  }
-  #sideBox a:hover {
-    transform: scale(1.3);
-    transition: all 500ms ease;
-  }
-  #sideBox a:hover span {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    z-index: 1;
-    transform: translateX(-50%);
-    width: auto;
-    height: auto;
-    margin: auto;
-    font-size: 12px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-align: center;
-    word-spacing: -3px;
-    clip: initial;
-  }
-  #sideBox a:hover:before, #sideBox a:hover::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    border-radius: 100%;
-    background-color: inherit;
-  }
-  #sideBox a:focus {
-    animation: myMove 300ms ease 1;
-  }
-  @keyframes myMove {
-    0% {
-      transform: scale(1.3);
-    }
-    30% {
-      transform: scale(0.3);
-    }
-    70% {
-      transform: scale(1.6);
-    }
-    100% {
-      transform: scale(1.3);
-    }
-  }
-}
-/* footBox.css */
-#footBox {
-  position: relative;
-  background-color: #333;
-  color: #ccc;
-}
-#footBox a:hover {
-  display: block;
-  transform: scale(1.1);
-  transition: all 300ms ease;
-}
-.foot_nav .foot_nav_cont {
-  display: flex;
-  flex-flow: wrap;
-  width: auto;
-  height: 100%;
-  padding: 16px 32px;
-  border-bottom: 0.0625rem solid #505050;
-}
-.foot_nav .foot_nav_cont li {
-  font-size: 12px;
-  font-size: 0.75rem;
-  margin-top: 7px;
-  margin-right: 12px;
-  margin-bottom: 7px;
-}
-.foot_nav .foot_nav_cont li:last-of-type {
-  margin-right: 0;
-}
-.foot_nav .family_site {
-  position: absolute;
-  left: 154px;
-  bottom: 420px;
-  width: 136px;
-  height: 30px;
-  border-bottom: 0.0625rem solid #ccc;
-  padding: 4px 8px;
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-weight: 200;
-  color: #fff;
-  text-transform: capitalize;
-}
-.foot_nav .family_site i {
-  margin-left: 42px;
-}
-.foot_nav .family_site form, .foot_nav .family_site fieldset, .foot_nav .family_site input {
-  width: 100%;
-  height: 100%;
-}
-.foot_nav .family_site dl ul {
-  display: none;
-}
-
-.foot_wrap h3 {
-  font-size: 16px;
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-.foot_wrap p {
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1.6;
-}
-.foot_wrap .foot_info .copyright {
-  position: absolute;
-  left: 32px;
-  bottom: 56px;
-}
-.foot_wrap .foot_cs {
-  margin-top: 30px;
-}
-.foot_wrap .foot_cs .phone_number {
-  font-size: 22px;
-  font-size: 1.375rem;
-  font-weight: 700;
-  line-height: 20px;
-}
-.foot_wrap .foot_sns {
-  position: absolute;
-  left: 32px;
-  bottom: 426px;
-  width: 80px;
-  height: 16px;
-}
-.foot_wrap .foot_sns ul {
-  display: flex;
-  justify-content: space-between;
-}
-
-/*==================== mobile 320px - 599px ====================*/
-@media all and (max-width: 599px) {
-  .foot_nav .family_site {
-    bottom: 400px;
-  }
-
-  .foot_wrap {
-    padding: 92px 32px 124px;
-  }
-
-  #footBox .foot_sns {
-    bottom: 406px;
-  }
-}
-/*==================== tablet 600px - 1023px ====================*/
-@media all and (min-width: 600px) and (max-width: 1023px) {
-  #footBox .foot_nav > .foot_nav_cont > li {
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-right: 18px;
-  }
-  #footBox .foot_wrap {
-    display: flex;
-    justify-content: flex-start;
-    padding: 90px 32px 110px;
-  }
-  .foot_nav > .family_site {
-    left: 276px;
-    bottom: 250px;
-  }
-
-  #footBox .foot_wrap .foot_sns {
-    bottom: 260px;
-  }
-  #footBox .foot_wrap .foot_info {
-    margin-right: 70px;
-  }
-  #footBox .foot_wrap .foot_info .copyright br {
-    display: none;
-  }
-  #footBox .foot_wrap .foot_cs {
-    margin-top: 0;
-  }
-}
-/*==================== desktop 1024px - ====================*/
-@media all and (min-width: 1024px) {
-  #footBox:before, #footBox::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 58px;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: #505050;
-  }
-  #footBox .container {
-    position: relative;
-    padding: 0 2rem;
-    max-width: 64rem;
-  }
-  #footBox h2 {
-    position: absolute;
-    top: 100px;
-    left: 2rem;
-    width: 62px;
-    height: 82px;
-    background-image: url(../../multi/img/logo_white.png);
-    background-size: contain;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-  }
-  #footBox h2 > span {
-    display: block;
-    position: absolute;
-    z-index: -1;
-    clip: rect(0 0 0 0);
-    width: 0;
-    height: 0;
-    overflow: hidden;
-  }
-  .foot_nav {
-    width: 930px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-  }
-  .foot_nav .foot_nav_cont {
-    display: flex;
-    flex-flow: wrap;
-    width: auto;
-    height: 100%;
-    padding: 20px 0;
-    border-bottom: 0;
-  }
-  .foot_nav .foot_nav_cont li {
-    font-size: 14px;
-    font-size: 0.875rem;
-    margin: 0 30px 0 0;
-  }
-  .foot_nav .foot_nav_cont li:last-of-type {
-    margin-right: 0;
-  }
-
-  #footBox .family_site {
-    position: static;
-    width: auto;
-    height: 100%;
-    border-bottom: 0;
-    border-left: 0.0625rem solid #505050;
-    padding: 20px 0;
-    padding-left: 32px;
-    text-align: center;
-  }
-  #footBox .foot_wrap {
-    display: flex;
-    justify-content: space-between;
-    padding: 38px 0 120px;
-    margin-left: 140px;
-  }
-  #footBox .foot_wrap h3 {
-    font-size: 22px;
-    font-size: 1.375rem;
-  }
-  #footBox .foot_wrap p {
-    font-size: 14px;
-    font-size: 0.875rem;
-  }
-  #footBox .foot_wrap .foot_info .copyright {
-    position: static;
-    margin-top: 20px;
-  }
-  #footBox .foot_wrap .foot_cs {
-    margin-top: 0;
-  }
-  #footBox .foot_wrap .foot_cs p {
-    margin-top: 14px;
-  }
-  #footBox .foot_wrap .foot_cs .phone_number {
-    font-size: 36px;
-    font-size: 2.25rem;
-    font-weight: 700;
-    line-height: 20px;
-    margin-top: 0;
-  }
-  #footBox .foot_wrap .foot_sns {
-    position: static;
-    width: 140px;
-    font-size: 30px;
-    font-size: 1.875rem;
-  }
-}
-/*==================== pc 1440px - ====================*/
-@media all and (min-width: 1440px) {
-  #footBox .container {
-    max-width: 80rem;
-  }
-  .foot_nav {
-    width: 100%;
   }
 }
