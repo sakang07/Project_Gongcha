@@ -3,7 +3,7 @@
 
 @import '../common/mixin', '../common/variable';
 @import '../page/base/headBox', '../page/base/footBox', '../page/base/sideBox';
-@import '../page/base/title_mob';
+@import '../page/base/title_login';
 
 
 /*==================== handhelds 320px - 599px ====================*/
@@ -133,12 +133,8 @@
 /*==================== desktop 1024px - 1439px ====================*/
 @include desktop {
 
-  .title_mob { display: none; }
 
   #contBox {
-    position: relative; z-index: 0;
-    width: 100%; height: auto;
-    padding: { top: 110px; bottom: 230px };
     @include img('login_bg.jpg', cover){ background-attachment: fixed; }
 
     &:before, &::before {
@@ -149,16 +145,6 @@
     }
 
     .title {
-      display: flex; flex-direction: column-reverse;
-      position: relative;
-
-      h2 {
-        @include font(40, $font_weight_bold) { color: $color_white; text-align: center; }
-      }
-      p {
-        margin-bottom: 10px;
-        @include font(18) { color: $color_white; text-transform: capitalize; text-align: center;}
-      }
       & + p {
         margin-top: 62px;
         color: $color_white; font-size: 16px; text-align: center; line-height: 1.6;

@@ -1,4 +1,4 @@
-/* login.css */
+/* drink.css */
 /* headBox.css */
 #headBox {
   position: absolute;
@@ -1016,13 +1016,13 @@ h1 > a > span {
 }
 /*==================== handhelds 320px - 599px ====================*/
 @media all and (max-width: 1023px) {
-  .title_mob {
+  #titleBox {
     width: 100%;
     min-height: 60px;
     border-bottom: 0.0625rem solid #ccc;
     background-color: #fff;
   }
-  .title_mob h2 {
+  #titleBox h2 {
     position: relative;
     width: 100%;
     height: 100%;
@@ -1033,7 +1033,7 @@ h1 > a > span {
     color: #171717;
     text-align: center;
   }
-  .title_mob h2::before, .title_mob h2:before {
+  #titleBox h2::before, #titleBox h2:before {
     content: "";
     position: absolute;
     top: 50%;
@@ -1047,7 +1047,7 @@ h1 > a > span {
     background-position: 50% 50%;
     background-repeat: no-repeat;
   }
-  .title_mob h2::before > span, .title_mob h2:before > span {
+  #titleBox h2::before > span, #titleBox h2:before > span {
     display: block;
     position: absolute;
     z-index: -1;
@@ -1056,40 +1056,121 @@ h1 > a > span {
     height: 0;
     overflow: hidden;
   }
+  #titleBox p {
+    display: none;
+  }
+  #titleBox .title_list {
+    display: none;
+    border-top: 0.0625rem solid #ccc;
+    text-align: center;
+  }
+  #titleBox .title_list.on {
+    display: block;
+  }
+  #titleBox .title_list li {
+    width: 100%;
+    height: 50px;
+    background: #eee;
+  }
+  #titleBox .title_list li > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #titleBox .title_list li > a:hover {
+    background-color: #505050;
+    font-weight: 700;
+    color: #fff;
+  }
 }
 /*==================== desktop 1024px - 1439px ====================*/
 @media all and (min-width: 1024px) {
-  .title_mob {
-    display: none;
-  }
-
-  #contBox {
+  #titleBox {
     position: relative;
     z-index: 0;
     width: 100%;
-    height: auto;
-    padding-top: 110px;
-    padding-bottom: 230px;
+    height: 300px;
+    padding-top: 84px;
+    background-image: url(../../multi/img/title_drink.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
   }
-  #contBox .title {
+  #titleBox > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  #titleBox::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+    background-color: rgba(23, 23, 23, 0.3);
+  }
+  #titleBox .container {
     display: flex;
-    flex-direction: column-reverse;
-    position: relative;
+    flex-direction: column;
+    max-width: 64rem;
   }
-  #contBox .title h2 {
+  #titleBox h2 {
+    order: 1;
     font-size: 40px;
     font-size: 2.5rem;
     font-weight: 700;
     color: #fff;
     text-align: center;
   }
-  #contBox .title p {
+  #titleBox p {
+    order: 0;
     margin-bottom: 10px;
     font-size: 18px;
     font-size: 1.125rem;
+    font-weight: 700;
     color: #fff;
     text-transform: capitalize;
     text-align: center;
+  }
+  #titleBox .title_list {
+    order: 3;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 72px;
+    font-size: 18px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  #titleBox .title_list li {
+    width: 130px;
+    height: 60px;
+    text-align: center;
+  }
+  #titleBox .title_list li.on {
+    border-top: 0.25rem solid #fff;
+  }
+  #titleBox .title_list li > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+  }
+}
+/*==================== pc 1024px - ====================*/
+@media all and (min-width: 1440px) {
+  #titleBox .container {
+    max-width: 80rem;
   }
 }
 /*==================== handhelds 320px - 599px ====================*/
@@ -1097,299 +1178,45 @@ h1 > a > span {
   #contBox {
     padding: 3.75rem 2rem 8.125rem;
   }
-  #contBox .title, #contBox .title + p {
-    display: none;
-  }
-  .login_box {
-    width: 100%;
-    height: auto;
-    max-width: 380px;
-    margin: auto;
-  }
-  .login_box form, .login_box fieldset {
-    width: 100%;
-    height: 100%;
-  }
-  .login_box .idpw > li {
+  .best_menu_area {
     position: relative;
-    width: 100%;
-    height: auto;
-    border: 0.0625rem solid #ccc;
   }
-  .login_box .idpw > li:last-of-type {
-    border-top: 0;
-  }
-  .login_box .idpw > li label {
+  .btn_area {
     position: absolute;
-    top: 15px;
-    left: 18px;
-    font-size: 12px;
-    font-size: 0.75rem;
-    font-weight: 700;
-  }
-  .login_box .idpw > li input {
-    width: 100%;
-    height: 100%;
-    padding: 39px 7px 12px;
-    font-size: 18px;
-    font-size: 1.125rem;
-    line-height: 20px;
-  }
-  .login_box .idpw > li input::placeholder {
-    text-indent: 10px;
-  }
-  .login_box .idcheck li {
+    top: 50%;
+    left: 0;
+    right: 0;
     display: flex;
-    align-items: center;
-    width: auto;
-    height: auto;
-    margin-top: 30px;
-  }
-  .login_box .idcheck li i {
-    margin-right: 8px;
-    font-size: 24px;
-    font-size: 1.5rem;
-    color: #ccc;
-    cursor: pointer;
-  }
-  .login_box .idcheck li #idSave:checked + label > i {
-    font-weight: 700;
-    color: #171717;
-  }
-  .login_box .idcheck li span {
-    font-size: 16px;
-    font-size: 1rem;
-  }
-  .login_box input[type=submit] {
+    justify-content: space-between;
     width: 100%;
-    height: 70px;
-    margin-top: 38px;
-    font-size: 18px;
-    font-size: 1.125rem;
-    font-weight: 700;
-    color: #fff;
-    background-color: #c30e2f;
-    cursor: pointer;
+    height: 0;
   }
-  .login_box input[type=submit]:hover {
-    transform: scale(1.1);
-    box-shadow: 0 5px 7px #ccc;
-    transition: all 300ms linear;
+  .btn_area > button {
+    width: 28px;
+    height: 50px;
+    background-color: #eee;
+    transform: translateY(-50%);
   }
-  .login_box .idcheck i:hover {
-    transform: scale(1.2);
-    transition: all 300ms linear;
-  }
-  .login_box .other_page {
-    margin: auto;
-    margin-top: 30px;
-  }
-  .login_box .other_page ul {
+
+  .best_menu_list {
     display: flex;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    margin: auto;
-    text-align: center;
+    justify-content: flex-start;
   }
-  .login_box .other_page li {
-    width: auto;
-    height: 20px;
-    padding-right: 5%;
-    border-right: 0.0625rem solid #ccc;
-    margin-right: 5%;
-    font-size: 14px;
-    font-size: 0.875rem;
-    line-height: 20px;
-    text-align: center;
-  }
-  .login_box .other_page li:last-of-type {
-    padding-right: 0;
-    border-right: 0;
-    margin-right: 0;
-  }
-  .login_box .other_page li a {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-}
-/*==================== tablet 600px - 1023px ====================*/
-@media all and (min-width: 600px) and (max-width: 1023px) {
-  #contBox .title + p {
-    display: block;
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.65;
-    color: #333;
-    text-align: center;
-    margin-bottom: 50px;
-  }
-  .login_box .idpw > li label {
-    position: absolute;
-    top: 19px;
-    left: 26px;
-    font-size: 18px;
-    font-size: 1.125rem;
-  }
-  .login_box .idpw > li input {
-    width: 100%;
-    height: 100%;
-    padding: 20px 0;
-    padding-left: 130px;
-    font-size: 18px;
-    font-size: 1.125rem;
-    line-height: 20px;
-  }
-  .login_box .idpw > li input::placeholder {
-    text-indent: 10px;
-  }
-  .login_box .other_page li {
-    font-size: 16px;
-    padding-right: 30px;
-    margin-right: 30px;
+  .best_menu_list > li {
+    flex-shrink: 0;
+    width: 240px;
+    height: 200px;
+    background-color: #ccc;
   }
 }
 /*==================== desktop 1024px - 1439px ====================*/
 @media all and (min-width: 1024px) {
   #contBox {
-    background-image: url(../../multi/img/login_bg.jpg);
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-  #contBox > span {
-    display: block;
-    position: absolute;
-    z-index: -1;
-    clip: rect(0 0 0 0);
-    width: 0;
-    height: 0;
-    overflow: hidden;
-  }
-  #contBox:before, #contBox::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    background-color: rgba(23, 23, 23, 0.3);
-  }
-  #contBox .title + p {
-    margin-top: 62px;
-    color: #fff;
-    font-size: 16px;
-    text-align: center;
-    line-height: 1.6;
-  }
-  .login_box {
-    width: 600px;
-    height: 600px;
-    margin: 73px auto 0;
-    padding: 132px 100px 0;
-    background-color: #fff;
-  }
-  .login_box .idpw > li {
     position: relative;
-    width: 400px;
-    height: 70px;
-    border: 0.0625rem solid #ccc;
-  }
-  .login_box .idpw > li:last-of-type {
-    border-top: 0;
-  }
-  .login_box .idpw > li input {
-    width: 100%;
-    height: 100%;
-    padding-left: 140px;
-    font-size: 18px;
-    font-size: 1.125rem;
-  }
-  .login_box .idpw > li label {
-    position: absolute;
-    top: 22px;
-    left: 30px;
-    font-size: 18px;
-    font-size: 1.125rem;
-    font-weight: 700;
-  }
-  .login_box .idcheck li {
-    display: flex;
-    align-items: center;
-    width: auto;
-    height: auto;
-    margin-top: 30px;
-  }
-  .login_box .idcheck li i {
-    margin-right: 8px;
-    font-size: 24px;
-    font-size: 1.5rem;
-    color: #ccc;
-    cursor: pointer;
-  }
-  .login_box .idcheck li #idSave:checked + label > i {
-    font-weight: 700;
-    color: #171717;
-  }
-  .login_box .idcheck li span {
-    font-size: 16px;
-    font-size: 1rem;
-  }
-  .login_box input[type=submit] {
-    width: 100%;
-    height: 70px;
-    margin-top: 38px;
-    font-size: 18px;
-    font-size: 1.125rem;
-    font-weight: 700;
-    color: #fff;
-    background-color: #c30e2f;
-    cursor: pointer;
-  }
-  .login_box input[type=submit]:hover {
-    transform: scale(1.1);
-    box-shadow: 0 5px 7px #ccc;
-    transition: all 300ms linear;
-  }
-  .login_box .idcheck i:hover {
-    transform: scale(1.2);
-    transition: all 300ms linear;
-  }
-  .login_box .other_page {
-    margin: auto;
-    margin-top: 30px;
-  }
-  .login_box .other_page ul {
-    display: flex;
-    justify-content: center;
+    z-index: 0;
     width: 100%;
     height: auto;
-    margin: auto;
-    text-align: center;
-  }
-  .login_box .other_page li {
-    width: auto;
-    height: 20px;
-    padding-right: 30px;
-    border-right: 0.0625rem solid #ccc;
-    margin-right: 30px;
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 20px;
-    text-align: center;
-  }
-  .login_box .other_page li:last-of-type {
-    padding-right: 0;
-    border-right: 0;
-    margin-right: 0;
-  }
-  .login_box .other_page li a {
-    display: block;
-    width: 100%;
-    height: 100%;
+    padding-top: 110px;
+    padding-bottom: 230px;
   }
 }

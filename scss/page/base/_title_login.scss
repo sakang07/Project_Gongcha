@@ -1,0 +1,52 @@
+// _title_login.scss
+
+/*==================== handhelds 320px - 599px ====================*/
+@include handhelds {
+  .title_mob {
+    width: 100%; min-height: 60px;
+    border-bottom: $line_01;
+    background-color: $color_white;
+
+    h2 {
+      position: relative;
+      width: 100%; height: 100%;
+      @include font(18, $font-weight-bold, 60px) { color: $color_black_02; }
+      text-align: center;
+
+      &::before, &:before {
+        content: "";
+        position: absolute; top: 50%; right: $pd_lr;
+        width: 20px; height: 20px;
+        margin: auto;
+        transform: translateY(-50%);
+        @include img('angle-down-solid.svg')
+      }
+    }
+  }
+
+} //@include handhelds
+
+
+/*==================== desktop 1024px - 1439px ====================*/
+@include desktop {
+  .title_mob { display: none; }
+
+  #contBox {
+    position: relative; z-index: 0;
+    width: 100%; height: auto;
+    padding: { top: 110px; bottom: 230px };
+
+    .title {
+      display: flex; flex-direction: column-reverse;
+      position: relative;
+
+      h2 {
+        @include font(40, $font_weight_bold) { color: $color_white; text-align: center; }
+      }
+      p {
+        margin-bottom: 10px;
+        @include font(18) { color: $color_white; text-transform: capitalize; text-align: center;}
+      }
+    }//.title
+  } // #contBox
+} // @include desktop

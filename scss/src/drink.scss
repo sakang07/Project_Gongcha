@@ -1,0 +1,60 @@
+// drink.scss
+/* drink.css */
+
+@import '../common/mixin', '../common/variable';
+@import '../page/base/headBox', '../page/base/footBox', '../page/base/sideBox';
+@import '../page/base/title';
+
+
+
+
+/*==================== handhelds 320px - 599px ====================*/
+@include handhelds {
+
+  #contBox {
+    padding: (nth($pd_tb, 1) - 1.25rem) $pd_lr nth($pd_tb, 3);
+
+    @at-root .best_menu_area {
+      position: relative;
+
+      @at-root .btn_area {
+        position: absolute; top: 50%; left: 0; right: 0;
+        display: flex; justify-content: space-between;
+        width: 100%; height: 0;
+        
+        & > button { 
+          width: 28px; height: 50px; background-color: $color_gray_01; 
+          transform: translateY(-50%);
+        }
+      } // .btn_area
+      
+      @at-root .best_menu_list {
+        display: flex; justify-content: flex-start;
+
+        & > li {
+          flex-shrink: 0;
+          width: 240px; height: 200px;
+          background-color: $color_gray_02;
+        }
+      }
+
+    }
+
+
+
+  }// #contBox
+} // @include handhelds
+
+
+/*==================== desktop 1024px - 1439px ====================*/
+@include desktop {
+
+  #contBox {
+    position: relative; z-index: 0;
+    width: 100%; height: auto;
+    padding: { top: 110px; bottom: 230px };
+
+
+  } // #contBox
+
+} // @include desktop

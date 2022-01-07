@@ -1,0 +1,105 @@
+// _title.scss
+
+/*==================== handhelds 320px - 599px ====================*/
+@include handhelds {
+  #titleBox {
+    width: 100%; min-height: 60px;
+    border-bottom: $line_01;
+    background-color: $color_white;
+    
+    h2 {
+      position: relative;
+      width: 100%; height: 100%;
+      @include font(18, $font-weight-bold, 60px) { color: $color_black_02; }
+      text-align: center;
+
+      &::before, &:before {
+        content: "";
+        position: absolute; top: 50%; right: $pd_lr;
+        width: 20px; height: 20px;
+        margin: auto;
+        transform: translateY(-50%);
+        @include img('angle-down-solid.svg')
+      }
+    } //h2
+
+    p {display: none;}
+
+    .title_list { 
+      display: none; 
+      border-top: $line_01;
+      text-align: center;
+
+      &.on { display: block; }
+
+      li { 
+        width: 100%; height: 50px;
+        background: $color_gray_01;
+        
+        & > a { @include full; 
+          display: flex; align-items: center; justify-content: center;
+          &:hover { background-color: $color_deep_gray_01; font-weight: $font_weight_bold; color: $color_white}
+        } // a
+      } // li
+    } //.title_list
+  }
+
+} //@include handhelds
+
+
+/*==================== desktop 1024px - 1439px ====================*/
+@include desktop {
+
+  #titleBox {
+    position: relative; z-index: 0;
+    width: 100%; height: 300px;
+    padding-top: 84px;
+    @include img('title_drink.jpg', cover);
+
+    &::before {
+      content: "";
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
+      display: block;
+      background-color: rgba($color_black_02, 0.3);
+    }
+
+    .container { display: flex; flex-direction: column; max-width: 64rem; }
+
+    h2 { 
+      order: 1; @include font(40, $font_weight_bold) { color: $color_white; text-align: center; } 
+    }
+    p {
+      order: 0;
+      margin-bottom: 10px;
+      @include font(18, $font-weight-bold) { color: $color_white; text-transform: capitalize; text-align: center; }
+    }
+    .title_list {
+      order: 3;
+      display: flex; justify-content: space-around;
+      margin-top: 72px;
+      @include font(18, $font-weight-bold) {color: $color_white;}
+
+      li { 
+        width: 130px; height: 60px; text-align: center; 
+        &.on {
+          border-top: $line_05;
+        }
+        & > a {
+          @include full; 
+          line-height: 60px;
+        }
+      }
+    }
+
+  } // #titleBox
+} // @include desktop
+
+
+/*==================== pc 1024px - ====================*/
+@include pc {
+
+  #titleBox {
+    .container { max-width: 80rem; }
+  }
+
+}//@include pc
