@@ -10,28 +10,208 @@
 #introBox {
   width: 100%; height: auto;
   padding: nth($pd_tb, 2) $pd_lr; 
-  background-color: rgba(#491DE7, 0.5);
+  background-color: $color_white;
+
+  h2 { 
+    padding-bottom: 40px;
+    @include font(22, $font-weight-bold) {color: $color_primary_01; text-align: center;}
+  }
+  p {
+    padding-bottom: 40px;
+    @include font(16, $line: 1.6) { color: $color_deep_gray_01}
+    &.bold {
+      padding-bottom: 0;
+      @include font(18, $font-weight-bold) {color: $color_black_02}
+      br { display: none; }
+    }
+  }
+
 }
 
 #processBox {
   width: 100%; height: auto;
   padding: nth($pd_tb, 2) $pd_lr;
-  background-color: rgba(#79F6AC, 0.5);
+  background-color: rgba($color_skyblue_01, 0.2);
+
+  @at-root .process_area {
+    display: flex; flex-direction: column; align-items: center;
+    padding-bottom: 50px;
+    &:last-of-type {padding-bottom: 0;}
+    
+    .img {
+      order: -1;
+      width: 120px; height: 120px;
+      border-radius: 100%; margin-bottom: 40px;
+      @include img ('brand_story_img1.png', contain);
+      background-color: #fff;
+    }
+
+    h3 {
+      padding-bottom: 20px;
+      @include font (22, $font-weight-bold)
+    }
+
+    dl { text-align: center; }
+    
+    dt {
+      padding-bottom: 20px;
+      @include font(18, $font-weight-bold) {color: $color_brown_01}
+    }
+    dd {
+      @include font(16, $line: 1.6) { color: $color_deep_gray_01}
+      br {display: none;}
+    }
+  }
 }
+
+
 #galleryBox {
-  width: 100%; height: auto;
+  position: relative;
+  width: 100%;
+  @include vw(height, 230, 320);
   padding: nth($pd_tb, 2) $pd_lr;
   background-color: rgba(#07B775, 0.5);
+
+  @at-root .indicator {
+    position: absolute; bottom: 20px; left: 50%; z-index: 10;
+    transform: translateX(-50%);
+    ul {
+      display: flex; justify-content: center;
+    }
+    li {
+      width: 36px; height: 5px;
+      margin-right: 10px; 
+      background-color: $color_gray_03;
+      &.on { background-color: $color_white; }
+    }
+  }
+  
+  @at-root .img_inner {
+    width: 100%; height: 100%;
+    
+    ul { 
+      width: 400%; height: 100%; display: flex; justify-content: flex-start; 
+    }
+    li {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      width: 100%; height: 100%;
+      background-color: #fff;
+    }
+    .img_01 { @include img ('main_live_img1.png', cover)}
+    .img_02 { @include img ('main_live_img2.png', cover)}
+    .img_03 { @include img ('main_live_img3.png', cover)}
+    .img_04 { @include img ('main_live_img4.png', cover)}
+  }
 }
+
+
 #philosophyBox {
+  position: relative; z-index: 0;
   width: 100%; height: auto;
   padding: nth($pd_tb, 2) $pd_lr;
-  background-color: rgba(#2E3CF1, 0.5);
+  padding-bottom: 240px;
+  background-color: $color_white;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute; top: 40%; left: 40%; right: 0; bottom: 0; z-index: -1;
+    @include img ('brand_promise_con_img4.jpg', $position:initial);
+    opacity: 0.6;
+  }
+
+  h2 {
+    padding-bottom: 30px;
+    @include font(22, $font-weight-bold, 1.6)
+  }
+  p {
+    padding-bottom: 30px;
+    @include font(16, $line: 1.6) { color: $color_deep_gray_01}
+    &.bold {
+      padding-bottom: 0;
+      @include font(18, $font-weight-bold) {color: $color_black_02}
+      br { display: none; }
+    }
+  }
+
 }
 #promiseBox {
   width: 100%; height: auto;
-  padding: nth($pd_tb, 2) $pd_lr;
-  background-color: rgba(#3D3113, 0.5);
+  
+  article {
+    position: relative; z-index: 0;
+    width: 100%; height: 100%;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
+    }
+    
+    .container {
+      padding: 90px $pd_lr;
+      display: flex; flex-direction: column;
+    }
+    .point {
+      order: -1;
+      width: 100px; height: 42px;
+      border: 4px solid; border-radius: 100px; margin-bottom: 32px;
+      @include font(16, $font-weight-bold, 34px) {text: {align: center; transform: capitalize;}}
+    }
+    h3 {
+      margin-bottom: 32px;
+      @include font(22, $font-weight-bold, 1.6);
+    }
+    p {
+      line-height: 1.6;
+      br {display: none;}
+    }
+  }
+
+  .promise_inner_01 {
+    @include img ('point1.jpg', cover);
+    &::before { background-color: rgba($color_black_01, 0.3);}
+
+    .point { color: #eeefbc; border-color: #eeefbc; }
+    h3 { color: $color_white; }
+    p { color: $color_gray_01; }
+  }
+
+  .promise_inner_02 {
+    @include img ('point2.jpg',1000px, 77% 79%);
+    &::before { background-image: linear-gradient(270deg, $color_white, rgba($color_white, 0.3)); }
+
+    .container { align-items: flex-end;}
+    .point { color: #AD3D5E; border-color: #AD3D5E; }
+    h3 {text-align: right}
+    p { color: $color_black_01; text-align: right }
+  }
+
+  .promise_inner_03 {
+    @include img ('point3.jpg', cover);
+    &::before { background-color: rgba($color_white, 0.3);}
+
+    .point { color: #673506; border-color: #673506; }
+    p { color: $color_black_01; }
+  }
+
+  .promise_inner_04 {
+    @include img ('point4.jpg', 200%);
+    &::before { background-image: linear-gradient(270deg, $color_white, rgba($color_white, 0.3)); }
+
+    .container { align-items: flex-end;}
+    .point { color: #084262; border-color: #084262;}
+    h3 {text-align: right}
+    p { color: $color_black_01; text-align: right }
+  }
+
+  .promise_inner_05 {
+    padding-bottom: 140px;
+    @include img ('point5.jpg', cover);
+    &::before { background-color: rgba($color_white, 0.3);}
+    
+    .point { color: #673506; border-color: #673506; }
+    p { color: $color_black_01;}
+  }
 }
 
 

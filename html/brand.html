@@ -50,6 +50,7 @@
       <div class="video_area">
         <video class="video" muted autoplay loop preload>
           <source src="/multi/video/gongcha.webm" type="video/webm" />
+          <source src="/multi/video/gongcha.mp4" type="video/mp4" />
           <!-- 구형 브라우저에서 보이는 문구 -->
           <p>현재 사용하고 계신 브라우저는 영상을 지원하지 않습니다.</p>
         </video>
@@ -95,6 +96,7 @@
       <div class="container">
         <article class="process_area">
           <h3>고른다</h3>
+          <div class="img"></div>
           <dl>
             <dt>공차는 느림을 쫓습니다</dt>
             <dd>대만 현지의 따뜻하고 깨끗한 
@@ -104,6 +106,7 @@
         </article>
         <article class="process_area">
           <h3>우린다</h3>
+          <div class="img"></div>
           <dl>
             <dt>공차는 불편함을 품습니다</dt>
             <dd>숙련된 공차의 티마스터(Tea Master)가 공차 음료의 기본이 되는 우롱티, 
@@ -112,6 +115,7 @@
         </article>
         <article class="process_area">
           <h3>더한다</h3>
+          <div class="img"></div>
           <dl>
             <dt>공차는 틀 밖을 향합니다</dt>
             <dd>공차의 모든 음료는 토핑, 당도, 얼음을 내 입맛에 따라 선택하여 즐기실 수 있습니다. 매일매일 새롭고 다양한 맛과 함께 차 한 잔에 우려내는 행복한 순간을 위해 
@@ -125,25 +129,25 @@
       <h2 class="blind">공차 갤러리</h2>
       <div class="indicator">
         <ul>
-          <li>indi 01</li>
-          <li>indi 02</li>
-          <li>indi 03</li>
-          <li>indi 04</li>
+          <li class="on"><button type="button"><span class="blind">1번째 이미지</span></button></li>
+          <li><button type="button"><span class="blind">2번째 이미지</span></button></li>
+          <li><button type="button"><span class="blind">3번째 이미지</span></button></li>
+          <li><button type="button"><span class="blind">4번째 이미지</span></button></li>
         </ul>
       </div>
       <div class="img_inner">
         <ul>
-          <li>img 01</li>
-          <li>img 02</li>
-          <li>img 03</li>
-          <li>img 04</li>
+          <li class="img_01">img 01</li>
+          <li class="img_02">img 02</li>
+          <li class="img_03">img 03</li>
+          <li class="img_04">img 04</li>
         </ul>
       </div>
     </section><!-- //#galleryBox -->
 
     <section id="philosophyBox">
-      <h2>최고의 한 잔을 위한 공차의 철학</h2>
       <div class="container">
+        <h2>최고의 한 잔을 위한 공차의 철학</h2>
         <p>공차는 한잔의 완벽한 Tea를 만들기 위해 찻잎의 선정부터 재배, 건조, 발효, 정제과정에 이르기까지의 전 과정을 철저히 관리하고 있습니다.</p>
         <p>또한 매장의 모든 티 마스터(Tea Master)가 신선하고 좋은 품질의 티(Tea)를 제공하기 위해,</p>
           <p class="bold">공차만의 철학과 문학을 바탕으로 끊임없이 노력하고 있습니다.</p>
@@ -153,18 +157,18 @@
     <section id="promiseBox">
       <h2 class="blind">공차의 약속</h2>
       <article class="promise_inner_01">
-        <h3>최상의 품질을 가진 찻잎 선별</h3>
         <div class="container">
+          <h3>최상의 품질을 가진 <br />찻잎 선별</h3>
           <div class="point">point 1</div>
           <p>고산지대에 위치한 대만 현지의 따뜻하고 깨끗한 <br />
             기후 조건의 재배지에서 최적의 시기, 최상의 품질을 가진 잎만을 수확합니다.<br />
             선별된 차의 신선한 향을 유지 시킬 수 있도록 <br />
-            공차만의 노하우로 건조시키며,차마다 알맞은 발효도를 맞추어 발효합니다.</p>
+            공차만의 노하우로 건조시키며, 차마다 알맞은 발효도를 맞추어 발효합니다.</p>
         </div>
       </article>
       <article class="promise_inner_02">
-        <h3>엄격한 티(Tea)의 신선도 관리</h3>
         <div class="container">
+          <h3>엄격한 티(Tea)의 <br />신선도 관리</h3>
           <div class="point">point 2</div>
           <p>공차 음료의 기본이 되는 티(Tea)는 맛을 위해<br />
             각 티(Tea)에 알맞은 온도를 설정하여 뜸을 들입니다.<br />
@@ -172,8 +176,8 @@
         </div>
       </article>
       <article class="promise_inner_03">
-        <h3>티 전문가 "Tea Master" 양성</h3>
         <div class="container">
+          <h3>티 전문가 <br />"Tea Master" 양성</h3>
           <div class="point">point 3</div>
           <p>공차는 티(Tea)에 관하여 70시간 이상 전문적인 <br />
             교육을 받은 Tea Master들이 신선한 찻잎으로 직접 우려냅니다. <br />
@@ -183,8 +187,8 @@
         </div>
       </article>
       <article class="promise_inner_04">
-        <h3>티(Tea) 종류부터 얼음량까지, 100% 맞춤 음료</h3>
         <div class="container">
+          <h3>티(Tea) 종류부터 얼음량까지, <br />100% 맞춤 음료</h3>
           <div class="point">point 4</div>
           <p>공차의 모든 음료는 오리지널 티(Original Tea)와 <br />
             에이드, 스무디 등을 베이스로 5가지 토핑과 당도, 얼음량 <br />
@@ -194,8 +198,8 @@
         </div>
       </article>
       <article class="promise_inner_05">
-        <h3>누구나 쉽고 맛있게 즐길 수 있는 차(茶) 문화 확산</h3>
         <div class="container">
+          <h3>누구나 쉽고 맛있게 즐길 수 <br />있는 차(茶) 문화 확산</h3>
           <div class="point">point 5</div>
           <p>공차는 티(Tea) 고유의 맛과 향으로<br />
             다양한 메뉴와 즐거운 선택을 통해 남녀노소 누구나<br />
