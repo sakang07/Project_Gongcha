@@ -1016,13 +1016,13 @@ h1 > a > span {
 }
 /*==================== handhelds 320px - 599px ====================*/
 @media all and (max-width: 1023px) {
-  .title_mob {
+  #titleBox {
     width: 100%;
     min-height: 60px;
     border-bottom: 0.0625rem solid #ccc;
     background-color: #fff;
   }
-  .title_mob h2 {
+  #titleBox h2 {
     position: relative;
     width: 100%;
     height: 100%;
@@ -1033,7 +1033,7 @@ h1 > a > span {
     color: #171717;
     text-align: center;
   }
-  .title_mob h2::before, .title_mob h2:before {
+  #titleBox h2::before, #titleBox h2:before {
     content: "";
     position: absolute;
     top: 50%;
@@ -1047,7 +1047,7 @@ h1 > a > span {
     background-position: 50% 50%;
     background-repeat: no-repeat;
   }
-  .title_mob h2::before > span, .title_mob h2:before > span {
+  #titleBox h2::before > span, #titleBox h2:before > span {
     display: block;
     position: absolute;
     z-index: -1;
@@ -1059,7 +1059,7 @@ h1 > a > span {
 }
 /*==================== desktop 1024px - 1439px ====================*/
 @media all and (min-width: 1024px) {
-  .title_mob {
+  #titleBox {
     display: none;
   }
 

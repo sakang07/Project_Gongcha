@@ -1072,6 +1072,9 @@ h1 > a > span {
     height: 50px;
     background: #eee;
   }
+  #titleBox .title_list li.on {
+    font-weight: 700;
+  }
   #titleBox .title_list li > a {
     display: block;
     width: 100%;
@@ -1082,7 +1085,6 @@ h1 > a > span {
   }
   #titleBox .title_list li > a:hover {
     background-color: #505050;
-    font-weight: 700;
     color: #fff;
   }
 }
