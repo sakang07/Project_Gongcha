@@ -1,0 +1,67 @@
+// _titleBox.scss
+
+/*==================== handhelds 320px - 599px ====================*/
+@include handhelds {
+  #headBox {
+    background-color: transparent; 
+    @at-root h1 { > a { @include full('logo_white.png', contain)}}
+  }
+
+  #titleBox {
+    position: relative; z-index: 10;
+    width: 100%; min-height: 60px;
+    border-bottom: $line_01;
+    background-color: transparent;
+    
+    h2 {
+      position: relative;
+      width: 100%; height: 100%;
+      @include font(18, $font-weight-bold, 60px) { color: $color_white; }
+      text-align: center;
+  
+      &::before, &:before {
+        content: "";
+        position: absolute; top: 50%; right: $pd_lr;
+        width: 20px; height: 20px;
+        margin: auto;
+        transform: translateY(-50%);
+        color: $color_white;
+        @include img('angle-down-white.svg');
+      }
+
+    } //h2
+  
+    p {display: none;}
+  
+    .title_list { 
+      display: none; 
+      border-top: $line_01;
+      text-align: center;
+  
+      &.on { display: block; }
+  
+      li { 
+        width: 100%; height: 50px;
+        background: $color_gray_01;
+        &.on { font-weight: $font-weight-bold;}
+        
+        & > a { @include full; 
+          display: flex; align-items: center; justify-content: center;
+          &:hover { background-color: $color_deep_gray_01; color: $color_white}
+        } // a
+      } // li
+    } //.title_list
+  } // #titleBox
+
+
+  
+} // @include handhelds
+
+
+/*==================== desktop 1024px - 1439px ====================*/
+@include desktop {
+  #titleBox {
+    display: none;
+  }
+
+} // @include desktop

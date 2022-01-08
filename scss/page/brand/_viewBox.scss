@@ -1,0 +1,79 @@
+// _viewBox.scss
+
+#viewBox {
+  position: relative;
+  width: 100%; height: 100vh;
+  margin-top: -7.5625rem;
+  
+  .video_area { 
+    position: relative; z-index: 0;
+    overflow: hidden; width: 100%; height: 100%; 
+    &::before {
+      content: '';
+      display: block;
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;
+      background-color: rgba($color_black_02, 0.3);
+    }
+  }
+  .video {
+    position: absolute; top: 0; left: 50%; right: 50%; bottom: 0;
+    width: auto; height: 100vh;
+    margin: auto;
+    transform: translateX(-50%);
+  }
+
+  .container { 
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
+    padding: 0 $pd_lr; 
+  }
+
+  @at-root .view_title {
+    display: flex; flex-direction: column-reverse; justify-content: flex-start;
+    width: 100%; height: 100%;
+    padding-bottom: 30%;
+
+    p { margin-bottom: 20px; @include font(16) {color: $color_white} }
+    h3 { @include font(28, $font-weight-bold, 1.6) {color: $color_white;} }
+  }
+  .category_tab { display: none; }
+  .scroll {
+    position: absolute; bottom: 20px; left: 0; right: 0; z-index: 10;
+    @include font(30){ color: $color_white; text-align: center; }
+    animation: scrollDown 800ms infinite alternate ease;
+    @keyframes scrollDown {
+      0% {transform: translateY(0px);}
+      100% {transform: translateY(16px);}
+    }
+  }
+}
+
+
+/*==================== handhelds 320px - 599px ====================*/
+@include handhelds {
+
+  #viewBox {
+    .pc { display: none; }
+
+  }
+
+
+
+  
+} // @include handhelds
+
+
+/*==================== desktop 1024px - 1439px ====================*/
+@include desktop {
+  #viewBox {
+    .container { max-width: map-get($container, "laptop"); }
+  } //#viewBox
+
+} // @include desktop
+
+
+/*==================== pc 1440px - ====================*/
+@include pc {
+  #viewBox {
+    .container { max-width: map-get($container, "pc"); }
+  } //#viewBox
+} // @include pc

@@ -1,0 +1,60 @@
+// brand.scss
+/* brand.css */
+
+@import '../common/mixin', '../common/variable';
+@import '../page/base/headBox', '../page/base/footBox', '../page/base/sideBox';
+@import '../page/brand/titleBox', '../page/brand/viewBox';
+
+
+
+#introBox {
+  width: 100%; height: auto;
+  padding: nth($pd_tb, 2) $pd_lr; 
+  background-color: rgba(#491DE7, 0.5);
+}
+
+#processBox {
+  width: 100%; height: auto;
+  padding: nth($pd_tb, 2) $pd_lr;
+  background-color: rgba(#79F6AC, 0.5);
+}
+#galleryBox {
+  width: 100%; height: auto;
+  padding: nth($pd_tb, 2) $pd_lr;
+  background-color: rgba(#07B775, 0.5);
+}
+#philosophyBox {
+  width: 100%; height: auto;
+  padding: nth($pd_tb, 2) $pd_lr;
+  background-color: rgba(#2E3CF1, 0.5);
+}
+#promiseBox {
+  width: 100%; height: auto;
+  padding: nth($pd_tb, 2) $pd_lr;
+  background-color: rgba(#3D3113, 0.5);
+}
+
+
+/*==================== handhelds 320px - 599px ====================*/
+@include handhelds {
+
+
+  
+} // @include handhelds
+
+
+/*==================== desktop 1024px - 1439px ====================*/
+@include desktop {
+  #Box {
+    .container { max-width: map-get($container, "laptop"); }
+  } //#Box
+
+} // @include desktop
+
+
+/*==================== pc 1440px - ====================*/
+@include pc {
+  #Box {
+    .container { max-width: map-get($container, "pc"); }
+  } //#Box
+} // @include pc
