@@ -14,11 +14,11 @@
   display: flex;
   justify-content: space-between;
 }
-h1 {
+#headBox h1 {
   width: 3.125rem;
   height: 3.375rem;
 }
-h1 > a {
+#headBox h1 > a {
   display: block;
   width: 100%;
   height: 100%;
@@ -27,7 +27,7 @@ h1 > a {
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
-h1 > a > span {
+#headBox h1 > a > span {
   display: block;
   position: absolute;
   z-index: -1;
@@ -36,7 +36,6 @@ h1 > a > span {
   height: 0;
   overflow: hidden;
 }
-
 #headBox.transparent {
   background-color: transparent;
   color: #fff;
@@ -51,6 +50,21 @@ h1 > a > span {
   background-repeat: no-repeat;
 }
 #headBox.transparent h1 > a > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+#headBox.transparent .nav_btn i {
+  background-image: url(../../multi/img/bars-white.svg);
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+#headBox.transparent .nav_btn i > span {
   display: block;
   position: absolute;
   z-index: -1;
@@ -75,10 +89,32 @@ h1 > a > span {
     position: relative;
     align-items: center;
   }
+  .nav_mob {
+    width: 100%;
+    height: 100%;
+  }
   .nav_btn {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 100%;
+    height: 100%;
     text-align: center;
+  }
+  .nav_btn i {
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-image: url(../../multi/img/bars-solid.svg);
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  .nav_btn i > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
   }
   .nav_btn button {
     display: block;
@@ -320,13 +356,12 @@ h1 > a > span {
   #headBox .container {
     max-width: 64rem;
   }
-
-  h1 {
+  #headBox h1 {
     width: 3.125rem;
     height: 4.125rem;
     margin-right: 10%;
   }
-  h1:hover {
+  #headBox h1:hover {
     display: block;
     transform: scale(1.1);
     transition: all 300ms ease;
@@ -488,6 +523,15 @@ h1 > a > span {
     font-size: 28px;
     font-size: 1.75rem;
   }
+  .unb.on .unb_search .modal_bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: transparent;
+  }
 }
 /*==================== pc 1024px - ====================*/
 @media all and (min-width: 1440px) {
@@ -502,13 +546,12 @@ h1 > a > span {
   #headBox .container {
     max-width: 80rem;
   }
-
-  h1 {
+  #headBox h1 {
     width: 3.125rem;
     height: 4.125rem;
     margin-right: 10%;
   }
-  h1:hover {
+  #headBox h1:hover {
     display: block;
     transform: scale(1.1);
     transition: all 300ms ease;
@@ -669,6 +712,15 @@ h1 > a > span {
     height: 100%;
     font-size: 28px;
     font-size: 1.75rem;
+  }
+  .unb.on .unb_search .modal_bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: transparent;
   }
 }
 /* sideBox.css */
