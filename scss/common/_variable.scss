@@ -37,7 +37,7 @@ $line_05: 0.25rem solid $color_white;
 
 
 // space ==================================
-$container: ("laptop": 64rem, "pc": 80rem);
+$container: ("tablet": 600px, "laptop": 64rem, "pc": 80rem);
 $pd_lr: 2rem;
 $pd_tb: (5rem, 6.25rem, 8.125rem);
 // nth($pd_tb, 1)

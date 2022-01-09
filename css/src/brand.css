@@ -37,6 +37,29 @@ h1 > a > span {
   overflow: hidden;
 }
 
+#headBox.transparent {
+  background-color: transparent;
+  color: #fff;
+}
+#headBox.transparent h1 > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../multi/img/logo_white.png);
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+#headBox.transparent h1 > a > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 /*==================== handhels 320px - 1023px ====================*/
 @media all and (max-width: 1023px) {
   #wrap {
@@ -1130,7 +1153,7 @@ h1 > a > span {
   z-index: 0;
   overflow: hidden;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 #viewBox .video_area::before {
   content: "";
@@ -1150,7 +1173,7 @@ h1 > a > span {
   right: 50%;
   bottom: 0;
   width: auto;
-  height: 100vh;
+  height: 120%;
   margin: auto;
   transform: translateX(-50%);
 }
@@ -1168,7 +1191,7 @@ h1 > a > span {
   justify-content: flex-start;
   width: 100%;
   height: 100%;
-  padding-bottom: 70%;
+  padding-bottom: 200px;
 }
 .view_title p {
   margin-bottom: 20px;
@@ -1216,8 +1239,43 @@ h1 > a > span {
 }
 /*==================== desktop 1024px - 1439px ====================*/
 @media all and (min-width: 1024px) {
+  #viewBox {
+    margin-top: -80px;
+  }
   #viewBox .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     max-width: 64rem;
+  }
+  .view_title {
+    height: 100%;
+    padding-bottom: 80px;
+  }
+
+  #viewBox .title_list ul {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 72px;
+    margin-bottom: 80px;
+    font-size: 18px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  #viewBox .title_list li {
+    width: 130px;
+    height: 60px;
+    text-align: center;
+  }
+  #viewBox .title_list li.on {
+    border-top: 0.25rem solid #fff;
+  }
+  #viewBox .title_list li > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
   }
 }
 /*==================== pc 1440px - ====================*/
@@ -1225,12 +1283,22 @@ h1 > a > span {
   #viewBox .container {
     max-width: 80rem;
   }
+  #viewBox .video {
+    width: 120%;
+    height: auto;
+  }
 }
 #introBox {
   width: 100%;
   height: auto;
   padding: 6.25rem 2rem;
   background-color: #fff;
+}
+#introBox .container {
+  max-width: 600px;
+}
+#introBox .breadcrumb {
+  display: none;
 }
 #introBox h2 {
   padding-bottom: 40px;
@@ -1247,6 +1315,9 @@ h1 > a > span {
   line-height: 1.6;
   color: #505050;
 }
+#introBox p br {
+  display: none;
+}
 #introBox p.bold {
   padding-bottom: 0;
   font-size: 18px;
@@ -1254,15 +1325,75 @@ h1 > a > span {
   font-weight: 700;
   color: #171717;
 }
-#introBox p.bold br {
-  display: none;
-}
 
+/*==================== tablet 600px - 1023px ====================*/
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #introBox {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    text-align: center;
+  }
+  #introBox h2 {
+    font-size: 28px;
+  }
+  #introBox p.bold {
+    font-size: 22px;
+  }
+  #introBox p.bold br {
+    display: block;
+  }
+}
+/*==================== desktop 1024px - 1439px ====================*/
+@media all and (min-width: 1024px) {
+  #introBox {
+    padding-bottom: 200px;
+  }
+  #introBox .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 64rem;
+    text-align: center;
+  }
+  #introBox .breadcrumb {
+    order: -1;
+    align-self: flex-end;
+    display: block;
+    margin-bottom: 180px;
+    color: #aaa;
+    font-weight: 700;
+  }
+  #introBox .breadcrumb i.fa-chevron-right {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 14px;
+  }
+  #introBox .breadcrumb span {
+    color: #171717;
+  }
+  #introBox h2 {
+    font-size: 36px;
+  }
+  #introBox p br {
+    display: block;
+  }
+  #introBox p.bold {
+    font-size: 22px;
+  }
+}
+/*==================== pc 1440px - ====================*/
+@media all and (min-width: 1440px) {
+  #introBox .container {
+    max-width: 80rem;
+  }
+}
 #processBox {
   width: 100%;
   height: auto;
   padding: 6.25rem 2rem;
   background-color: rgba(148, 198, 225, 0.2);
+}
+#processBox .container {
+  max-width: 600px;
 }
 .process_area {
   display: flex;
@@ -1279,13 +1410,45 @@ h1 > a > span {
   height: 120px;
   border-radius: 100%;
   margin-bottom: 40px;
+  background-color: #fff;
+}
+.process_area .img1 {
   background-image: url(../../multi/img/brand_story_img1.png);
   background-size: contain;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-color: #fff;
 }
-.process_area .img > span {
+.process_area .img1 > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.process_area .img2 {
+  background-image: url(../../multi/img/brand_story_img2.png);
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.process_area .img2 > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.process_area .img3 {
+  background-image: url(../../multi/img/brand_story_img3.png);
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.process_area .img3 > span {
   display: block;
   position: absolute;
   z-index: -1;
@@ -1295,7 +1458,7 @@ h1 > a > span {
   overflow: hidden;
 }
 .process_area h3 {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
   font-size: 22px;
   font-size: 1.375rem;
   font-weight: 700;
@@ -1304,7 +1467,7 @@ h1 > a > span {
   text-align: center;
 }
 .process_area dt {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
   font-size: 18px;
   font-size: 1.125rem;
   font-weight: 700;
@@ -1320,14 +1483,69 @@ h1 > a > span {
   display: none;
 }
 
+/*==================== tablet 600px - 1023px ====================*/
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #processBox {
+    padding-top: 8.125rem;
+    padding-bottom: 8.125rem;
+  }
+  .process_area {
+    margin-bottom: 90px;
+  }
+  .process_area .img {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 66px;
+  }
+  .process_area h3 {
+    font-size: 28px;
+  }
+  .process_area dt {
+    font-size: 22px;
+  }
+}
+/*==================== desktop 1024px - 1439px ====================*/
+@media all and (min-width: 1024px) {
+  #processBox {
+    padding: 180px 0;
+  }
+  #processBox .container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 64rem;
+  }
+  .process_area {
+    width: 260px;
+  }
+  .process_area .img {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 56px;
+  }
+  .process_area h3 {
+    font-size: 28px;
+    margin-bottom: 56px;
+  }
+  .process_area dt {
+    font-size: 22px;
+  }
+  .process_area dd br {
+    display: block;
+  }
+}
+/*==================== pc 1440px - ====================*/
+@media all and (min-width: 1440px) {
+  #processBox .container {
+    max-width: 80rem;
+  }
+}
 #galleryBox {
   position: relative;
   width: 100%;
   height: 230px;
   height: 14.375rem;
   height: 71.875vw;
-  padding: 6.25rem 2rem;
-  background-color: rgba(7, 183, 117, 0.5);
+  max-height: 600px;
 }
 .indicator {
   position: absolute;
@@ -1431,6 +1649,9 @@ h1 > a > span {
   overflow: hidden;
 }
 
+/*==================== tablet 600px - 1023px ====================*/
+/*==================== desktop 1024px - 1439px ====================*/
+/*==================== pc 1440px - ====================*/
 #philosophyBox {
   position: relative;
   z-index: 0;
@@ -1439,6 +1660,9 @@ h1 > a > span {
   padding: 6.25rem 2rem;
   padding-bottom: 240px;
   background-color: #fff;
+}
+#philosophyBox .container {
+  max-width: 600px;
 }
 #philosophyBox::before {
   content: "";
@@ -1465,21 +1689,21 @@ h1 > a > span {
   overflow: hidden;
 }
 #philosophyBox h2 {
-  padding-bottom: 30px;
+  margin-bottom: 30px;
   font-size: 22px;
   font-size: 1.375rem;
   font-weight: 700;
   line-height: 1.6;
 }
 #philosophyBox p {
-  padding-bottom: 30px;
+  margin-bottom: 30px;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.6;
   color: #505050;
 }
 #philosophyBox p.bold {
-  padding-bottom: 0;
+  margin-bottom: 0;
   font-size: 18px;
   font-size: 1.125rem;
   font-weight: 700;
@@ -1489,6 +1713,69 @@ h1 > a > span {
   display: none;
 }
 
+/*==================== tablet 600px - 1023px ====================*/
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #philosophyBox {
+    padding-top: 130px;
+    padding-bottom: 300px;
+  }
+  #philosophyBox h2 {
+    font-size: 28px;
+  }
+  #philosophyBox p.bold {
+    font-size: 22px;
+  }
+}
+/*==================== desktop 1024px - 1439px ====================*/
+@media all and (min-width: 1024px) {
+  #philosophyBox {
+    padding-top: 280px;
+    padding-bottom: 280px;
+    margin: auto;
+  }
+  #philosophyBox::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    background-position: -200px 50%;
+    background-size: 800px;
+    opacity: 1;
+  }
+  #philosophyBox .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 64rem;
+  }
+  #philosophyBox .container > * {
+    width: 600px;
+  }
+  #philosophyBox h2 {
+    font-size: 36px;
+  }
+  #philosophyBox p:nth-child(3) {
+    margin-bottom: 60px;
+  }
+  #philosophyBox p.bold {
+    font-size: 22px;
+  }
+  #philosophyBox p.bold br {
+    display: block;
+  }
+}
+/*==================== pc 1440px - ====================*/
+@media all and (min-width: 1440px) {
+  #philosophyBox {
+    max-width: 1440px;
+  }
+  #philosophyBox::before {
+    background-position: 0 50%;
+    background-size: 800px;
+  }
+  #philosophyBox .container {
+    max-width: 80rem;
+  }
+}
 #promiseBox {
   width: 100%;
   height: auto;
@@ -1617,7 +1904,7 @@ h1 > a > span {
   overflow: hidden;
 }
 #promiseBox .promise_inner_03::before {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
 }
 #promiseBox .promise_inner_03 .point {
   color: #673506;
@@ -1685,16 +1972,115 @@ h1 > a > span {
   color: #333;
 }
 
-/*==================== handhelds 320px - 599px ====================*/
+/*==================== tablet 600px - 1023px ====================*/
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #promiseBox article .point {
+    width: 120px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 44px;
+  }
+  #promiseBox article h3 {
+    font-size: 28px;
+  }
+  #promiseBox article p br {
+    display: block;
+  }
+  #promiseBox .promise_inner_01 {
+    background-position: 50% 70%;
+  }
+  #promiseBox .promise_inner_02 {
+    background-position: 100% 73%;
+    background-size: 1400px;
+  }
+  #promiseBox .promise_inner_02::before {
+    background-image: linear-gradient(270deg, #fff, rgba(255, 255, 255, 0));
+  }
+  #promiseBox .promise_inner_03 {
+    background-position: 36% 27%;
+    background-size: 160%;
+  }
+  #promiseBox .promise_inner_03::before {
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+  }
+  #promiseBox .promise_inner_04 {
+    background-position: 97% 50%;
+  }
+  #promiseBox .promise_inner_04::before {
+    background-image: linear-gradient(270deg, #fff, rgba(255, 255, 255, 0));
+  }
+  #promiseBox .promise_inner_05 {
+    background-position: 50% 76%;
+  }
+}
 /*==================== desktop 1024px - 1439px ====================*/
 @media all and (min-width: 1024px) {
-  #Box .container {
+  #promiseBox article .container {
     max-width: 64rem;
+    padding: 110px 2rem;
+  }
+  #promiseBox article .point {
+    width: 120px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 44px;
+  }
+  #promiseBox article h3 {
+    font-size: 28px;
+  }
+  #promiseBox article h3 br {
+    display: none;
+  }
+  #promiseBox article p br {
+    display: block;
+  }
+  #promiseBox .promise_inner_01 {
+    background-position: 50% 70%;
+  }
+  #promiseBox .promise_inner_02 {
+    background-position: 100% 73%;
+    background-size: 1440px;
+  }
+  #promiseBox .promise_inner_02::before {
+    background-image: linear-gradient(270deg, #fff, rgba(255, 255, 255, 0));
+  }
+  #promiseBox .promise_inner_03 {
+    background-position: 36% 27%;
+    background-size: 160%;
+  }
+  #promiseBox .promise_inner_03::before {
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+  }
+  #promiseBox .promise_inner_04 {
+    background-position: 97% 50%;
+  }
+  #promiseBox .promise_inner_04::before {
+    background-image: linear-gradient(270deg, #fff, rgba(255, 255, 255, 0));
+  }
+  #promiseBox .promise_inner_05 {
+    background-position: 50% 76%;
   }
 }
 /*==================== pc 1440px - ====================*/
 @media all and (min-width: 1440px) {
-  #Box .container {
+  #promiseBox .container {
     max-width: 80rem;
+  }
+  #promiseBox .promise_inner_02 {
+    background-position: 100% 73%;
+    background-size: 100%;
+  }
+  #promiseBox .promise_inner_02::before {
+    opacity: 0.5;
+  }
+  #promiseBox .promise_inner_03 {
+    background-position: 36% 27%;
+    background-size: cover;
+  }
+  #promiseBox .promise_inner_04 {
+    background-size: 178%;
+  }
+  #promiseBox .promise_inner_04::before {
+    opacity: 0.5;
   }
 }

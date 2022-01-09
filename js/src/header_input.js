@@ -12,12 +12,12 @@
     {
       type: 'mobile',
       htmlUrl: './temp/base/mob_header.html',
-      scriptUrl: '../js/src/drop_navigation.js',
+      scriptUrl: '../js/src/mob_header.js',
       size: 1023,
     }, {
       type: 'pc',
       htmlUrl: './temp/base/pc_header.html',
-      scriptUrl: '../js/src/open_unb_search.js'
+      scriptUrl: '../js/src/pc_header.js'
     }
   ];
   const mediaSize = `screen and (max-width:${setDevice[0].size}px)`; // mobile 환경

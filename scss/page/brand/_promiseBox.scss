@@ -1,0 +1,160 @@
+// _promiseBox.scss
+
+#promiseBox {
+  width: 100%; height: auto;
+  
+  article {
+    position: relative; z-index: 0;
+    width: 100%; height: 100%;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
+    }
+    
+    .container {
+      padding: 90px $pd_lr;
+      display: flex; flex-direction: column;
+    }
+    .point {
+      order: -1;
+      width: 100px; height: 42px;
+      border: 4px solid; border-radius: 100px; margin-bottom: 32px;
+      @include font(16, $font-weight-bold, 34px) {text: {align: center; transform: capitalize;}}
+    }
+    h3 {
+      margin-bottom: 32px;
+      @include font(22, $font-weight-bold, 1.6);
+    }
+    p {
+      line-height: 1.6;
+      br {display: none;}
+    }
+  }
+
+  .promise_inner_01 {
+    @include img ('point1.jpg', cover);
+    &::before { background-color: rgba($color_black_01, 0.3);}
+
+    .point { color: #eeefbc; border-color: #eeefbc; }
+    h3 { color: $color_white; }
+    p { color: $color_gray_01; }
+  }
+
+  .promise_inner_02 {
+    @include img ('point2.jpg',1000px, 77% 79%);
+    &::before { background-image: linear-gradient(270deg, $color_white, rgba($color_white, 0.3)); }
+
+    .container { align-items: flex-end;}
+    .point { color: #AD3D5E; border-color: #AD3D5E; }
+    h3 {text-align: right}
+    p { color: $color_black_01; text-align: right }
+  }
+
+  .promise_inner_03 {
+    @include img ('point3.jpg', cover);
+    &::before { background-image: linear-gradient(90deg, rgba($color_white, 0.7), rgba($color_white, 0.3)); }
+
+    .point { color: #673506; border-color: #673506; }
+    p { color: $color_black_01; }
+  }
+
+  .promise_inner_04 {
+    @include img ('point4.jpg', 200%);
+    &::before { background-image: linear-gradient(270deg, $color_white, rgba($color_white, 0.3)); }
+
+    .container { align-items: flex-end;}
+    .point { color: #084262; border-color: #084262;}
+    h3 {text-align: right}
+    p { color: $color_black_01; text-align: right }
+  }
+
+  .promise_inner_05 {
+    padding-bottom: 140px;
+    @include img ('point5.jpg', cover);
+    &::before { background-color: rgba($color_white, 0.3);}
+    
+    .point { color: #673506; border-color: #673506; }
+    p { color: $color_black_01;}
+  }
+}
+
+
+
+/*==================== tablet 600px - 1023px ====================*/
+@include tablet {
+  #promiseBox {
+
+    article {
+      .point { width: 120px; height: 50px; font-size: 18px; line-height: 44px; }
+      h3 { font-size: 28px; }
+      p { br {display: block;} }
+    }
+
+    .promise_inner_01 { background-position: 50% 70%; }
+    .promise_inner_02 { background: { position: 100% 73%; size: 1400px;}
+      &::before { background-image: linear-gradient(270deg, $color_white, rgba($color_white, 0)); }
+    }
+    .promise_inner_03 { background: {position: 36% 27%; size: 160%}
+      &::before { background-image: linear-gradient(90deg, rgba($color_white, 0.7), rgba($color_white, 0)); }
+    }
+    .promise_inner_04 { background-position: 97% 50%; 
+      &::before { background-image: linear-gradient(270deg, $color_white, rgba($color_white, 0)); }
+    }
+    .promise_inner_05 { background-position: 50% 76%; }
+  }
+
+  
+} // @include tablet
+
+
+/*==================== desktop 1024px - 1439px ====================*/
+@include desktop {
+  #promiseBox {
+    
+    article {
+      
+      .container {
+        max-width: map-get($container, "laptop"); 
+        padding: 110px $pd_lr;
+      }
+
+      .point { width: 120px; height: 50px; font-size: 18px; line-height: 44px; }
+      h3 { 
+        font-size: 28px; 
+        br {display: none;}
+      }
+      p { br {display: block;} }
+    }
+
+    .promise_inner_01 { background-position: 50% 70%; }
+    .promise_inner_02 { background: { position: 100% 73%; size: 1440px;}
+      &::before { background-image: linear-gradient(270deg, $color_white, rgba($color_white, 0)); }
+    }
+    .promise_inner_03 { background: {position: 36% 27%; size: 160%}
+      &::before { background-image: linear-gradient(90deg, rgba($color_white, 0.7), rgba($color_white, 0)); }
+    }
+    .promise_inner_04 { background-position: 97% 50%; 
+      &::before { background-image: linear-gradient(270deg, $color_white, rgba($color_white, 0)); }
+    }
+    .promise_inner_05 { background-position: 50% 76%; }
+  } //#promiseBox
+
+} // @include desktop
+
+
+/*==================== pc 1440px - ====================*/
+@include pc {
+  #promiseBox {
+    .container { max-width: map-get($container, "pc"); }
+
+    .promise_inner_02 { background: { position: 100% 73%; size: 100%;}
+    &::before { opacity: 0.5; }
+  }
+    .promise_inner_03 { background: {position: 36% 27%; size: cover}}
+    .promise_inner_04 { background: { size: 178%} 
+      &::before { opacity: 0.5; }
+    }
+    // .promise_inner_05 { background-position: 50% 76%; }
+  } //#promiseBox
+} // @include pc

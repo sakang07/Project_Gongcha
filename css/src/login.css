@@ -37,6 +37,29 @@ h1 > a > span {
   overflow: hidden;
 }
 
+#headBox.transparent {
+  background-color: transparent;
+  color: #fff;
+}
+#headBox.transparent h1 > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../multi/img/logo_white.png);
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+#headBox.transparent h1 > a > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 /*==================== handhels 320px - 1023px ====================*/
 @media all and (max-width: 1023px) {
   #wrap {

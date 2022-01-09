@@ -7,7 +7,8 @@
   
   .video_area { 
     position: relative; z-index: 0;
-    overflow: hidden; width: 100%; height: 100%; 
+    overflow: hidden;
+    width: 100%; height: 100vh;
     &::before {
       content: '';
       display: block;
@@ -15,9 +16,10 @@
       background-color: rgba($color_black_02, 0.3);
     }
   }
+
   .video {
     position: absolute; top: 0; left: 50%; right: 50%; bottom: 0;
-    width: auto; height: 100vh;
+    width: auto; height: 120%;
     margin: auto;
     transform: translateX(-50%);
   }
@@ -30,7 +32,7 @@
   @at-root .view_title {
     display: flex; flex-direction: column-reverse; justify-content: flex-start;
     width: 100%; height: 100%;
-    padding-bottom: 70%;
+    padding-bottom: 200px;
 
     p { margin-bottom: 20px; @include font(16) {color: $color_white} }
     h3 { @include font(28, $font-weight-bold, 1.6) {color: $color_white;} }
@@ -50,22 +52,43 @@
 
 /*==================== handhelds 320px - 599px ====================*/
 @include handhelds {
-
   #viewBox {
     .pc { display: none; }
-
   }
-
-
-
-  
 } // @include handhelds
 
 
 /*==================== desktop 1024px - 1439px ====================*/
 @include desktop {
   #viewBox {
-    .container { max-width: map-get($container, "laptop"); }
+    margin-top: -80px;
+    
+    .container { 
+      display: flex; flex-direction: column; justify-content: space-between;
+      max-width: map-get($container, "laptop"); 
+    }
+    @at-root .view_title {
+      height: 100%;
+      padding-bottom: 80px;
+    }
+
+    .title_list {
+      ul {
+        display: flex; justify-content: space-around;
+        margin: {top: 72px; bottom: 80px;}
+        @include font(18, $font-weight-bold) {color: $color_white;}
+      }
+      li {
+        width: 130px; height: 60px; text-align: center; 
+        &.on {
+          border-top: $line_05;
+        }
+        & > a {
+          @include full; 
+          line-height: 60px;
+        }
+      }
+    }
   } //#viewBox
 
 } // @include desktop
@@ -75,5 +98,6 @@
 @include pc {
   #viewBox {
     .container { max-width: map-get($container, "pc"); }
+    .video { width: 120%; height: auto; }
   } //#viewBox
 } // @include pc

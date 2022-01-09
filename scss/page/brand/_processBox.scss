@@ -1,0 +1,89 @@
+// _processBox.scss
+
+#processBox {
+  width: 100%; height: auto;
+  padding: nth($pd_tb, 2) $pd_lr;
+  background-color: rgba($color_skyblue_01, 0.2);
+  
+  .container { max-width: map-get($container, "tablet"); }
+
+  @at-root .process_area {
+    display: flex; flex-direction: column; align-items: center;
+    padding-bottom: 50px;
+    &:last-of-type {padding-bottom: 0;}
+    
+    .img {
+      order: -1;
+      width: 120px; height: 120px;
+      border-radius: 100%; margin-bottom: 40px;
+      background-color: $color_white;
+    }
+    .img1 { @include img ('brand_story_img1.png', contain)}
+    .img2 { @include img ('brand_story_img2.png', contain)}
+    .img3 { @include img ('brand_story_img3.png', contain)}
+
+    h3 {
+      margin-bottom: 20px;
+      @include font (22, $font-weight-bold)
+    }
+
+    dl { text-align: center; }
+    
+    dt {
+      margin-bottom: 20px;
+      @include font(18, $font-weight-bold) {color: $color_brown_01}
+    }
+    dd {
+      @include font(16, $line: 1.6) { color: $color_deep_gray_01}
+      br {display: none;}
+    }
+  }
+}
+
+
+/*==================== tablet 600px - 1023px ====================*/
+@include tablet {
+  #processBox {
+    padding: {top: nth($pd_tb,3); bottom: nth($pd_tb,3)};
+
+    @at-root .process_area {
+      margin-bottom: 90px;
+
+      .img { width: 160px; height: 160px; margin-bottom: 66px; }
+      h3 { font-size: 28px; }
+      dt { font-size: 22px; }
+    }
+  }
+
+  
+} // @include tablet
+
+
+/*==================== desktop 1024px - 1439px ====================*/
+@include desktop {
+  #processBox {
+    padding: 180px 0;
+    .container {
+      display: flex; justify-content: space-around;
+      max-width: map-get($container, "laptop"); 
+    }
+
+    @at-root .process_area {
+      width: 260px;
+
+      .img { width: 250px; height: 250px; margin-bottom: 56px; }
+      h3 { font-size: 28px; margin-bottom: 56px; }
+      dt { font-size: 22px; }
+      dd br { display: block; }
+    }
+  } //#processBox
+
+} // @include desktop
+
+
+/*==================== pc 1440px - ====================*/
+@include pc {
+  #processBox {
+    .container { max-width: map-get($container, "pc"); }
+  } //#processBox
+} // @include pc

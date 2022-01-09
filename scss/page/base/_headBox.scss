@@ -17,6 +17,11 @@
       & > a { @include full('logo.png', contain); }
     }
   } //.container
+  
+  &.transparent {
+    background-color: transparent; color: $color_white;
+    h1 > a { @include full('logo_white.png', contain) }
+  }
 }
 
 

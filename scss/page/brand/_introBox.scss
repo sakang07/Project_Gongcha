@@ -1,0 +1,74 @@
+// _introBox.scss
+
+#introBox {
+  width: 100%; height: auto;
+  padding: nth($pd_tb, 2) $pd_lr; 
+  background-color: $color_white;
+
+  .container { max-width: map-get($container, "tablet"); }
+  .breadcrumb { display: none; }
+  h2 { 
+    padding-bottom: 40px;
+    @include font(22, $font-weight-bold) {color: $color_primary_01; text-align: center;}
+  }
+  p {
+    padding-bottom: 40px;
+    @include font(16, $line: 1.6) { color: $color_deep_gray_01}
+    br { display: none; }
+
+    &.bold {
+      padding-bottom: 0;
+      @include font(18, $font-weight-bold) {color: $color_black_02}
+    }
+  }
+
+}
+
+
+/*==================== tablet 600px - 1023px ====================*/
+@include tablet {
+  #introBox {
+    padding: {top: 120px; bottom: 120px;}
+    text-align: center;
+
+    h2 { font-size: 28px; }
+    p.bold { font-size: 22px; }
+    p.bold br { display: block; }
+  }
+} // @include tablet
+
+
+/*==================== desktop 1024px - 1439px ====================*/
+@include desktop {
+  #introBox {
+    padding-bottom: 200px;
+
+    .container {
+      display: flex; flex-direction: column;
+      max-width: map-get($container, "laptop"); 
+      text-align: center;
+    }
+    .breadcrumb {
+      order: -1; align-self: flex-end;
+      display: block;
+      margin-bottom: 180px;
+      color: $color_gray_03; font-weight: $font_weight_bold;
+
+      i.fa-chevron-right { margin: {left: 20px; right: 20px;}; font-size: 14px; }
+      span { color: $color_black_02 }
+    }
+    h2 { font-size: 36px; }
+    p br { display: block; }
+    p.bold { font-size: 22px; }
+    
+  } //#introBox
+
+} // @include desktop
+
+
+/*==================== pc 1440px - ====================*/
+@include pc {
+  #introBox {
+    .container { max-width: map-get($container, "pc"); }
+  } //#introBox
+} // @include pc

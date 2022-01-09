@@ -1,0 +1,65 @@
+// _galleryBox.scss
+
+#galleryBox {
+  position: relative;
+  width: 100%;
+  @include vw(height, 230, 320);
+  max-height: 600px;
+
+  @at-root .indicator {
+    position: absolute; bottom: 20px; left: 50%; z-index: 10;
+    transform: translateX(-50%);
+    ul {
+      display: flex; justify-content: center;
+    }
+    li {
+      width: 36px; height: 5px;
+      margin-right: 10px; 
+      background-color: $color_gray_03;
+      &.on { background-color: $color_white; }
+    }
+  }
+
+  @at-root .img_inner {
+    width: 100%; height: 100%;
+    
+    ul { 
+      width: 400%; height: 100%; display: flex; justify-content: flex-start; 
+    }
+    li {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      width: 100%; height: 100%;
+      background-color: #fff;
+    }
+    .img_01 { @include img ('main_live_img1.png', cover)}
+    .img_02 { @include img ('main_live_img2.png', cover)}
+    .img_03 { @include img ('main_live_img3.png', cover)}
+    .img_04 { @include img ('main_live_img4.png', cover)}
+  }
+}
+
+
+/*==================== tablet 600px - 1023px ====================*/
+// @include tablet {
+
+
+  
+// } // @include tablet
+
+
+/*==================== desktop 1024px - 1439px ====================*/
+// @include desktop {
+//   #galleryBox {
+
+
+//   } //#galleryBox
+
+// } // @include desktop
+
+
+/*==================== pc 1440px - ====================*/
+// @include pc {
+//   #galleryBox {
+
+//   } //#galleryBox
+// } // @include pc
