@@ -1092,6 +1092,7 @@
 /*==================== handhelds 320px - 599px ====================*/
 @media all and (max-width: 1023px) {
   #titleBox {
+    position: relative;
     width: 100%;
     min-height: 60px;
     border-bottom: 0.0625rem solid #ccc;
@@ -1136,7 +1137,13 @@
   }
   #titleBox .title_list {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 100;
     border-top: 0.0625rem solid #ccc;
+    border-bottom: 0.0625rem solid #ccc;
     text-align: center;
   }
   #titleBox .title_list.on {
@@ -1265,14 +1272,44 @@
   right: 0;
   display: flex;
   justify-content: space-between;
+  flex-direction: row-reverse;
   width: 100%;
   height: 0;
 }
 .btn_area > button {
   width: 28px;
   height: 50px;
-  background-color: #eee;
   transform: translateY(-50%);
+}
+.btn_area .next {
+  background-image: url(../../multi/img/btn_next2.png);
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.btn_area .next > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.btn_area .prev {
+  background-image: url(../../multi/img/btn_prev2.png);
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.btn_area .prev > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .best_menu_list {
@@ -1348,7 +1385,7 @@
   padding-top: 30px;
 }
 .filter_area li {
-  width: 170px;
+  width: 196px;
   padding-bottom: 10px;
 }
 .filter_area li i {
@@ -1360,16 +1397,15 @@
 }
 
 .menu_list_inner {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
   justify-content: center;
   padding-top: 60px;
 }
 .menu_list_inner > li {
   width: auto;
   height: auto;
-  margin-left: 10px;
-  margin-bottom: 10px;
+  margin: 5px;
   padding: 10px 0 46px;
   background-color: rgba(238, 238, 238, 0.5);
 }

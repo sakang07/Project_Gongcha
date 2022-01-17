@@ -3,6 +3,7 @@
 /*==================== handhelds 320px - 599px ====================*/
 @include handhelds {
   #titleBox {
+    position: relative;
     width: 100%; min-height: 60px;
     border-bottom: $line_01;
     background-color: $color_white;
@@ -27,7 +28,8 @@
 
     .title_list { 
       display: none; 
-      border-top: $line_01;
+      position: absolute; top: 100%; left: 0; right: 0; z-index: 100;
+      border: {top: $line_01; bottom: $line_01;}
       text-align: center;
 
       &.on { display: block; }

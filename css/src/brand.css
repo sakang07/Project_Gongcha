@@ -1158,7 +1158,13 @@
   }
   #titleBox .title_list {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 100;
     border-top: 0.0625rem solid #ccc;
+    border-bottom: 0.0625rem solid #ccc;
     text-align: center;
   }
   #titleBox .title_list.on {
@@ -1239,14 +1245,14 @@
 }
 #viewBox .video {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50%;
-  right: 50%;
-  bottom: 0;
   width: auto;
-  height: 120%;
-  margin: auto;
-  transform: translateX(-50%);
+  height: 130%;
+  min-height: 100vh;
+  min-width: 100vw;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
 }
 #viewBox .container {
   position: absolute;

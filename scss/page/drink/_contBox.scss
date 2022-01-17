@@ -9,13 +9,15 @@
 
     @at-root .btn_area {
       position: absolute; top: 50%; left: 0; right: 0;
-      display: flex; justify-content: space-between;
+      display: flex; justify-content: space-between; flex-direction: row-reverse;
       width: 100%; height: 0;
       
       & > button { 
-        width: 28px; height: 50px; background-color: $color_gray_01; 
+        width: 28px; height: 50px; //background-color: $color_gray_01; 
         transform: translateY(-50%);
       }
+      .next { @include img ('btn_next2.png', contain)}
+      .prev { @include img ('btn_prev2.png', contain)}
     } // .btn_area
     
     @at-root .best_menu_list {
@@ -66,7 +68,7 @@
       padding-top: 30px;
     }
     li {
-      width: 170px;
+      width: 196px;
       padding-bottom: 10px;
 
       i { color: $color_gray_02; }
@@ -77,12 +79,15 @@
   @at-root .content_inner {
 
     @at-root .menu_list_inner {
-      display: flex; flex-wrap: wrap; justify-content: center;
+      // display: flex; flex-wrap: wrap; justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 250px);
+      justify-content: center;
       padding-top: 60px;
 
       & > li {
         width: auto; height: auto;
-        margin: {left: 10px; bottom: 10px;} padding: 10px 0 46px;
+        margin: 5px; padding: 10px 0 46px;
         background-color: rgba($color_gray_01, 0.5);
 
         a { @include full; }

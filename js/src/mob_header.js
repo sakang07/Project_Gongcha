@@ -38,9 +38,9 @@
 
   // 함수 --------------------------------------------------------
   // 클릭한 요소가 아닌 다른 요소 닫고 버튼 모양 반전 제거하는 함수
-  const fnCloseSubMenu = function (el) {
+  const fnCloseSubMenu = e => {
     // 배열 요소를 순환하며 외부 ckIdx 값과 일치하지 않는 것만 닫기
-    el.forEach(function(d, idx) {
+    e.forEach((d, idx) => {
       if (ckIdx !== idx) { // 클릭한 요소가 아니면
         d.parentNode.classList.remove(CK_ON); // 클릭하지 않은 요소의 부모요소(elGnbTitle)에 .on 제거
         d.classList.remove(CK_ON); // 클릭하지 않은 요소(elGnbTitleA)에 .on 제거
@@ -50,16 +50,15 @@
 
 
   // 이벤트 --------------------------------------------------------
-
   // elNavMOpenBtn을 클릭하면 gnb 열기----------------------
-  elNavMOpenBtn.addEventListener('click', function(e) {
+  elNavMOpenBtn.addEventListener('click', e => {
     e.preventDefault();
     elNavMob.classList.add(CK_ON);
     elNavMCloseBtn.focus();
   });
 
   // elNavMCloseBtn을 클릭하면 gnb 닫기----------------------
-  elNavMCloseBtn.addEventListener('click', function(e){
+  elNavMCloseBtn.addEventListener('click', e => {
     e.preventDefault();
     elNavMob.classList.remove(CK_ON);
   });

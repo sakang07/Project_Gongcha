@@ -1,5 +1,5 @@
 // pc_header.js
-// 220109 수정
+// 220110 수정
 
 // ==============================================
 // unb searchBtn 클릭하면 searchArea 출력
@@ -50,7 +50,6 @@
     // .on이 없으면 추가, 있으면 제거
     !fnCkOn() ? elUnb.classList.add(CK_ON) : elUnb.classList.remove(CK_ON);
     ckSearch = false;
-    console.log('ckSearch', ckSearch);
   });
 
   // 외부 영역(.modal_bg) 클릭시 .unb에 .on 제거
@@ -66,7 +65,6 @@
   elPcGnbWrap.addEventListener('mouseenter', () => {
     if (fnCkOn()) elUnb.classList.remove(CK_ON);
     ckSearch = true;
-
   });
 
 
@@ -84,7 +82,6 @@
   if (ckTrsp && ckSearch) {
       elHeadBox.classList.add(CK_TRSP);
       ckTrsp = false;
-      console.log(ckTrsp && ckSearch, ckSearch, 'ckTrsp && ckSearch');
     } 
   })
 
